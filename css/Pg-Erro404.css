@@ -30,7 +30,7 @@ body {
     background: #01d31a;
     margin: 0px 4px ;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgb(97, 131, 226),
+    box-shadow: 0 0 0 1px rgb(97, 131, 226),  
     0 0  50px rgb(97, 131, 226),
     0 0  100px rgb(128, 149, 205);
     animation: animar calc(700s/var(--i)) linear infinite;

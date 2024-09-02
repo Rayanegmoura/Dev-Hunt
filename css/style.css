@@ -176,7 +176,6 @@ section.txt-2 .flex {
 .txt-2 h2 {
     color: #2cea68;
     font-size: 45px;
-    line-height;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -199,11 +198,186 @@ section.encontre .flex {
 }
 
 .encontre .serv-box {
+    margin-top: 15px;
     border-radius: 20px;
-    padding: 100px 100px;
+    padding: 100px;
+    transition: .2s;
+    background-color: #073252;
 }
 
-.encontre .serv-box {
+.encontre .serv-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px #073252;
+}
+
+.serv-box p {
+    font-size: 13px;
+}
+
+.serv-box h3 {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILO QUEM SOMOS */
+
+section.txt-3 {
+    padding: 70px 4%;
+    background-color: #2cea68;
+}
+
+section.txt-3 .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.txt-3 .txt-quem-somos {
+    border-radius: 20px;
+    padding: 100px;
+    padding-right: 200px;
+}
+
+.txt-3 .txt-quem-somos h2 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.txt-3 .quem-somos p {
+    font-size: 20x;
+    text-align: justify;
+}
+
+/* ESTILO AVALIAÇÕES DE USUÁRIOS */
+
+section.depoimentos{
+    padding: 40px 4%;
+}
+
+section.depoimentos.flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.depoimentos h2 {
+    color: #2cea68;
+    font-size: 45px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.depoimentos .depoimentos-box {
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 30px;
+    transition: .2s;
+}
+
+.depoimentos .depoimentos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #073252;
+}
+
+.depoimentos h4 {
+    font-size: 14px;
+    padding: 3px;
+}
+
+.depoimentos p {
+    font-size: 12px;
+}
+/* ESTILO PLANOS */
+
+section.planos{
+    padding: 40px 4%;
+}
+
+section.planos.flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.planos h2 {
+    color: #2cea68;
+    font-size: 35px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.planos p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.planos .p-empresa {
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 100px;
+    transition: .2s;
+    background-color: #073252;
+}
+
+.planos .p-empresa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #073252;
+}
+
+.p-empresa p {
+    font-size: 13px;
+}
+
+.p-empresa h3 {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.planos .p-freelancer {
+    margin-top: 15px;
+    border-radius: 20px;
+    padding: 100px;
+    transition: .2s;
+    background-color: #073252;
+}
+
+.planos .p-freelancer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #073252;
+}
+
+.p-freelancer p {
+    font-size: 13px;
+}
+
+.p-freelancer h3 {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILO PRECISO DE AJUDA */
+
+section.ajuda{
+    padding: 40px 4%;
+}
+
+section.ajuda.flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* ESTILO FOOTER */
+
+footer {
+    padding: 40px 4%;
+    background-color: #2cea68;
+}
+
+footer.flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
 }

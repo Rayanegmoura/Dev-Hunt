@@ -10,7 +10,50 @@
 body {
     background-color:rgb(1, 2, 1);
     overflow: hidden;
+    min-height: 100vh;
 }
+
+.conteiner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+}
+
+.bolhas span{
+    width: 7px;
+    height: 5px;
+    background: #01d31a;
+    margin: 0px 4px ;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(97, 131, 226),
+    0 0  50px rgb(97, 131, 226),
+    0 0  100px rgb(128, 149, 205);
+    animation: animar calc(700s/var(--i)) linear infinite;
+    
+}
+
+@keyframes animar{
+    0%{
+        transform:translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-100vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #b3dfd9;
+    box-shadow: 0 0 0 10px rgb(97, 131, 226),
+    0 0 0  50px rgb(97, 131, 226),
+    0 0 0 100px rgb(97, 131, 226),
+    
+}
+
 
 header {
     position: fixed;
@@ -86,7 +129,7 @@ nav ul li a:hover{
 }
 
 .left .btn:hover {
-    box-shadow: 0 1px 4px #357f8e ;
+    box-shadow: 0 1px 4px #28c07e ;
 }
 
 .right img{
@@ -113,7 +156,7 @@ nav ul li a:hover{
         transform: translateY(1px);
     }
 }/*
-@keyframes shadow{
+@keyframes animas{
     0%{
         transform: scale(1.1);
     }

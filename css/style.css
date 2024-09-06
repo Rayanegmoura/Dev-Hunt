@@ -28,16 +28,6 @@ span {
 
 /* ESTILO CABEÇALHO */
 
-.logo {
-    float: left;
-    padding: 20px;   
-}
-
-.logo img{
-    width: 150px;
-    height: 100px;
-}
-
 header {
     display: flex;
     width: 100%;
@@ -72,21 +62,31 @@ header a:hover {
     background-color: #43424200;
 }
 
+.logo {
+    float: left;
+    padding: 20px;  
+}
+
+.logo img {
+    width: 250px;
+    height: 150px;
+}
+
 .link-menu {
     position: absolute;
-    top: 40%;
-    left: 15%;
+    top: 45%;
+    left: 25%;
 }
 
 .login-topo {
     position: absolute;
-    top: 40%;
+    top: 45%;
     right: 20%;
 }
 
 .btn-topo {
     position: absolute;
-    top: 32%;
+    top: 42%;
     right: 3%;
 }
 

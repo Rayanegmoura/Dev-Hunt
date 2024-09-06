@@ -129,7 +129,6 @@ section.topo-do-site.flex {
     margin-right: 20px;
     position: relative;
     left: 8%;
-    padding-bottom: 10px;
 }
 
 .txt-topo-site {
@@ -141,31 +140,56 @@ section.topo-do-site.flex {
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
-    background-color: #2cea68;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
     margin-top: 1%;
-    margin-left: 0.5%;
+    margin-left: 2%;
+}
+
+.bnt-txt button:hover {
+    background-color: #073252;
+    transform: scale(1.05);
+}
+
+.bnt-txt .bnt-txt-1 {
+    background-color: #1a74b8;
+}
+
+.bnt-txt .bnt-txt-2 {
+    background-color: #2cea68;
 }
 
 /* ESTILO SECTION TXT-2 */
 
 section.txt-2 {
     padding: 40px 4%;
+    display: inline-block;
 }
 
 section.txt-2 .flex {
     align-items: center;
     justify-content: center;
-    gap: 60px
+    gap: 60px;
+    justify-content: center;
+}
+
+.txt-2 h1 {
+    color: #2cea68;
+    font-size: 45px;
+    padding-bottom: 70px;
+    text-align: center;
 }
 
 .txt-2 .txt-box {
-    font-size: 14px;
+    height: 300px;
+    width: 245px;
+    align-items: center;
+    font-size: 15px;
     border-radius: 20px;
     padding: 30px;
+    display: inline-block;
 }
 
 .txt-2 .txt-box {
@@ -173,22 +197,25 @@ section.txt-2 .flex {
     box-shadow: 0 0 30px #073252;
 }
 
-.txt-2 h2 {
-    color: #2cea68;
-    font-size: 45px;
-    padding-bottom: 30px;
+.txt-2 .txt-box h3 {
+    font-size: 18px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
-.txt-2 .txt-box h3 {
-    font-size: 22px;
-    padding-bottom: 10px;
+.txt-2 .txt-box p {
+    font-size: 14px;
 }
+
+.txt-2 span:hover {
+    color: #2cea68;
+}
+
 
 /* ESTILO SECTION ENCONTRE */
 
 section.encontre {
-    padding: 40px 4%;
+    padding: 70px 4%;
 }
 
 section.encontre .flex {
@@ -203,6 +230,10 @@ section.encontre .flex {
     padding: 100px;
     transition: .2s;
     background-color: #073252;
+    text-align: center;
+    height: 350px;
+    width: 400px;
+    display: inline-block;
 }
 
 .encontre .serv-box:hover {
@@ -210,12 +241,20 @@ section.encontre .flex {
     box-shadow: 0 0 30px #073252;
 }
 
+.serv-box i {
+    display: flex;
+    font-size: 40px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
 .serv-box p {
-    font-size: 13px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .serv-box h3 {
-    font-size: 18px;
+    font-size: 28px;
     justify-content: center;
     align-items: center;
 }
@@ -229,7 +268,7 @@ section.txt-3 {
 
 section.txt-3 .flex {
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .txt-3 .txt-quem-somos {
@@ -239,12 +278,12 @@ section.txt-3 .flex {
 }
 
 .txt-3 .txt-quem-somos h2 {
-    font-size: 40px;
+    font-size: 60px;
     line-height: 40px;
 }
 
 .txt-3 .quem-somos p {
-    font-size: 20x;
+    font-size: 25x;
     text-align: justify;
 }
 
@@ -257,104 +296,129 @@ section.depoimentos{
 section.depoimentos.flex {
     align-items: center;
     justify-content: center;
-    gap: 90px;
+}
+
+section.depoimentos .depoimentos-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.depoimentos {
+    align-items: center;
+    text-align: center;
+    align-items: center;
 }
 
 .depoimentos h2 {
+    padding-top: 40px;
     color: #2cea68;
     font-size: 45px;
     padding-bottom: 30px;
-    text-align: center;
 }
 
 .depoimentos .depoimentos-box {
     margin-top: 15px;
     border-radius: 20px;
     padding: 30px;
-    transition: .2s;
-}
-
-.depoimentos .depoimentos:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #073252;
 }
 
 .depoimentos h4 {
     font-size: 14px;
-    padding: 3px;
+    padding: 10px;
+
 }
 
 .depoimentos p {
     font-size: 12px;
 }
+
+.depoimentos-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #073252;
+}
+
 /* ESTILO PLANOS */
 
 section.planos{
-    padding: 40px 4%;
+    padding: 70px 4%;
 }
 
-section.planos.flex {
+section.planos .flex {
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    gap: 110px;
+}
+
+.planos .p-planos {
+    width: 450px;
+    height: 550px;
 }
 
 .planos h2 {
     color: #2cea68;
     font-size: 35px;
-    padding-bottom: 30px;
     text-align: center;
 }
 
 .planos p {
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.planos h3 {
+    font-size: 25px;
     text-align: center;
 }
 
-.planos .p-empresa {
+.planos h4 {
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.planos ul li {
+    margin-left: 40px;
+    font-size: 13px;
+    padding: 3px;
+}
+
+.planos .bnt-planos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.planos .bnt-planos button {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #1a74b8;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bnt-planos button:hover {
+    background-color: #2cea68;
+    transform: scale(1.05);
+}
+
+.planos .p-planos {
     margin-top: 15px;
     border-radius: 20px;
-    padding: 100px;
+    padding: 20px;
     transition: .2s;
     background-color: #073252;
 }
 
-.planos .p-empresa:hover {
+.planos .p-planos:hover {
     transform: scale(1.05);
     box-shadow: 0 0 30px #073252;
-}
-
-.p-empresa p {
-    font-size: 13px;
-}
-
-.p-empresa h3 {
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
-}
-
-.planos .p-freelancer {
-    margin-top: 15px;
-    border-radius: 20px;
-    padding: 100px;
-    transition: .2s;
-    background-color: #073252;
-}
-
-.planos .p-freelancer:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px #073252;
-}
-
-.p-freelancer p {
-    font-size: 13px;
-}
-
-.p-freelancer h3 {
-    font-size: 18px;
-    justify-content: center;
-    align-items: center;
 }
 
 /* ESTILO PRECISO DE AJUDA */
@@ -367,6 +431,31 @@ section.ajuda.flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
+}
+
+.ajuda h2 {
+    padding: 30px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.ajuda h3 {
+    font-size: 23px;
+    padding: 10px;
+}
+
+.ajuda p  {
+    font-size: 13px;
+    padding: 10px;
+}
+
+.ajuda a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.ajuda a:hover {
+    color: #2cea68;
 }
 
 /* ESTILO FOOTER */

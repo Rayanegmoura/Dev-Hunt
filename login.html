@@ -1,1 +1,39 @@
-<!--login-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo Dev Hunt -->
+        <div class="logo-container">
+            <img src="dev_hunt_logo.png" alt="Dev Hunt Logo" class="logo">
+        </div>
+
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" maxlength="6" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+                <button type="reset" id="clearBtn">Limpar</button>
+            </div>
+
+            <p id="errorMessage"></p>
+        </form>
+        
+        <div class="register-section">
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

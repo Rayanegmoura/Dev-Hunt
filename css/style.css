@@ -103,7 +103,7 @@ header a:hover {
 }
 
 .btn-topo button:hover {
-    background-color: #2cea68;
+    background-color: #38c1a0;
     transform: scale(1.05);
 }
 
@@ -120,7 +120,7 @@ section.topo-do-site.flex {
 }
 
 .topo-do-site h1 {
-    color: #2cea68;
+    color: #38c1a0;
     font-size: 57px;
     line-height: 40px;
     padding-bottom: 30px;
@@ -162,7 +162,7 @@ section.topo-do-site.flex {
 }
 
 .bnt-txt .bnt-txt-2 {
-    background-color: #2cea68;
+    background-color: #38c1a0;
 }
 
 /* ESTILO SECTION TXT-2 */
@@ -180,7 +180,7 @@ section.txt-2 .flex {
 }
 
 .txt-2 h1 {
-    color: #2cea68;
+    color: #38c1a0;
     font-size: 45px;
     padding-bottom: 70px;
     text-align: center;
@@ -212,7 +212,7 @@ section.txt-2 .flex {
 }
 
 .txt-2 span:hover {
-    color: #2cea68;
+    color: #38c1a0;
 }
 
 
@@ -267,7 +267,7 @@ section.encontre .flex {
 
 section.txt-3 {
     padding: 70px 4%;
-    background-color: #2cea68;
+    background-color: #38c1a0;
 }
 
 section.txt-3 .flex {
@@ -316,7 +316,7 @@ section.depoimentos .depoimentos-box img {
 
 .depoimentos h2 {
     padding-top: 40px;
-    color: #2cea68;
+    color: #38c1a0;
     font-size: 45px;
     padding-bottom: 30px;
 }
@@ -360,7 +360,7 @@ section.planos .flex {
 }
 
 .planos h2 {
-    color: #2cea68;
+    color: #38c1a0;
     font-size: 35px;
     text-align: center;
 }
@@ -408,7 +408,7 @@ section.planos .flex {
 }
 
 .bnt-planos button:hover {
-    background-color: #2cea68;
+    background-color: #38c1a0;
     transform: scale(1.05);
 }
 
@@ -459,14 +459,14 @@ section.ajuda .flex {
 }
 
 .ajuda a:hover {
-    color: #2cea68;
+    color: #38c1a0;
 }
 
 .ajuda i {
     font-size: 35px;
     display: flex;
     margin-left: 10px;
-    color: #2cea68;
+    color: #38c1a0;
 }
 
 .ajuda ul li {
@@ -477,7 +477,7 @@ section.ajuda .flex {
 
 footer {
     padding: 30px 4%;
-    background-color: #2cea68;
+    background-color: #38c1a0;
 }
 
 footer .flex {

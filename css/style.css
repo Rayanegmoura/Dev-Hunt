@@ -169,7 +169,6 @@ section.topo-do-site.flex {
 
 section.txt-2 {
     padding: 40px 4%;
-    display: inline-block;
 }
 
 section.txt-2 .flex {
@@ -193,7 +192,6 @@ section.txt-2 .flex {
     font-size: 15px;
     border-radius: 20px;
     padding: 30px;
-    display: inline-block;
 }
 
 .txt-2 .txt-box {

@@ -10,16 +10,20 @@
     <div class="login-container">
         <!-- Logo Dev Hunt -->
         <div class="logo-container">
-            <img src="/img/logo.png" alt="Dev Hunt Logo" class="logo">
+            <img src="dev_hunt_logo.png" alt="Dev Hunt Logo" class="logo">
         </div>
 
-        <h2>Login</h2>
         <form id="loginForm">
             <label for="login">Login</label>
             <input type="text" id="login" name="login" maxlength="6" required>
 
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" minlength="8" required>
+
+            <!-- Adicionando a parte de "Esqueci minha senha" -->
+            <div class="forgot-password">
+                <a href="esqueci_senha.html">Esqueci minha senha</a>
+            </div>
 
             <div class="button-container">
                 <button type="submit">Enviar</button>

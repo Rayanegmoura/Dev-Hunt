@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b3a42;
+    color: #e0e0e0; 
+  }
+  
+  .header {
+    background-color: #1b2832; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .Bemvindo {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .Barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .Barra input {
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #4a5a67; 
+    font-size: 16px;
+    background-color: #3c4f5a; 
+    color: #e0e0e0;
+  }
+  
+  .Barra button {
+    padding: 15px;
+    background-color: #00b894; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .Links {
+    background-color: #1f2c36; 
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+  }
+  
+  .Links h2 {
+    margin-bottom: 20px;
+    color: #00b894; 
+  }
+  
+  .link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+  
+  .link a {
+    background-color: #00b894; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px); 
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link a:hover {
+    background-color: #009371; 
+  }
+  
+  .Recomendados {
+    background-color: #1f2c36;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .topicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    
+  }
+  
+  .topico {
+    background-color: #485b57;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    text-decoration: none; 
+  }
+  .topico:hover {
+      background-color: #009371; 
+  }
+  
+  .ajuda1 {
+    background-color: #1f2c36;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+  }
+  
+  .ajuda1 h2 {
+    margin-bottom: 20px;
+    color: #00b894;
+  }
+  
+  .ajuda2 {
+    margin-bottom: 20px;
+  }
+  
+  .ajuda2 a {
+    color: #00b894;
+    text-decoration: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b3a42;
+    color: #e0e0e0;
+  }
+  
+  @media (max-width: 768px) {
+    .Barra input {
+        width: 100%;
+    }
+  
+    .link a {
+        flex: 1 1 100%;
+    }
+  
+    .topico {
+        flex: 1 1 100%;
+    }
+  }

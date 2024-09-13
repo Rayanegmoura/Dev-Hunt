@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="card">
-           <form action="https://formsubmit.co/ryanrodrygs1@gmail.com" method="POST">
+           <form action="formulario.php" method="POST">
          </form>
            <h1>Cadastrar</h1>
   
@@ -17,50 +17,50 @@
   
            <div class="label-float">
               <input type="text" id="nome" placeholder=" " autocomplete="off" maxlength="60" required />
-              <label id="labelNome" for="nome">Nome Completo</label>
+              <label id="labelNome" name="nome"for="nome">Nome Completo</label>
            </div>
   
            <div class="label-float">
               <input type="text" id="mae" placeholder=" " autocomplete="off" maxlength="60" required />
-              <label id="labelMae" for="mae">Nome da Mãe</label>
+              <label id="labelMae" name="mae" for="mae">Nome da Mãe</label>
            </div>
   
            <div class="label-float">
-              <input type="text" id="usuario" placeholder=" " autocomplete="off" maxlength="14" required />
-              <label id="labelUsuario" for="usuario">CPF</label>
+              <input type="text" id="cpf" placeholder=" " autocomplete="off" maxlength="14" required />
+              <label id="labelcpf" name="cpf" for="usuario">CPF</label>
            </div>
   
            <div class="label-float">
               <input type="text" id="nasc" placeholder=" " maxlength="10" required />
-              <label id="labelNasc" for="nasc">Data de Nascimento</label>
+              <label id="labelNasc" name="nasc" for="nasc">Data de Nascimento</label>
            </div> 
   
            <div class="label-float">
               <input type="text" id="email" placeholder=" " required />
-              <label id="labelEmail" for="email">E-mail</label>
+              <label id="labelEmail" name="email" for="email">E-mail</label>
            </div>
   
            <div class="label-float">
               <input type="celular" id="celular" placeholder=" " autocomplete="off" maxlength="15" required />
-              <label id="labelCelular" for="Celular">Celular</label>
+              <label id="labelCelular" name="celuar" for="Celular">Celular</label>
            </div>
            <div class="label-float">
               <input type="text" id="ende" placeholder=" " required />
-              <label id="labelEnde" for="ende">Endereço</label>
+              <label id="labelEnde" name="ende" for="ende">Endereço</label>
            </div>
            <div class="label-float">
               <input type="text" id="cep" placeholder=" " autocomplete="off" maxlength="9"required />
-              <label id="labelCep" for="cep">CEP</label>
+              <label id="labelCep" name="cep" for="cep">CEP</label> 
            </div>
            <div class="label-float">
               <input type="password" id="senha" placeholder=" " required />
-              <label id="labelSenha" for="senha">Senha</label>
+              <label id="labelSenha" name="senha" for="senha">Senha</label>
               <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
            </div>
   
            <div class="label-float">
               <input type="password" id="confirmSenha" placeholder=" " required />
-              <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+              <label id="labelConfirmSenha" name="confirmSenha" for="confirmSenha">Confirmar Senha</label>
               <i id="verConfirmSenha" class="Senha" aria-hidden="true"></i>
            </div>
            <div class="Genero" >
@@ -74,7 +74,7 @@
            </div>
   
            <div class="justify-center">
-              <button onclick="cadastrar()">Cadastrar</button>
+              <button type="submit" name="submit" id="submit" onclick="">Cadastrar</button>
            </div>
            </div>
         </form>

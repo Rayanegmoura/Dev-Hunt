@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+  }
+  
+  body {
+    background-color: #2b3a42;
+    color: #e0e0e0; 
+    height: 100vg;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  main {
+  
+  }
+  
+  .interface {
+    margin: 1280px;
+    margin: 0;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  span {
+    color: #1a74b8;
+  }
+  
+  /* ESTILO CABEÇALHO */
+  
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 7;
+      width: 100%;
+      height: 100px;
+      padding: 10px 90px;
+      box-sizing: border-box;
+      background: rgba(0,0,0,0.6);
+      
+  }
+  
+  header nav ul {
+      list-style-type: none;
+  }
+  
+  header ul li {
+      margin-left: 40px;
+      display: inline-block;
+     
+  }
+  header ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      text-transform: uppercase;
+  }
+  
+  header ul li a:hover {
+      color: #38c1a0;
+  }
+  
+  .logo img {
+      width: 120px;
+      height: 60px;
+      float: left;
+      position:absolute;
+      top: 20%;
+  }
+  
+  .link-menu {
+      position: absolute;
+      top: 40%;
+      left: 25%;
+  }
+  
+  .login-topo {
+      position: absolute;
+      top: 40%;
+      right: 20%;
+  }
+  
+  
+  .btn-topo {
+      position: absolute;
+      top: 30%;
+      right: 3%;
+  }
+  
+  .btn-topo button {
+      padding: 10px 20px;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #38c1a0;
+      border: 0;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .2s;
+  }
+  
+  .btn-topo button:hover {
+      background-color: #1af5c2;
+      transform: scale(1.05);
+  }
+  
+  /* ESTILO TOPO-DO-SITE */
+  
+    .quemsomos {
+      margin-left: 20px;
+      margin-top: 20px;
+      display: flex;
+      
+    }
+    .grad1 {
+      -webkit-mask-image: 
+          linear-gradient(to left, transparent 5%, black 75%);
+      mask-image: none   
+          linear-gradient(to left, transparent 5%, black 75%);
+      -webkit-mask-repeat: 
+          no-repeat;  
+      mask-repeat:
+          no-repeat;  
+    }
+    .grad2 {
+      -webkit-mask-image: 
+          linear-gradient(to right, transparent 5%, black 75%);
+      mask-image: none   
+          linear-gradient(to right, transparent 5%, black 75%);
+      -webkit-mask-repeat: 
+          no-repeat;  
+      mask-repeat:
+          no-repeat;  
+    }
+    .grad3 {
+      -webkit-mask-image: 
+          linear-gradient(to left, transparent 5%, black 75%);
+      mask-image: none   
+          linear-gradient(to left, transparent 5%, black 75%);
+      -webkit-mask-repeat: 
+          no-repeat;  
+      mask-repeat:
+          no-repeat;  
+    }
+  
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 50px;
+    }
+  
+    footer {
+        padding: 5px 4%;
+        background-color: #38c1a0;
+    }
+    
+    footer .flex {
+        justify-content: space-between;
+    }
+    
+    .footer-1 i {
+        color: #fff;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    
+    .footer-2 {
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .footer-2 a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .logo-footer img {
+        width: 120px;
+        height: 60px;
+        float: left;
+    }
+
+    .bi

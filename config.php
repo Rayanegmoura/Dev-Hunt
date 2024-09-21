@@ -1,11 +1,11 @@
 <?php
      
          $dbHost = 'localHost';
-         $dbUserName = 'root';
-         $dbPassword = 'admin';
-         $dbName = 'Formulario-ryan';
+         $dbUserName = 'Formulario';
+         $dbPassword = '';
+         $dbName = 'Formulario_ryan';
 
-         $conexao = new mysqli($dbHost,$dbUserName,$dbPassword,$dbName);
+         $conexao = new mysqli($dbHost,$dbUserName,$dbName);
 
          if($conexao->connect_errno){
           echo "erro";

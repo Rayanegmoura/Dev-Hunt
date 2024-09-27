@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;   
+    
 }
 
 body {
@@ -126,15 +127,6 @@ section.topo-do-site.flex {
 
 }
 
-.Card1 {
-    background-color: white;
-    width: 660px;
-    height: 180px;
-    border-radius: 12px;
-    baox-shadow: 4px 4px 12px #aaaa;
-    
-}
-
 h1 {
     color:#000;
 
@@ -145,12 +137,21 @@ h1 {
 
 }
 
-.Card1 div {
+.Cards {
+    padding: 120px 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    height: 50%;
+}
+
+.Card1 {
+    background-color: white;
+    width: 760px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+    margin: 20px;
+    padding: 30px;
 
 }

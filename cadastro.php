@@ -1,13 +1,4 @@
 
-<?php
-   if(isseT($_POST['submit']));
-   {
-      print_r($_POST["nome"]);
-      print_r($_POST["mae"]);
-      print_r($_POST["cpf"]);
-   }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

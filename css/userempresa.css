@@ -118,21 +118,22 @@ section.topo-do-site.flex {
     height: 20;
     background-color: white;
     width: 20;
-
 }
 
 .search-txt {
     height: 50;
     margin-right: 50;
-
 }
 
 h1 {
     color:#000;
-
 }
 
-    h2 {
+h3 {
+    color: #000;
+}
+
+span {
     color: #000;
 
 }
@@ -146,12 +147,29 @@ h1 {
 }
 
 .Card1 {
-    background-color: white;
+    background-color: #ffffffaa;
     width: 760px;
     height: 180px;
     border-radius: 12px;
     box-shadow: 4px 4px 12px #aaaa;
     margin: 20px;
     padding: 30px;
-
 }
+
+.Card1 button {
+    background-color: rgb(0, 224, 75);
+    height: 30px;
+    border: none;
+    padding: 4px;
+    width: 20%;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.Card1 button:hover {
+    background-color: rgb(0, 252, 105);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+

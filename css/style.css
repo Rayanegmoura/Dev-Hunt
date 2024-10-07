@@ -424,9 +424,9 @@ section.txt-2 .flex {
 }
 
 .txt-2 .txt-box {
-    padding: 30px;
+    padding: 20px;
     background-color: #80808021;
-    height: 300px;
+    height: auto;
     width: 245px;
     margin: 70px 0 50px 0;
     border: 2px solid #38c1a0;

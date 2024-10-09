@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Hunt</title>
+    <title>Freelancer Company</title>
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -26,59 +26,48 @@
 
         <div class="logo">
             <a href="/index.html">
-                <img src="/img/logo.png" alt="Dev Hunt" />
+                <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
             </a><!--link-logo-->
         </div><!--logo-->
 
         <nav class="menu-desktop">
             <ul>
                 <li>
-                    <a href="#">Contrate Freelancer</a>
+                    <a href="#">Início</a>
                 </li>
 
                 <li>
-                    <a href="#">Encontre Trabalho</a>
+                    <a href="#">Quem Somos</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <a href="#">Freelancer</a>
+                        <a href="#">Empresas</a>
+                    </div>
                 </li>
 
                 <li>
                     <a href="#">Ajuda</a>
                 </li>
-            </ul><!---ul-->
-        </nav><!--links-->
 
-        <div class="login-topo">
-            <ul>
-                <li>
+                <li class="login-topo">
                     <a href="#">Login</a>
                 </li>
-                <li>
-                    <a href="#">Cadastro</a>
-                </li>
-            </ul><!--login-->
-        </div><!--login-topo-->
+            </ul><!---ul-->
+        </nav><!--links-->
 
         <div class="btn-topo btn">
             <a href="#"><button>Publicar Projeto</button></a>
         </div><!--botao-topo-->
 
-        <div class="acessibilidade">
-            <h6 class="acess">Acessibilidade</h6>
-            <div class="modo-escuro">
-                <div class="trilho" id="trilho">
-                    <div class="indicador">
-                    </div><!--indicador-->
-                </div><!--trilho-->
-            </div><!--modo-escuro-->
-
-            <div class="maior-menor" id="maior-menor">
-                <button type="button" id="btnAumentar">A+</button>
-                <button type="button" id="btnDiminuir">A-</button>
-            </div> <!--maior-menor--->
-        </div><!--acessibilidade-->
-
+        <!--menu-mobile-->
+        
         <div class="btn-abrir-menu" id="btn-menu">
             <i class="bi bi-list"></i>
-        </div>
+        </div><!--btn-abrir-menu-->
 
         <div class="menu-mobile" id="menu-mobile">
 
@@ -88,12 +77,21 @@
 
             <nav>
                 <ul>
+
                     <li>
-                        <a href="#">Contrate Freelancer</a>
+                        <a class="btn-login" href="#"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
                     </li>
 
                     <li>
-                        <a href="#">Encontre Trabalho</a>
+                        <a href="#">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Quem Somos</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Ajuda</a>
                     </li>
 
                     <li>
@@ -109,17 +107,37 @@
         </div><!--overlay-menu-->
 
     </header><!--fim-menu-principal-->
-
-    <div id="content">
     
         <main>
+
+            <div class="btn-fixo" id="btn-fixo">
+                <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+            
+                <div class="acessibilidade" id="acessibilidade">
+                    <h6 class="acess">Acessibilidade</h6>
+                    
+                    <div class="modo-escuro">
+                        <div class="trilho" id="trilho">
+                            <div class="indicador"></div><!--indicador-->
+                        </div><!--trilho-->
+                    </div><!--modo-escuro-->
+            
+                    <div class="maior-menor" id="maior-menor">
+                        <button type="button" id="btnAumentar">A+</button>
+                        <button type="button" id="btnDiminuir">A-</button>
+                    </div> <!--maior-menor-->
+                </div><!--acessibilidade-->
+            </div><!--btn-fixo-->
+            
+    <div id="content">
             <section class="topo-do-site">
                 <div class="interface">
                     <div class="flex">
-                        <div class="video-topo"></div>
+                        <div class="video-topo">
                         <video autoplay muted loop>
                             <source src="/img/video.mp4" type="video/mp4">
                         </video>
+                        </div>
                         </div><!---video-topo--->
                         <div class="txt-topo-site efeito-txt-topo">
                             <h1>
@@ -180,13 +198,13 @@
                             <h3>Encontre o Freelancer Ideal para Seu Projeto</h3>
                             <p>Nossa plataforma é o ponto de encontro entre empresas e freelancers talentosos. Economize
                                 tempo e recursos encontrando o profissional perfeito para suas necessidades. Seja para
-                                projetos curtos ou de longo prazo, temos a solução ideal.</p>
+                                projetos curtos ou de longo prazo, temos a solução ideal. </p>
                         </div><!--txt-box-->
     
                     </div><!--flex-->
                 </div><!--interface-->
             </section><!--txt-2-->
-    
+    <div id="content">
             <section class="encontre">
                 <div class="interface">
                     <div class="flex">
@@ -359,6 +377,8 @@
             </section><!--ajuda-->
         </main><!--main-->
     
+    </div><!--content-->
+    
         <footer>
             <div class="interface">
                 <div class="footer-1">
@@ -372,13 +392,12 @@
                 </div><!--footer-1-->
     
                 <div class="footer-2">
-                    <a href="mailto:contato@devhunt.com.br"> contato@devhunt.com.br</a></p>
+                    <p><i class="bi bi-envelope"></i><a href="mailto:contato@devhunt.com.br"> contato@devhunt.com.br</a></p>
                     <p class="desc">© 2024 www.devhunt.com.br | Todos os direitos reservados.</p>
                 </div><!--footer-2-->
             </div><!--interface-->
         </footer><!--rodapé-->
     
-    </div><!--content-->
 </body>
 
 </html>

@@ -87,6 +87,64 @@ a {
 
 /* ACESSIBILIDADE */
 
+    /* BOTÃO DA ACESSIBILIDADE */
+
+.fixo {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none !important;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.fixo:hover {
+    box-shadow: 0 0 0 !important;
+}
+
+.fixo i {
+    color: #fff;
+}
+
+.acessibilidade {
+    text-align: center;
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.acessibilidade.ativo {
+    display: block;
+}
+
+.acess {
+    text-transform: uppercase;
+    color: #000;
+}
+
+.modo-escuro {
+    top: 6px;
+    margin: 12px 0;
+}
+
+    /* AUMENTAR E DIMINUIR FONTE */
+
+.maior-menor button {
+    padding: 3px 3px;
+    margin-left: 4px;
+}
+
+    /* CLARO E ESCURO */
+
 .trilho {
     width: 60px;
     height: 30px;
@@ -121,7 +179,7 @@ body.dark .encontre,
 body.dark .depoimentos,
 body.dark .planos,
 body.dark .ajuda {
-    background-color: #e1e1e1;
+    background-color: #d5d4d4;
 }
 
 body.dark .txt-3,
@@ -133,11 +191,14 @@ body.dark header ul li a,
 body.dark .topo-do-site ul li,
 body.dark .txt-3 *,
 body.dark footer *,
-body.dark .footer-1 i {
+body.dark footer i,
+body.dark .fixo i,
+body.dark .menu-mobile .btn-login i {
     color: #fff !important;
 }
 
 body.dark h1,
+body.dark i,
 body.dark i,
 body.dark ul li a:hover {
     color: #2e71c6 !important; 
@@ -189,7 +250,27 @@ body.dark .txt-box:hover {
     box-shadow: 0 0 30px #2e71c6;
 }
 
+body.dark .menu-mobile nav ul li a:hover {
+    background-color: #2e71c6;
+}
 
+
+body.dark .menu-desktop a:hover, .login-topo a:hover {
+    box-shadow: -1px 2px 2px #2e71c6;
+    color: #2e71c6;
+}
+
+body.dark .dropdown:hover .dropdown-menu {
+    box-shadow: 1px 2px 2px #2e71c6;
+}
+
+body.dark .menu-mobile .btn-login {
+    background-color: #2e71c6;
+}
+
+body.dark .menu-mobile .btn-login:hover {
+    box-shadow: 0 0 15px #2e71c6;
+}
 /* ESTILO CABEÇALHO */
 
 header {
@@ -204,24 +285,52 @@ header {
     background: rgba(0,0,0,0.6);
 }
 
-header nav ul {
+header nav.menu-desktop ul {
     list-style-type: none;
 }
 
-header ul li {
-    margin-left: 30px;
+header nav.menu-desktop ul li {
+    margin-left: 25px;
     display: inline-block;
 }
-header ul li a {
+
+header nav.menu-desktop ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     text-transform: uppercase;
+    padding: 15px;
 }
 
-header nav.menu-desktop a:hover {
+.menu-desktop a:hover, .login-topo a:hover {
+    box-shadow: -1px 2px 2px #38c1a0;
     color: #38c1a0;
 }
+
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    box-shadow: 1px 2px 2px #38c1a0;
+    background-color: #000000a9;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.dropdown i {
+    font-size: 20px;
+    margin: 0 0 0 2px;
+}
+
+/* POSIÇÃO DO MENU */
 
 .logo img {
     width: 120px;
@@ -229,7 +338,6 @@ header nav.menu-desktop a:hover {
     position: absolute;
     top: 18%;
     left: 4%;
-
 }
 
 .menu-desktop {
@@ -241,112 +349,13 @@ header nav.menu-desktop a:hover {
 
 .login-topo {
     position: absolute;
-    top: 40%;
-    right: 32%;
+    left: 140%;
 }
 
 .btn-topo {
     position: absolute;
     top: 30%;
-    right: 15%;
-}
-
-.modo-escuro {
-    position: absolute;
-    top: 35%;
-    right: 8%;
-}
-
-.acess {
-    position: absolute;
-    top: 11%;
-    right: 5%;
-    font-size: 9px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.maior-menor {
-    position: absolute;
-    top: 35%;
     right: 2%;
-    font-size: 9px;
-}
-
-.maior-menor button {
-    padding: 3px 3px;
-    margin-left: 4px;
-}
-
-/* ESTILO MENU MOBILE */
-
-.btn-abrir-menu {
-    display: none;
-}
-
-.btn-abrir-menu i {
-    color: #38c1a0;
-    font-size: 40px;
-    position: fixed;
-    top: 4%;
-    right: 5%;
-}
-
-.menu-mobile {
-    background-color: #000000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 999999;
-    width: 0%;
-    overflow: hidden;
-    transition: .2s;
-}
-
-.menu-mobile.abrir-menu {
-    width: 70%;
-}
-
-.menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block;
-}
-
-.menu-mobile .btn-fechar {
-    padding: 20px 5%;
-}
-
-.menu-mobile .btn-fechar i {
-    color: #38c1a0;
-    font-size: 30px;
-}
-
-.menu-mobile nav ul {
-    text-align: right;
-}
-
-.menu-mobile nav ul li a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 10%;
-    display: block;
-}
-
-.menu-mobile nav ul li a:hover {
-    background-color: #38c1a0;
-    color: #000;
-}
-
-.overlay-menu {
-    background-color: #000000a5;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 888888;
-    display: none;
 }
 
 /* ESTILO TOPO-DO-SITE */
@@ -413,7 +422,6 @@ section.txt-2 {
 }
 
 section.txt-2 .flex {
-    display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -424,10 +432,11 @@ section.txt-2 .flex {
 }
 
 .txt-2 .txt-box {
-    padding: 20px;
+    padding: 30px;
     background-color: #80808021;
-    height: auto;
-    width: 245px;
+    width: 280px;
+    height: 350px;
+    overflow-y: auto;
     margin: 70px 0 50px 0;
     border: 2px solid #38c1a0;
 }
@@ -437,7 +446,22 @@ section.txt-2 .flex {
     box-shadow: 0 0 30px #38c1a0;
 }
 
+.txt-2 .txt-box::-webkit-scrollbar {
+    width: 10px
+}
+
+.txt-2 .txt-box::-webkit-scrollbar-track {
+    background-color: #2e71c6;
+}
+
+.txt-2 .txt-box::-webkit-scrollbar-thumb{
+    background-color: #38c1a0;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+}
+
 .txt-box p {
+    font-size: 16px;
     margin: 15px 0 0px 0;
 }
 
@@ -640,8 +664,101 @@ footer .flex {
     text-align: center;
 }
 
+.footer-2 i {
+    font-size: 15px;
+    color: #fff;
+}
+
 .footer-2 a {
     text-decoration: none;
+}
+
+
+/* ESTILO MENU MOBILE */
+
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-abrir-menu i {
+    position: fixed;
+    top: 4%;
+    right: 5%;
+}
+
+.menu-mobile {
+    background-color: #000000cb;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #38c1a0;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #38c1a0;
+    color: #000 !important;
+}
+
+.menu-mobile .btn-login {
+    background-color: #38c1a0;
+    font-size: 15px;
+    text-decoration: underline;
+    text-align: left;
+}
+
+.menu-mobile .btn-login i {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.menu-mobile .btn-login:hover {
+    box-shadow: 0 0 15px #38c1a0;
+}
+
+.overlay-menu {
+    background-color: #000000a9;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
 }
 
 /* RESPONSIVIDADE */
@@ -653,7 +770,7 @@ footer .flex {
     }
 
     /* MENU */
-    .menu-desktop, .login-topo, .btn-topo, .acess, .modo-escuro, .maior-menor {
+    .menu-desktop, .btn-topo {
         display: none;
     }    
 
@@ -661,10 +778,14 @@ footer .flex {
         display: block;
     }
 
+    h1 {
+        font-size: 45px;
+    }
+
     /* TOPO DO SITE */
 
     section.topo-do-site{
-    padding: 60px 4%;
+    padding: 60px 6%;
     }
 
     .txt-topo-site {
@@ -680,11 +801,11 @@ footer .flex {
     /* TXT-2 */
 
     section.txt-2 {
-        padding: 40px 7%;
+        padding: 40px 8%;
     }
 
     .txt-2 .txt-box {
-        height: 280px;
+        height: 330px;
         width: 300px;
     }
 
@@ -695,7 +816,7 @@ footer .flex {
     /* ENCONTRE */
 
     section.encontre {
-        padding: 20px 4%;
+        padding: 60px 4%;
     }
 
     .serv-box button {
@@ -705,13 +826,13 @@ footer .flex {
     }
 
     .serv-box {
-        margin: 20px 0 30px 0;
+        margin: 5px 0;
     }
 
     /* QUEM SOMOS */
 
     section.txt-3 {
-        padding: 90px 7%;
+        padding: 90px 8%;
     }
 
     .txt-3 {
@@ -738,7 +859,7 @@ footer .flex {
     }
 
     .depoimentos p {
-        margin: 0 0 40px 0;
+        margin: 0 0 30px 0;
     }
 
     /* PLANOS */
@@ -759,17 +880,16 @@ footer .flex {
     /* AJUDA */
 
     section.ajuda{
-        padding: 60px 8%;
+        padding: 60px 5%;
     }
-
-    .ajuda h1 {
-        font-size: 40px;
-    }
-
 
     /* FOOTER */
 
     footer {
         padding: 40px 8%;
+    }
+
+    .footer-2 {
+        margin-top: 15px;
     }
 }

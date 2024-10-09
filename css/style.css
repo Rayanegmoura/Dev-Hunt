@@ -432,10 +432,10 @@ section.txt-2 .flex {
 }
 
 .txt-2 .txt-box {
-    padding: 30px;
+    padding: 20px;
     background-color: #80808021;
-    width: 280px;
-    height: 350px;
+    width: 270px;
+    height: 310px;
     overflow-y: auto;
     margin: 70px 0 50px 0;
     border: 2px solid #38c1a0;

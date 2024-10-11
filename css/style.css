@@ -347,12 +347,9 @@ header nav.menu-desktop ul li a {
     left: 15%;
 }
 
-.login-topo {
-    position: absolute;
-    right: -105%;
-}
-
 .btn-topo {
+    display: flex;
+    gap: 12px;
     position: absolute;
     top: 30%;
     right: 2%;

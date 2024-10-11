@@ -1,12 +1,29 @@
+// BOTÃO DE ACESSIBILIDADE
+
+const toggleBtn = document.getElementById('toggleAcessibilidade');
+const acessibilidadeDiv = document.getElementById('acessibilidade');
+
+
+toggleBtn.addEventListener('click', function() {
+    acessibilidadeDiv.classList.toggle('ativo');
+});
+
 // ACESSIBILIDADE MODO CLARO
 
 let trilho = document.getElementById('trilho')
 let body = document.querySelector('body')
+let imagem = document.getElementById('imagemAcessibilidade'); 
 
 trilho.addEventListener('click', ()=>{
     trilho.classList.toggle('dark')
     body.classList.toggle('dark')
-})
+
+    if (body.classList.contains('dark')) {
+        imagem.src = "/img/logo-2.png";
+    } else {
+        imagem.src = "/img/logo.png";
+    }
+});
 
 // ACESSIBILIDADE AUMENTAR E DIMINUIR FONTE
 
@@ -52,6 +69,7 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+
 
 // SCROLLREVEAL
 
@@ -110,14 +128,14 @@ revelar.reveal('.efeito-serv-1',
 {
     duration: 2000,
     distance: '90px',
-    delay: 1500
+    delay: 2500
 })
 
 revelar.reveal('.efeito-serv-2',
 {
     duration: 2000,
     distance: '90px',
-    delay: 1500
+    delay: 2800
 })
 
 // QUEM SOMOS
@@ -137,7 +155,7 @@ revelar.reveal('.efeito-depoimentos-1',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1000,
+    delay: 1500,
     origin: 'left'
 })
 
@@ -145,7 +163,7 @@ revelar.reveal('.efeito-depoimentos-2',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1100,
+    delay: 1600,
     origin: 'left'
 })
 
@@ -153,7 +171,7 @@ revelar.reveal('.efeito-depoimentos-3',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1200,
+    delay: 1700,
     origin: 'left'
 })
 
@@ -161,7 +179,7 @@ revelar.reveal('.efeito-depoimentos-4',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1300,
+    delay: 1800,
     origin: 'left'
 })
 
@@ -169,7 +187,7 @@ revelar.reveal('.efeito-depoimentos-5',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1400,
+    delay: 1900,
     origin: 'left'
 })
 
@@ -177,7 +195,7 @@ revelar.reveal('.efeito-depoimentos-5',
 
 revelar.reveal('.efeito-planos',
 {
-    duration: 1500,
+    duration: 2000,
     distance: '90px',
     delay: 500
 })
@@ -186,7 +204,7 @@ revelar.reveal('.efeito-planos',
 
 revelar.reveal('.efeito-ajuda',
 {
-    duration: 1500,
+    duration: 2000,
     distance: '90px',
     delay: 500
 })

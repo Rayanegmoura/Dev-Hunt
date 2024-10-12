@@ -1,1 +1,175 @@
-<!--caso tenha algum plano a ser pago, sla-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHunt - Planos</title>
+    <link rel="stylesheet" href="css/planos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header class="menu-principal">
+
+        <div class="logo">
+            <a href="/index.html">
+                <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
+            </a><!--link-logo-->
+        </div><!--logo-->
+
+        <nav class="menu-desktop">
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="quemsomos.html">Quem Somos</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <a href="userfreela.html">Freelancer</a>
+                        <a href="userempresa.html">Empresas</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
+                </li>
+
+                <li class="login-topo">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul><!---ul-->
+        </nav><!--links-->
+
+        <div class="btn-topo btn">
+            <a href="#"><button>Publicar Projeto</button></a>
+        </div><!--botao-topo-->
+
+        <!--menu-mobile-->
+        
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+        </div><!--btn-abrir-menu-->
+
+        <div class="menu-mobile" id="menu-mobile">
+
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div><!--btn-fechar-->
+
+            <nav>
+
+                <div class="btn-fixo" id="btn-fixo">
+                    <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+                
+                    <div class="acessibilidade" id="acessibilidade">
+                        <h6 class="acess">Acessibilidade</h6>
+                        
+                        <div class="modo-escuro">
+                            <div class="trilho" id="trilho">
+                                <div class="indicador"></div><!--indicador-->
+                            </div><!--trilho-->
+                        </div><!--modo-escuro-->
+                
+                        <div class="maior-menor" id="maior-menor">
+                            <button type="button" id="btnAumentar">A+</button>
+                            <button type="button" id="btnDiminuir">A-</button>
+                        </div> <!--maior-menor-->
+                    </div><!--acessibilidade-->
+                </div><!--btn-fixo-->
+
+                <ul>
+
+                    <li>
+                        <a class="btn-login" href="login.html"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="quemsomos.html">Quem Somos</a>
+                    </li>
+
+                    <li>
+                        <a href="ajuda.html">Ajuda</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Publicar Projeto</a>
+                    </li>
+                </ul><!---ul-->
+            </nav><!--links-->
+
+        </div><!--menu-mobile-->
+
+        <div class="overlay-menu" id="overlay-menu">
+            <!--estilo do menu mobile-->
+        </div><!--overlay-menu-->
+
+    </header><!--fim-menu-principal-->
+
+    <main>
+        <section class="planos-container">
+            <h1>Escolha o plano ideal para você</h1>
+
+            <div class="planos">
+                <div class="plano">
+                    <i class="bi bi-pc-display plano-icon"></i>
+                    <h2>Plano Freelancer</h2>
+                    <p>Perfeito para profissionais independentes que querem encontrar projetos e crescer no mercado.</p>
+                    <ul>
+                        <li><i class="bi bi-check2-circle"></i>Maior Visibilidade</li>
+                                <li><i class="bi bi-check2-circle"></i>Acesso Prioritário a Projetos</li>
+                                <li><i class="bi bi-check2-circle"></i>Credibilidade Aumentada</li>
+                                <li><i class="bi bi-check2-circle"></i>Mais Convites Diretos</li>
+                                <li><i class="bi bi-check2-circle"></i>Ferramentas Exclusivas</li>
+                                <li><i class="bi bi-check2-circle"></i>Apoio e Suporte Personalizado</li>
+                    </ul>
+                    <button class="btn-plano">Escolher Plano</button>
+                </div>
+
+                <div class="plano">
+                    <i class="bi bi-building-gear plano-icon"></i>
+                    <h2>Plano Empresa</h2>
+                    <p>Ideal para empresas que buscam freelancers qualificados para seus projetos e precisam de soluções rápidas.</p>
+                    <ul>
+                        <li><i class="bi bi-check2-circle"></i>Acesso a Talentos Qualificados</li>
+                                <li><i class="bi bi-check2-circle"></i>Economia de Tempo</li>
+                                <li><i class="bi bi-check2-circle"></i>Maior Garantia de Entrega</li>
+                                <li><i class="bi bi-check2-circle"></i>Filtragem Avançada</li>
+                                <li><i class="bi bi-check2-circle"></i>Suporte Prioritário</li>
+                                <li><i class="bi bi-check2-circle"></i>Relatórios e Insights</li>
+                    </ul>
+                    <button class="btn-plano">Escolher Plano</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="footer-1">
+                <div class="flex">
+                    <div class="btn-redes">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div><!--btn-redes-->
+                </div><!--flex-->
+            </div><!--footer-1-->
+
+            <div class="footer-2">
+                <p><i class="bi bi-envelope"></i><a href="mailto:contato@devhunt.com.br"> contato@devhunt.com.br</a></p>
+                <p class="desc">© 2024 www.devhunt.com.br | Todos os direitos reservados.</p>
+            </div><!--footer-2-->
+        </div><!--interface-->
+    </footer><!--rodapé-->
+</body>
+</html>

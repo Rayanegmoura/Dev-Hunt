@@ -11,9 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/userempresa.css">
 
-    <script src="/js/pginicial.js" defer></script>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/userempresa.js" defer></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src=""></script>
@@ -24,125 +22,109 @@
 
     <header class="menu-principal">
 
-        <div class="logo">
-            <a href="/index.html">
-                <img id="imagemAcessibilidade" src="img/logo.png" alt="Dev Hunt" />
-            </a><!--link-logo-->
-        </div><!--logo-->
+        <nav class="menu-lateral">
 
-        <nav class="menu-desktop">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div><!--btn-expandir-->
+    
             <ul>
-                <li>
-                    <a href="index.html">Início</a>
+                <li class="item-menu ativo">
+                    <a href="index.html">
+                        <span class="icon"><i class="bi bi-house" title="Início"></i></span>
+                        <span class="txt-link">Início</span>
+                    </a>
                 </li>
-
-                <li>
-                    <a href="quemsomos.html">Quem Somos</a>
+                
+                <li class="item-menu">
+                    <a href="sobre.html">
+                        <span class="icon"><i class="bi bi-file-person" title="Sobre"></i></span>
+                        <span class="txt-link">Sobre</span>
+                    </a>
                 </li>
-
-                <li class="dropdown">
-                    <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
-
-                    <div class="dropdown-menu">
-                        <a href="userfreela.html">Freelancer</a>
-                        <a href="userempresa.html">Empresas</a>
-                    </div>
+    
+                <li class="item-menu">
+                    <a href="minimundo.html">
+                        <span class="icon"><i class="bi bi-globe2" title="MiniMundo"></i></span>
+                        <span class="txt-link">MiniMundo</span>
+                    </a>
                 </li>
-
-                <li>
-                    <a href="ajuda.html">Ajuda</a>
+    
+                <li class="item-menu">
+                    <a href="conceitual.html">
+                        <span class="icon"><i class="bi bi-diagram-3" title="Conceitual"></i></span>
+                        <span class="txt-link">Conceitual</span>
+                    </a>
                 </li>
-
-                <li class="login-topo">
-                    <a href="login.html">Login</a>
+    
+                <li class="item-menu">
+                    <a href="logico.html">
+                        <span class="icon"><i class="bi bi-hdd-stack" title="Lógico"></i></span>
+                        <span class="txt-link">Lógico</span>
+                    </a>
                 </li>
-            </ul><!---ul-->
-        </nav><!--links-->
-
-        <div class="btn-topo btn">
-            <a href="#"><button>Publicar Projeto</button></a>
-        </div><!--botao-topo-->
-
-        <!--menu-mobile-->
-
-        <div class="btn-abrir-menu" id="btn-menu">
-            <i class="bi bi-list"></i>
-        </div><!--btn-abrir-menu-->
-
-        <div class="menu-mobile" id="menu-mobile">
-
-            <div class="btn-fechar">
-                <i class="bi bi-x-lg"></i>
-            </div><!--btn-fechar-->
-
-            <nav>
-                <ul>
-
-                    <li>
-                        <a class="btn-login" href="login.html"><i class="bi bi-person-square"></i>Olá, seja
-                            bem-vindo</a>
-                    </li>
-
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-
-                    <li>
-                        <a href="quemsomos.html">Quem Somos</a>
-                    </li>
-
-                    <li>
-                        <a href="ajuda.html">Ajuda</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Publicar Projeto</a>
-                    </li>
-                </ul><!---ul-->
-            </nav><!--links-->
-
-        </div><!--menu-mobile-->
-
-        <div class="overlay-menu" id="overlay-menu">
-            <!--estilo do menu mobile-->
-        </div><!--overlay-menu-->
+    
+                <li class="item-menu">
+                    <a href="fisico.html">
+                        <span class="icon"><i class="bi bi-hdd-network" title="Físico"></i></span>
+                        <span class="txt-link">Físico</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!--menu-lateral-->
+    
+        <script src="script.js"></script>
 
     </header><!--fim-menu-principal-->
 
     <main>
+        
+        <section class="cards">
 
-        <div class="btn-fixo" id="btn-fixo">
-            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+            <div class="Cards">
+                <div class="Txt-Cards">
+                    <div class="Card1">
+                        <h1>Renato Vieira</h1>
+                        <h3>Desenvolvedor Sênior Back-End</h3>
+                        <span>Salário - A Combinar</span>
+                        <div class="btn-cards">
+                            <button>Conectar</button>
+                            <button class="mensagem">Mensagem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="acessibilidade" id="acessibilidade">
-                <h6 class="acess">Acessibilidade</h6>
+            <div class="Cards">
+                <div class="Txt-Cards">
+                    <div class="Card1">
+                        <h1>Renato Vieira</h1>
+                        <h3>Desenvolvedor Sênior Back-End</h3>
+                        <span>Salário - A Combinar</span>
+                        <div class="btn-cards">
+                            <button>Conectar</button>
+                            <button class="mensagem">Mensagem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <div class="modo-escuro">
-                    <div class="trilho" id="trilho">
-                        <div class="indicador"></div><!--indicador-->
-                    </div><!--trilho-->
-                </div><!--modo-escuro-->
+            <div class="Cards">
+                <div class="Txt-Cards">
+                    <div class="Card1">
+                        <h1>Renato Vieira</h1>
+                        <h3>Desenvolvedor Sênior Back-End</h3>
+                        <span>Salário - A Combinar</span>
+                        <div class="btn-cards">
+                            <button>Conectar</button>
+                            <button class="mensagem">Mensagem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="maior-menor" id="maior-menor">
-                    <button type="button" id="btnAumentar">A+</button>
-                    <button type="button" id="btnDiminuir">A-</button>
-                </div> <!--maior-menor-->
-            </div><!--acessibilidade-->
-        </div><!--btn-fixo-->
 
-        <div id="content">
-            <section class="topo-do-site">
-                <div class="interface">
-                    <div class="Cards">
-                        <div class="Txt-Cards">
-                            <div class="Card1">
-                                <h1>Renato Vieira</h1>
-                                <h3>Desenvolvedor Sênior Back-End</h3>
-                                <span>Salário - A Combinar</span>
-                                <P></P>
-                                <button>Conectar</button>
-                                <button class="mensagem">Mensagem</button>
-                            </div>
 </body>
 
 </html>

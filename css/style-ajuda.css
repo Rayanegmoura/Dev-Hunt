@@ -1,27 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2b3a42;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: #000;
     color: #e0e0e0; 
-  }
-  
-  .header {
-    background-color: #1b2832; 
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 100px;
-    margin-right: 10px;
   }
   
   main {
@@ -31,6 +13,7 @@ body {
   .Bemvindo {
     text-align: center;
     margin-bottom: 40px;
+    margin: 100px;
   }
   
   .Barra {
@@ -38,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 72px;
   }
   
   .Barra input {
@@ -47,30 +30,33 @@ body {
     border-radius: 5px;
     border: 1px solid #4a5a67; 
     font-size: 16px;
-    background-color: #3c4f5a; 
+    background-color: #80808021; 
     color: #e0e0e0;
   }
   
   .Barra button {
     padding: 15px;
-    background-color: #00b894; 
+    background-color: #38c1a0; 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
   }
-  
+  .Bemvindo i{
+    color : #070000;
+    font-size: 18px;
+  }
   .Links {
-    background-color: #1f2c36; 
+    background-color: #80808021; 
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     border-radius: 8px;
   }
   
   .Links h2 {
     margin-bottom: 20px;
-    color: #00b894; 
+    color: #ffffff; 
   }
   
   .link {
@@ -81,7 +67,7 @@ body {
   }
   
   .link a {
-    background-color: #00b894; 
+    background-color: #38c1a0; 
     color: white;
     text-decoration: none;
     padding: 15px 20px;
@@ -94,16 +80,20 @@ body {
   }
   
   .link a:hover {
-    background-color: #009371; 
+    background-color: #2e71c6; 
   }
   
   .Recomendados {
-    background-color: #1f2c36;
+    background-color: #80808021;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 40px;
   }
-  
+  .Recomendados h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+
+  }
   .topicos {
     display: flex;
     flex-wrap: wrap;
@@ -111,10 +101,9 @@ body {
     justify-content: space-around;
     
   }
-  
   .topico {
-    background-color: #485b57;
-    color: white;
+    background-color: #2e71c6;
+    color: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 5px;
     text-align: center;
@@ -126,11 +115,11 @@ body {
     text-decoration: none; 
   }
   .topico:hover {
-      background-color: #009371; 
+      background-color: #38c1a0; 
   }
   
   .ajuda1 {
-    background-color: #1f2c36;
+    background-color: #80808021;
     padding: 20px;
     margin-bottom: 40px;
     border-radius: 8px;
@@ -138,7 +127,7 @@ body {
   
   .ajuda1 h2 {
     margin-bottom: 20px;
-    color: #00b894;
+    color: #38c1a0;
   }
   
   .ajuda2 {
@@ -146,14 +135,14 @@ body {
   }
   
   .ajuda2 a {
-    color: #00b894;
+    color: #38c1a0;
     text-decoration: none;
   }
   
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #2b3a42;
+    background-color: #80808021 ;
     color: #e0e0e0;
   }
   

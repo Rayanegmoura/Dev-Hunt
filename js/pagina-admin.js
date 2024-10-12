@@ -93,7 +93,7 @@ const data1 = {
     });
   });
   
-  // Gráfico de rosca para 'Interação' no Tube
+  // Gráfico de polar para 'Interação' no Tube
   const data2 = {
     labels: [
       'Red',
@@ -120,8 +120,7 @@ const data1 = {
   data: data2,
   options: {}
 };
-  
-  
+
   const chartTube = new Chart(
     document.getElementById('tubeChart'),
     config3

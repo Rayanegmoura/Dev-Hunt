@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autentificação de dois fatores</title>
-    <link rel="stylesheet" href="/css/2FA.css">
-    <script src="/js/alt.js" defer></script>
+    <title>Alterar Senha</title>
+    <link rel="stylesheet" href="/css/alterarsenha.css">
     <link rel="stylesheet" type="text/css" href="/css/acessibilidade.css">
     <script src="/js/acessibilidade.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src=""></script>
 </head>
-<body>
+<body> 
 
     <header class="menu-principal">
 
@@ -124,14 +123,21 @@
 
         <h2>Alterar Senha</h2>
         <form id="alterar-senha">
+            <label for="nova-senha">Digite sua nova senha</label>
             <div class="password-container">
-                <form id="pergunta-form">
-                    <label for="nome-mae">Qual o nome da sua mãe?</label>
-                    <input type="text" id="nome-mae" name="nome-mae" required placeholder="Digite o nome da sua mãe">
-        
-        
+                <input type="password" id="nova-senha" name="nova-senha" required>
+                <button type="button" class="toggle-password" data-target="#nova-senha">👁️</button>
+            </div>
+
+            <label for="confirmar-senha">Confirme sua senha</label>
+            <div class="password-container">
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+                <button type="button" class="toggle-password" data-target="#confirmar-senha">👁️</button>
+            </div>
+
             <div class="button-container">
-                <button type="submit" onclick="location.href='troca_senha.html';">Alterar Senha</button>
+                <button type="submit">Alterar Senha</button>
+                <button type="reset" id="clearBtn">Limpar</button>
             </div>
 
             <p id="errorMessage"></p>
@@ -140,6 +146,6 @@
         <div class="login-section">
         </div>
     </div>
-
+    <script src="alt.js"></script>
 </body>
 </html>

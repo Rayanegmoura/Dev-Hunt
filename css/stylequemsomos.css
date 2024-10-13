@@ -142,11 +142,13 @@ body.dark footer {
 body.dark header ul li a,
 body.dark .topo-do-site ul li,
 body.dark .txt-3 *,
+body.dark .menu-mobile .btn-login i {
+    color: #2e71c6 !important;
+}
 body.dark footer *,
 body.dark footer i,
-body.dark .fixo i,
-body.dark .menu-mobile .btn-login i {
-    color: #000000 !important;
+body.dark .fixo i{
+    color: black !important;
 }
 
 body.dark h1,
@@ -212,7 +214,7 @@ header nav.menu-desktop ul li {
 }
 
 header nav.menu-desktop ul li a {
-    color: #fff;
+    color: #38c1a0;
     text-decoration: none;
     font-size: 18px;
     text-transform: uppercase;
@@ -258,6 +260,7 @@ header nav.menu-desktop ul li a {
     width: 65%;
     height: 25%;
     z-index: 50;
+    overflow-y: auto;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(5px);
@@ -368,7 +371,7 @@ footer {
     padding: 40px 4%;
     background-color: #38c1a0;
     width: 1920px;
-    margin-top: -5px;
+    margin-top: -6px;
 }
 
 footer .flex {

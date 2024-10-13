@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/acessibilidade.css">
 
     <script src="/js/pginicial.js" defer></script>
+    <script src="/js/acessibilidade.js" defer></script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -44,8 +46,8 @@
                     <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
 
                     <div class="dropdown-menu">
-                        <a href="userfreela.html">Freelancer</a>
-                        <a href="userempresa.html">Empresas</a>
+                        <a href="login.html">Freelancer</a>
+                        <a href="login.html">Empresas</a>
                     </div>
                 </li>
 
@@ -56,8 +58,9 @@
         </nav><!--links-->
 
         <div class="btn-topo btn">
-            <a href="#"><button class="login">Login</button></a>
-            <a href="#"><button>Publicar Projeto</button></a>
+            <a class="login-btn" href="login.html">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+            <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
+            <a href="login.html"><button>Publicar Projeto</button></a>
         </div><!--botao-topo-->
 
         <!--menu-mobile-->
@@ -76,7 +79,7 @@
                 <ul>
 
                     <li>
-                        <a class="btn-login" href="login.html"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
+                        <a class="btn-login" href="#"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
                     </li>
 
                     <li>
@@ -92,7 +95,7 @@
                     </li>
 
                     <li>
-                        <a href="#">Publicar Projeto</a>
+                        <a href="login.html">Publicar Projeto</a>
                     </li>
                 </ul><!---ul-->
             </nav><!--links-->
@@ -246,7 +249,7 @@
                     <div class="flex">
     
                         <div class="depoimentos-box efeito-depoimentos-1">
-                            <img src="img/1.jpg">
+                            <img src="/img/1.jpg">
                             <h4>Carlos</h4>
                             <p>“Trabalhar com a <span>Dev Hunt</span> foi uma experiência incrível. Eles entenderam
                                 exatamente o que eu precisava e entregaram um trabalho de alta qualidade dentro do prazo.
@@ -254,7 +257,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-2">
-                            <img src="img/2.jpg">
+                            <img src="/img/2.jpg">
                             <h4>Rebeca</h4>
                             <p>“Desde que comecei a colaborar com a <span>Dev Hunt</span>, minha carreira como freelancer
                                 decolou. Eles me conectaram com clientes incríveis e projetos desafiadores que me ajudaram a
@@ -262,7 +265,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-3">
-                            <img src="img/4.jpg">
+                            <img src="/img/4.jpg">
                             <h4>Pedro</h4>
                             <p> “A flexibilidade e o suporte oferecidos pela <span>Dev Hunt</span> são incomparáveis. Eles
                                 sempre estão disponíveis para ajudar e garantir que eu tenha tudo o que preciso para
@@ -270,7 +273,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-4">
-                            <img src="img/3.jpg">
+                            <img src="/img/3.jpg">
                             <h4>Bruna</h4>
                             <p>“Graças ao trabalho com a <span>Dev Hunt</span>, consegui alcançar uma independência
                                 financeira que nunca imaginei ser possível. Agora, posso focar em projetos que realmente me
@@ -278,7 +281,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-5">
-                            <img src="img/5.jpg">
+                            <img src="/img/5.jpg">
                             <h4>Henrique</h4>
                             <p>“A qualidade e o profissionalismo da <span>Dev Hunt</span> são excepcionais. Cada projeto é
                                 tratado com o máximo cuidado e atenção aos detalhes, resultando em entregas que superam as

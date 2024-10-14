@@ -139,13 +139,6 @@ body {
     text-decoration: none;
   }
   
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #80808021 ;
-    color: #e0e0e0;
-  }
-  
   @media (max-width: 768px) {
     .Barra input {
         width: 100%;

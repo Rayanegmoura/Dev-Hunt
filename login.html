@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/style-Login.css">
+    <link rel="stylesheet" href="css/style-Login.css">
+    <script src="/js/login.js" defer></script>
 </head>
 <body>
     <div class="login-container">
         <div class="logo-container">
-            <img src="dev_hunt_logo.png" alt="Dev Hunt Logo" class="logo">
+            <img src="img/logo-2.png" alt="Dev Hunt Logo" class="logo">
         </div>
 
         <form id="loginForm">
@@ -29,9 +30,9 @@
 
             <p id="errorMessage"></p>
         </form>
-        
+
         <div class="register-section">
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+            <p>Não tem uma conta? <a href="cadastro.html" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
         </div>
     </div>
 

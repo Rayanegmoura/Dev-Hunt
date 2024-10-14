@@ -1,3 +1,58 @@
+// BOTÃO DE ACESSIBILIDADE
+
+const toggleBtn = document.getElementById('toggleAcessibilidade');
+const acessibilidadeDiv = document.getElementById('acessibilidade');
+
+
+toggleBtn.addEventListener('click', function() {
+    acessibilidadeDiv.classList.toggle('ativo');
+});
+
+// ACESSIBILIDADE MODO CLARO
+
+let trilho = document.getElementById('trilho')
+let body = document.querySelector('body')
+let imagem = document.getElementById('imagemAcessibilidade'); 
+
+trilho.addEventListener('click', ()=>{
+    trilho.classList.toggle('dark')
+    body.classList.toggle('dark')
+
+    if (body.classList.contains('dark')) {
+        imagem.src = "/img/logo-2.png";
+    } else {
+        imagem.src = "/img/logo.png";
+    }
+});
+
+// ACESSIBILIDADE AUMENTAR E DIMINUIR FONTE
+
+var $btnAumentar = $("#btnAumentar");
+var $btnDiminuir = $("#btnDiminuir");
+var $elemento = $("body #content").find("*"); 
+var fonts = [];
+
+function obterTamanhoFonte() {
+  for (var i = 0; i < $elemento.length; i++) {
+    fonts.push(parseFloat($elemento.eq(i).css('font-size')));
+  }
+}
+obterTamanhoFonte();
+$btnAumentar.on('click', function() {
+  for (var i = 0; i < $elemento.length; i++) {
+    ++fonts[i];
+    $elemento.eq(i).css('font-size', fonts[i]);
+  }
+});
+
+$btnDiminuir.on('click', function() {
+  for (var i = 0; i < $elemento.length; i++) {
+    --fonts[i];
+    $elemento.eq(i).css('font-size', fonts[i]);
+  }
+});
+
+
 // Gráfico de rosca para 'Interação'
 const data1 = {
     labels: ['Cinza Metálico', 'Azul Metálico', 'Roxo Metálico'],
@@ -60,69 +115,4 @@ const data1 = {
     );
   });
   
-  // Acessibilidade: Modo claro/escuro
-  let trilho = document.getElementById('trilho');
-  let body = document.querySelector('body');
-  
-  trilho.addEventListener('click', () => {
-    trilho.classList.toggle('dark');
-    body.classList.toggle('dark');
-  });
-  
-  // Acessibilidade: Aumentar e diminuir fonte
-  let btnAumentar = document.getElementById('btnAumentar');
-  let btnDiminuir = document.getElementById('btnDiminuir');
-  let elementos = document.querySelectorAll('body *');
-  let fonts = [];
-  
-  elementos.forEach(el => {
-    fonts.push(parseFloat(window.getComputedStyle(el).fontSize));
-  });
-  
-  btnAumentar.addEventListener('click', () => {
-    elementos.forEach((el, i) => {
-      fonts[i]++;
-      el.style.fontSize = fonts[i] + 'px';
-    });
-  });
-  
-  btnDiminuir.addEventListener('click', () => {
-    elementos.forEach((el, i) => {
-      fonts[i]--;
-      el.style.fontSize = fonts[i] + 'px';
-    });
-  });
-  
-  // Gráfico de polar para 'Interação' no Tube
-  const data2 = {
-    labels: [
-      'Red',
-      'Green',
-      'Yellow',
-      'Grey',
-      'Blue'
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [11, 16, 7, 3, 14],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(75, 192, 192)',
-        'rgb(255, 205, 86)',
-        'rgb(201, 203, 207)',
-        'rgb(54, 162, 235)'
-      ]
-    }]
-  };
-  
-  const config3= {
-    type: 'polarArea',
-  data: data2,
-  options: {}
-};
-
-  const chartTube = new Chart(
-    document.getElementById('tubeChart'),
-    config3
-  );
-  
+ 

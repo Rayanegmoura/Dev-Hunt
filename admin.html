@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="menu-principal">
+    <header>
 
         <nav class="menu-lateral">
 
@@ -38,37 +38,25 @@
                 
                 <li class="item-menu">
                     <a href="sobre.html">
-                        <span class="icon"><i class="bi bi-file-person" title="Sobre"></i></span>
-                        <span class="txt-link">Sobre</span>
+                        <span class="icon"><i class="bi bi-columns-gap" title="Sobre"></i></span>
+                        <span class="txt-link">Dashboard </span>
                     </a>
                 </li>
     
                 <li class="item-menu">
                     <a href="minimundo.html">
                         <span class="icon"><i class="bi bi-globe2" title="MiniMundo"></i></span>
-                        <span class="txt-link">MiniMundo</span>
+                        <span class="txt-link">Calendario</span>
                     </a>
                 </li>
     
                 <li class="item-menu">
                     <a href="conceitual.html">
-                        <span class="icon"><i class="bi bi-diagram-3" title="Conceitual"></i></span>
-                        <span class="txt-link">Conceitual</span>
+                        <span class="icon"><i class="bi bi-gear" title="Conceitual"></i></span>
+                        <span class="txt-link">Configuração</span>
                     </a>
                 </li>
-    
-                <li class="item-menu">
-                    <a href="logico.html">
-                        <span class="icon"><i class="bi bi-hdd-stack" title="Lógico"></i></span>
-                        <span class="txt-link">Lógico</span>
-                    </a>
-                </li>
-    
-                <li class="item-menu">
-                    <a href="fisico.html">
-                        <span class="icon"><i class="bi bi-hdd-network" title="Físico"></i></span>
-                        <span class="txt-link">Físico</span>
-                    </a>
+
                 </li>
             </ul>
         </nav><!--menu-lateral-->
@@ -96,9 +84,50 @@
                 </div> <!--maior-menor-->
             </div><!--acessibilidade-->
         </div><!--btn-fixo-->
+
+        <div class="main-content">
+            <div class="dashboard">
+              <div class="panel large">
+                <div class="title">Performance</div>
+                <div class="content">
+                  <canvas id="chart1"></canvas>
+                </div>
+              </div>
+      
+              <div class="panel medium">
+                  <div class="title">Tube</div>
+                  <div class="content tube-center">
+                    <div id="tubeChart"></div>
+                  </div>
+                </div>
+                   
+              <div class="panel medium">
+                <div class="title">Saldo</div>
+                <div class="content">
+                  <div class="stat">Funcionamento: 72%</div>
+                  <div class="stat">Memory: 16GB</div>
+                </div>
+              </div>
+      
+              <div class="panel medium">
+                <div class="title">Interação</div>
+                <div class="content">
+                  <canvas id="chart2"></canvas>
+                </div>
+              </div>
+      
+              <div class="panel small">
+                <div class="title">Conexão</div>
+                <div class="content">
+                  <canvas id="chart3"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
     </main>
 
-    
   <script src="\js\pagina-admin.js"></script>
 </body>
 </html>

@@ -350,6 +350,7 @@ footer .flex {
     body.dark footer *,
     body.dark footer i,
     body.dark .fixo i,
+    body.dark .btn-plano,
     body.dark .menu-mobile .btn-login i {
         color: #fff !important;
     }

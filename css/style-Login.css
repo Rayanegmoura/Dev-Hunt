@@ -136,10 +136,10 @@
   }
   
   .login-container {
-      background-color: #1a1a2e;
+      background-color: #383838a3;
       padding: 40px;
       border-radius: 10px;
-      border: 2px solid #00d1ff;
+      border: 2px solid #38c1a0;
       box-shadow: 0 5px 15px rgba(104, 38, 120, 0.75);
       width: 350px;
       text-align: center;
@@ -167,7 +167,7 @@
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
-      border: 1px solid #00d1ff;
+      border: 1px solid #38c1a0;
       border-radius: 4px;
       background-color: #000;
       color: #fff;

@@ -81,7 +81,7 @@ header nav.menu-desktop ul li a {
     color: #b90000;
 }
 
-.btn-topo button {
+button {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: uppercase;
@@ -263,6 +263,7 @@ footer .flex {
     }
     
     .fixo i {
+        
         color: #fff;
     }
     

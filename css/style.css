@@ -369,8 +369,8 @@ section.ajuda .flex {
 .ajuda a:hover {
     color: #38c1a0;
 }
-
-/* RESPONSIVIDADE */
+ 
+/* RESPONSIVIDADE */ 
 
 @media screen and (max-width: 1020px){
     /* CLASSES GERAIS */

@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevHunt - Planos</title>
+    <title>Planos</title>
     <link rel="stylesheet" href="css/planos.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="/js/acessibilidade.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/css/acessibilidade.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src=""></script>
 </head>
 <body>
     <header class="menu-principal">
@@ -31,23 +36,22 @@
                     <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
 
                     <div class="dropdown-menu">
-                        <a href="userfreela.html">Freelancer</a>
-                        <a href="userempresa.html">Empresas</a>
+                        <a href="planos.html">Planos</a>
+                        <a href="login.html">Freelancer</a>
+                        <a href="login.html">Empresas</a>
                     </div>
                 </li>
 
                 <li>
                     <a href="ajuda.html">Ajuda</a>
                 </li>
-
-                <li class="login-topo">
-                    <a href="login.html">Login</a>
-                </li>
             </ul><!---ul-->
         </nav><!--links-->
 
         <div class="btn-topo btn">
-            <a href="#"><button>Publicar Projeto</button></a>
+            <a class="login-btn" href="login.html">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+            <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
+            <a href="login.html"><button>Publicar Projeto</button></a>
         </div><!--botao-topo-->
 
         <!--menu-mobile-->
@@ -63,30 +67,10 @@
             </div><!--btn-fechar-->
 
             <nav>
-
-                <div class="btn-fixo" id="btn-fixo">
-                    <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
-                
-                    <div class="acessibilidade" id="acessibilidade">
-                        <h6 class="acess">Acessibilidade</h6>
-                        
-                        <div class="modo-escuro">
-                            <div class="trilho" id="trilho">
-                                <div class="indicador"></div><!--indicador-->
-                            </div><!--trilho-->
-                        </div><!--modo-escuro-->
-                
-                        <div class="maior-menor" id="maior-menor">
-                            <button type="button" id="btnAumentar">A+</button>
-                            <button type="button" id="btnDiminuir">A-</button>
-                        </div> <!--maior-menor-->
-                    </div><!--acessibilidade-->
-                </div><!--btn-fixo-->
-
                 <ul>
 
                     <li>
-                        <a class="btn-login" href="login.html"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
+                        <a class="btn-login" href="#"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
                     </li>
 
                     <li>
@@ -102,7 +86,7 @@
                     </li>
 
                     <li>
-                        <a href="#">Publicar Projeto</a>
+                        <a href="login.html">Publicar Projeto</a>
                     </li>
                 </ul><!---ul-->
             </nav><!--links-->
@@ -114,8 +98,27 @@
         </div><!--overlay-menu-->
 
     </header><!--fim-menu-principal-->
-
     <main>
+        
+        <div class="btn-fixo" id="btn-fixo">
+            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+        
+            <div class="acessibilidade" id="acessibilidade">
+                <h6 class="acess">Acessibilidade</h6>
+                
+                <div class="modo-escuro">
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div><!--indicador-->
+                    </div><!--trilho-->
+                </div><!--modo-escuro-->
+        
+                <div class="maior-menor" id="maior-menor">
+                    <button type="button" id="btnAumentar">A+</button>
+                    <button type="button" id="btnDiminuir">A-</button>
+                </div> <!--maior-menor-->
+            </div><!--acessibilidade-->
+        </div><!--btn-fixo-->
+
         <h1>Nossos Planos</h1>
         <div class="planos-container">
             <div class="planos">

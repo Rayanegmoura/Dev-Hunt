@@ -150,6 +150,7 @@ footer .flex {
 
 .footer-2 a {
     text-decoration: none;
+    color: #fff;
 }
 
 
@@ -331,6 +332,10 @@ footer .flex {
     
     body.dark {
         background-color: #d5d4d4!important;
+    }
+
+    body.dark topo-do-site {
+        background-color: #000!important;
     }
     
     body.dark .txt-3,

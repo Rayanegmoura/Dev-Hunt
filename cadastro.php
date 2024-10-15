@@ -23,9 +23,9 @@ if(isset($_POST['submit'])) {
     print_r('<br>');*/
     
     include_once('config.php');
-
-    $nome = $_POST['nome'];
+    
     $usuario = $_POST['usuario'];
+    $nome = $_POST['nome'];
     $mae = $_POST['mae'];
     $cpf = $_POST['cpf'];
     $dat_nasc = $_POST['dat_nasc'];

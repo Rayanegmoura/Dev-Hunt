@@ -1,16 +1,15 @@
 <?php
-     
-         $dbHost = 'localHost';
-         $dbUserName = 'Formulario';
-         $dbPassword = '';
-         $dbName = 'Formulario_ryan';
+   $dbHost = 'localHost';
+   $dbUserName = 'root';
+   $dbPassword = '';
+   $dbName = 'dev_hunt';
 
-         $conexao = new mysqli($dbHost,$dbUserName,$dbName);
+   $conexao = new mysqli($dbHost,$dbUserName,$dbPassword,$dbName);
 
-         if($conexao->connect_errno){
-          echo "erro";
-         }
-         else{
-            echo"conexao efetuada com sucesso";
-         }
+   if($conexao->connect_errno){
+    echo "erro";
+   }
+   else{
+      echo"conexao efetuada com sucesso";
+   }
 ?>

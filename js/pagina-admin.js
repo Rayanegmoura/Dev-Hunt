@@ -1,83 +1,6 @@
-// BOTÃO DE ACESSIBILIDADE
-
-const toggleBtn = document.getElementById('toggleAcessibilidade');
-const acessibilidadeDiv = document.getElementById('acessibilidade');
-
-
-toggleBtn.addEventListener('click', function() {
-    acessibilidadeDiv.classList.toggle('ativo');
-});
-
-// ACESSIBILIDADE MODO CLARO
-
-let trilho = document.getElementById('trilho')
-let body = document.querySelector('body')
-let imagem = document.getElementById('imagemAcessibilidade'); 
-
-trilho.addEventListener('click', ()=>{
-    trilho.classList.toggle('dark')
-    body.classList.toggle('dark')
-
-    if (body.classList.contains('dark')) {
-        imagem.src = "/img/logo-2.png";
-    } else {
-        imagem.src = "/img/logo.png";
-    }
-});
-
-// ACESSIBILIDADE AUMENTAR E DIMINUIR FONTE
-
-var $btnAumentar = $("#btnAumentar");
-var $btnDiminuir = $("#btnDiminuir");
-var $elemento = $("body #content").find("*"); 
-var fonts = [];
-
-function obterTamanhoFonte() {
-  for (var i = 0; i < $elemento.length; i++) {
-    fonts.push(parseFloat($elemento.eq(i).css('font-size')));
-  }
-}
-obterTamanhoFonte();
-$btnAumentar.on('click', function() {
-  for (var i = 0; i < $elemento.length; i++) {
-    ++fonts[i];
-    $elemento.eq(i).css('font-size', fonts[i]);
-  }
-});
-
-$btnDiminuir.on('click', function() {
-  for (var i = 0; i < $elemento.length; i++) {
-    --fonts[i];
-    $elemento.eq(i).css('font-size', fonts[i]);
-  }
-});
-
-
-// Gráfico de rosca para 'Interação'
-const data1 = {
-    labels: ['Cinza Metálico', 'Azul Metálico', 'Roxo Metálico'],
-    datasets: [{
-      label: 'Porcentagem',
-      data: [500, 500, 150],
-      backgroundColor: ['rgb(169, 169, 169)', 'rgb(0, 122, 204)', 'rgb(75, 0, 130)'],
-      borderColor: ['rgb(100, 100, 100)', 'rgb(0, 102, 174)', 'rgb(55, 0, 100)'],
-      borderWidth: 2,
-      hoverOffset: 4
-    }]
-  };
-  
-  const config1 = {
-    type: 'doughnut',
-    data: data1,
-  };
-  
-  const chart2 = new Chart(
-    document.getElementById('chart2'),
-    config1
-  );
-  
-  // Gráfico de barras para 'Performance'
-  document.addEventListener('DOMContentLoaded', function () {
+// Certifique-se de que o Chart.js está carregado corretamente
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico de barras para 'Performance'
     const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'];
     const data = {
       labels: labels,
@@ -113,6 +36,27 @@ const data1 = {
       document.getElementById('chart1'),
       config
     );
-  });
   
- 
+    // Gráfico de rosca para 'Interação'
+    const data1 = {
+      labels: ['Cinza Metálico', 'Azul Metálico', 'Roxo Metálico'],
+      datasets: [{
+        label: 'Porcentagem',
+        data: [500, 500, 150],
+        backgroundColor: ['rgb(169, 169, 169)', 'rgb(0, 122, 204)', 'rgb(75, 0, 130)'],
+        borderColor: ['rgb(100, 100, 100)', 'rgb(0, 102, 174)', 'rgb(55, 0, 100)'],
+        borderWidth: 2,
+        hoverOffset: 4
+      }]
+    };
+    
+    const config1 = {
+      type: 'doughnut',
+      data: data1,
+    };
+    
+    const chart2 = new Chart(
+      document.getElementById('chart2'),
+      config1
+    );
+});

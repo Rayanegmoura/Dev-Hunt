@@ -48,6 +48,9 @@ if(isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastro.css">
     <title>Formulário</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -126,5 +129,10 @@ if(isset($_POST['submit'])) {
 
         </form>
     </div>
+    <script>
+        $('#cpf').mask('000.000.000-00');
+        $('#celular').mask('(00) 0000-0000');
+        $('#cep').mask('00000-000');
+    </script>
 </body>
 </html>

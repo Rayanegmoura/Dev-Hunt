@@ -254,7 +254,7 @@ footer .flex {
         border: none !important;
         border-radius: 50%;
         cursor: pointer;
-        font-size: 24px;
+        font-size: 44px;
         z-index: 1000;
     }
     
@@ -350,6 +350,7 @@ footer .flex {
     body.dark footer *,
     body.dark footer i,
     body.dark .fixo i,
+    body.dark .btn-plano,
     body.dark .menu-mobile .btn-login i {
         color: #fff !important;
     }

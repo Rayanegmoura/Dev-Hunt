@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/style-Login.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
     <script src="/js/login.js" defer></script>
+    <script src="/js/acessibilidade.js" defer></script>
 </head>
 <body>
+    <main>
     <div class="login-container">
         <div class="logo-container">
-            <img src="img/logo-2.png" alt="Dev Hunt Logo" class="logo">
+            <img src="img/logo.png" alt="Dev Hunt Logo" class="logo">
         </div>
 
         <form id="loginForm">
@@ -35,7 +38,36 @@
             <p>Não tem uma conta? <a href="cadastro.html" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
         </div>
     </div>
+    <div class="btn-fixo" id="btn-fixo">
+        <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+    
+        <div class="acessibilidade" id="acessibilidade">
+            <h6 class="acess">Acessibilidade</h6>
+            
+            <div class="modo-escuro">
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div><!--indicador-->
+                </div><!--trilho-->
+            </div><!--modo-escuro-->
+    
+            <div class="maior-menor" id="maior-menor">
+                <button type="button" id="btnAumentar">A+</button>
+                <button type="button" id="btnDiminuir">A-</button>
+            </div> <!--maior-menor-->
+        </div><!--acessibilidade-->
+    </div><!--btn-fixo-->
 
     <script src="script.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
 </body>
 </html>

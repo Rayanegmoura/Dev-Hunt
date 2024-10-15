@@ -332,11 +332,12 @@ footer .flex {
     }
     
     body.dark {
-        background-color: #d5d4d4!important;
+        background-color: #d5d4d4;
     }
 
-    body.dark topo-do-site {
-        background-color: #000!important;
+    body.dark .topo-do-site {
+        background-color: #000000;
+        opacity: 0.9;
     }
     
     body.dark .txt-3,

@@ -75,7 +75,7 @@ if(isset($_POST['submit'])) {
 
             <div class="label-float">
             <label for="nasc"></label>
-            <input type="date" id="nasc" name="dat_nasc" required>
+            <input class="data" type="date" id="nasc" name="dat_nasc" required>
             </div>
 
             <div class="label-float">

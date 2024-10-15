@@ -17,19 +17,20 @@ body {
 }
 
 .dashboard {
-position: absolute;    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    position: grid;   
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
     padding: 9px;
     margin: 1%;
-    width: calc(100% - 80px);
+    width: calc(70% - 90px);
     transition: width 0.2s;
 }
 
 .panel {
     background: #2c2c34;
     border-radius: 10px;
-    padding: 10%;
-    height: 100%;
+    padding: 70;
+    height: 90%;
     box-shadow: 0 5px 15px rgba(57, 78, 146, 0.852);
 }
 

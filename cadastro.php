@@ -50,8 +50,12 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container">
+        <img class="logo" src="img/logo-2.png">
         <form action="cadastro.php" method="POST">
-
+        <div class="label-float">
+                <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />
+                <label for="nome">Usuário</label>
+            </div>
             <div class="label-float">
                 <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
                 <label for="nome">Nome Completo</label>
@@ -69,7 +73,7 @@ if(isset($_POST['submit'])) {
 
             <div class="label-float">
             <label for="nasc">Data de Nascimento:</label>
-            <input type="nasc" id="nasc" name="dat_nasc" required>
+            <input type="date" id="nasc" name="dat_nasc" required>
             </div>
 
             <div class="label-float">

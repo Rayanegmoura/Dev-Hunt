@@ -68,7 +68,7 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-            <label for="nasc">Data de Nascimento:</label>
+            <label for="nasc">Data de Nascimento:</label> //mudar o t
             <input type="text" id="nasc" name="dat_nasc" required>
             </div>
 

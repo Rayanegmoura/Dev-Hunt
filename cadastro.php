@@ -25,6 +25,7 @@ if(isset($_POST['submit'])) {
     include_once('config.php');
 
     $nome = $_POST['nome'];
+    $usuario = $_POST['usuario'];
     $mae = $_POST['mae'];
     $cpf = $_POST['cpf'];
     $dat_nasc = $_POST['dat_nasc'];
@@ -35,8 +36,8 @@ if(isset($_POST['submit'])) {
     $senha = $_POST['senha'];
     $sexo = $_POST['sexo'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
 }
 ?>
 
@@ -60,6 +61,7 @@ if(isset($_POST['submit'])) {
                 <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
                 <label for="nome">Nome Completo</label>
             </div>
+            
 
             <div class="label-float">
                 <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />

@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
     print_r('<br>');*/
     
     include_once('config.php');
-    
+
     $usuario = $_POST['usuario'];
     $nome = $_POST['nome'];
     $mae = $_POST['mae'];
@@ -58,9 +58,10 @@ if(isset($_POST['submit'])) {
         <img class="logo" src="img/logo.png">
         </a>
         <form action="cadastro.php" method="POST">
+
         <div class="label-float">
                 <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="nome">Usuário</label>
+                <label for="usuario">Usuário</label>
             </div>
             <div class="label-float">
                 <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />

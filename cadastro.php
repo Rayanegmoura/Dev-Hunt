@@ -24,6 +24,7 @@ if(isset($_POST['submit'])) {
     
     include_once('config.php');
 
+    $usuario = $_POST['usuario'];
     $nome = $_POST['nome'];
     $mae = $_POST['mae'];
     $cpf = $_POST['cpf'];
@@ -35,8 +36,8 @@ if(isset($_POST['submit'])) {
     $senha = $_POST['senha'];
     $sexo = $_POST['sexo'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
 }
 ?>
 
@@ -47,15 +48,26 @@ if(isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastro.css">
     <title>Formulário</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    
 </head>
 <body>
     <div class="container">
+        <a href="index.html">
+        <img class="logo" src="img/logo.png">
+        </a>
         <form action="cadastro.php" method="POST">
 
+        <div class="label-float">
+                <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />
+                <label for="usuario">Usuário</label>
+            </div>
             <div class="label-float">
                 <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
                 <label for="nome">Nome Completo</label>
             </div>
+            
 
             <div class="label-float">
                 <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />
@@ -68,8 +80,8 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-            <label for="nasc">Data de Nascimento:</label>
-            <input type="text" id="nasc" name="dat_nasc" required>
+            <label for="nasc"></label>
+            <input class="data" type="date" id="nasc" name="dat_nasc" required>
             </div>
 
             <div class="label-float">
@@ -112,10 +124,18 @@ if(isset($_POST['submit'])) {
             <label for="outros">Outro</label>
             </div>
 
-            <div class="justify-center">
-                <input type="submit" name="submit" id="submit" value="Cadastrar">
+            <div class="btntest">
+            <button type="submit" name="submit" id="submit">Cadastrar</button>
+
+            <button type="reset" name="reset" id="reset">Limpar</button>
             </div>
+
         </form>
     </div>
+    <script>
+        $('#cpf').mask('000.000.000-00');
+        $('#celular').mask('(00) 00000-0000');
+        $('#cep').mask('00000-000');
+    </script>
 </body>
 </html>

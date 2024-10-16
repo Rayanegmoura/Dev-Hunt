@@ -13,17 +13,19 @@
     <main>
     <div class="login-container">
         <div class="logo-container">
+            <a href="index.html">
             <img src="img/logo.png" alt="Dev Hunt Logo" class="logo">
+            </a>
         </div>
 
         <form id="loginForm">
-            <label for="login">Login</label>
-            <input type="text" id="login" name="login" maxlength="6" required>
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" maxlength="6" required>
 
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" minlength="8" required>
             <div class="forgot-password">
-                <a href="esqueci_senha.html">Esqueci minha senha</a>
+                <a href="esquecisenha.html">Esqueci minha senha</a>
             </div>
 
             <div class="button-container">

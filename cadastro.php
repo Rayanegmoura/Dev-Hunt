@@ -54,7 +54,9 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container">
+        <a href="index.html">
         <img class="logo" src="img/logo.png">
+        </a>
         <form action="cadastro.php" method="POST">
         <div class="label-float">
                 <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />

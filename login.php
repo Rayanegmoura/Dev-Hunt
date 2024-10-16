@@ -13,7 +13,9 @@
     <main>
     <div class="login-container">
         <div class="logo-container">
+            <a href="index.html">
             <img src="img/logo.png" alt="Dev Hunt Logo" class="logo">
+            </a>
         </div>
 
         <form id="loginForm">

@@ -25,7 +25,7 @@
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" minlength="8" required>
             <div class="forgot-password">
-                <a href="esqueci_senha.html">Esqueci minha senha</a>
+                <a href="esquecisenha.html">Esqueci minha senha</a>
             </div>
 
             <div class="button-container">

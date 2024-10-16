@@ -134,7 +134,7 @@ if(isset($_POST['submit'])) {
     </div>
     <script>
         $('#cpf').mask('000.000.000-00');
-        $('#celular').mask('(00) 0000-0000');
+        $('#celular').mask('(00) 00000-0000');
         $('#cep').mask('00000-000');
     </script>
 </body>

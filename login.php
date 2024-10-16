@@ -19,8 +19,8 @@
         </div>
 
         <form id="loginForm">
-            <label for="login">Login</label>
-            <input type="text" id="login" name="login" maxlength="6" required>
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" maxlength="6" required>
 
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" minlength="8" required>

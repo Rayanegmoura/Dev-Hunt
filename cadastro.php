@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
     $sexo = $_POST['sexo'];
 
      $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
 }
 ?>
 
@@ -78,7 +78,7 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-            <label for="nasc"></label>
+            <label for="dat_nasc"></label>
             <input class="data" type="date" id="nasc" name="dat_nasc" required>
             </div>
 
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="15" required />
+                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
                 <label for="celular">Celular</label>
             </div>
 

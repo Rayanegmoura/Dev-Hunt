@@ -60,3 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
       config1
     );
 });
+
+document.getElementById('btn-exp').addEventListener('click', function () {
+  const menu = document.getElementById('menuLateral');
+  menu.classList.toggle('expandir');
+});

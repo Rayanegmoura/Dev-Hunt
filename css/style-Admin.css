@@ -1,37 +1,162 @@
-*{
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #000;
+    background-color: #0f0e0e;
     height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #fff;
-    transition: .5s
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
 }
 
+/* MENU LATERAL */
+nav.menu-lateral {
+    width: 60px;
+    height: 100%;
+    background-color: #191a2129;
+    padding: 10px 5px;
+    box-shadow: 3px 0 15px #1e1f66;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.3s ease; /* Suavizar transição ao passar o mouse */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+}
+
+nav.menu-lateral:hover {
+    width: 250px; /* Largura ao passar o mouse */
+}
+
+/* Logo no início do menu */
+.menu-lateral .logo-inicio img {
+    width: 105px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-expandir > i {
+    font-size: 34px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Itens do menu lateral */
+ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li.item-menu {
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+ul li.ativo {
+    background-color: #38c1a0;
+    box-shadow: 0 0 15px #38c1a0;
+}
+
+ul li.item-menu:hover {
+    background-color: #38c1a0;
+    box-shadow: 0 0 15px #2e71c6;
+}
+
+ul li.item-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    padding: 10px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 20px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+
+nav.menu-lateral:hover ul li.item-menu a .txt-link {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+ul li.item-menu .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: #fff;
+    margin-right: 15px; /* Espaço entre ícone e texto */
+}
+
+ul li.item-menu .icon > i {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Expansão do menu */
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+    opacity: 1;
+}
+
+/* Conteúdo principal */
 .main-content {
-    margin-left: 80px; /* Espaço para o menu lateral */
+    margin-left: 80px; /* Espaço inicial para o menu lateral */
     flex-grow: 1;
     padding: 10px;
-    transition: margin-left 0.3s;
+    transition: margin-left 0.3s ease;
 }
 
+nav.menu-lateral:hover ~ .main-content {
+    margin-left: 200px; /* Ajuste do conteúdo ao expandir o menu */
+}
+
+/* DASHBOARD */
 .dashboard {
-    position: grid;   
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 10px;
-    padding: 9px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Layout em 3 colunas */
+    gap: 20px;
+    padding: 15px;
     margin: 1%;
-    width: calc(70% - 90px);
-    transition: width 0.2s;
+    width: calc(100% - 100px); /* Ajuste da largura */
+    transition: width 0.2s ease;
 }
 
 .panel {
     background: #2c2c34;
     border-radius: 10px;
-    padding: 70;
-    height: 90%;
-    box-shadow: 0 5px 15px rgba(57, 78, 146, 0.852);
+    padding: 20px;
+    min-height: 300px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(57, 78, 146, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .title {
@@ -44,18 +169,20 @@ body {
 
 .content {
     color: #c5c6c7;
+    flex-grow: 1;
 }
 
 canvas {
     width: 100%;
     height: auto;
+    max-height: 300px;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 1024px) {
     .dashboard {
         grid-template-columns: 1fr 1fr;
-        width: calc(100% - 80px);
+        width: calc(100% - 80px); /* Ajuste da largura para telas menores */
     }
 }
 

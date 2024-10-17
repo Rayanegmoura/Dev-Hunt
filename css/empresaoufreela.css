@@ -44,15 +44,18 @@
   }
   
   .empresa, .freela {
-      padding: 10px 20px;
+      padding: 13px 20px;
       background-color: #38c1a0;
       color: white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      width: 48%;
+      width: 78%;
       font-weight: bold;
   }
+  a{
+    width: 50%;
+}
   
   button:hover {
       background-color: #007bff;

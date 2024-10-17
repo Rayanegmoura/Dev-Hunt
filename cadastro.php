@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
     print_r('<br>');*/
     
     include_once('config.php');
-    
+
     $usuario = $_POST['usuario'];
     $nome = $_POST['nome'];
     $mae = $_POST['mae'];
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
     $sexo = $_POST['sexo'];
 
      $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
 }
 ?>
 
@@ -54,11 +54,14 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container">
+        <a href="index.html">
         <img class="logo" src="img/logo.png">
+        </a>
         <form action="cadastro.php" method="POST">
+
         <div class="label-float">
                 <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="nome">Usuário</label>
+                <label for="usuario">Usuário</label>
             </div>
             <div class="label-float">
                 <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
@@ -77,7 +80,7 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-            <label for="nasc"></label>
+            <label for="dat_nasc"></label>
             <input class="data" type="date" id="nasc" name="dat_nasc" required>
             </div>
 
@@ -87,7 +90,7 @@ if(isset($_POST['submit'])) {
             </div>
 
             <div class="label-float">
-                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="15" required />
+                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
                 <label for="celular">Celular</label>
             </div>
 
@@ -131,7 +134,7 @@ if(isset($_POST['submit'])) {
     </div>
     <script>
         $('#cpf').mask('000.000.000-00');
-        $('#celular').mask('(00) 0000-0000');
+        $('#celular').mask('(00) 00000-0000');
         $('#cep').mask('00000-000');
     </script>
 </body>

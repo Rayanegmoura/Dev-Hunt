@@ -2,85 +2,67 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Administradora</title>
-  <link rel="stylesheet" href="/Dev-Hunt/css/style-Admin.css">
-  
-  <script src="/Dev-Hunt/js/acessibilidade.js" defer></script>
- 
-  <link rel="stylesheet" type="text/css" href="/Dev-Hunt/css/userfreela.css">
-  <link rel="stylesheet" type="text/css" href="/Dev-Hunt/css/acessibilidade.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Administradora</title>
+    <link rel="stylesheet" href="/Dev-Hunt/css/style-Admin.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/Dev-Hunt/js/acessibilidade.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <header>
-
+    <header class="menu-principal">
         <nav class="menu-lateral">
-
             <div class="logo-inicio">
                 <a href="index.html">
                     <img src="/Dev-Hunt/img/logo.png">
                 </a>
             </div>
-
             <div class="btn-expandir">
                 <i class="bi bi-list" id="btn-exp"></i>
             </div><!--btn-expandir-->
-    
             <ul>
-                <li class="item-menu ativo">
+                <li class="item-menu">
                     <a href="index.html">
                         <span class="icon"><i class="bi bi-house" title="Início"></i></span>
                         <span class="txt-link">Início</span>
                     </a>
                 </li>
-                
                 <li class="item-menu">
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-columns-gap" title="Sobre"></i></span>
-                        <span class="txt-link">Dashboard </span>
+                    <a href="quemsomos.html">
+                        <span class="icon"><i class="bi bi-file-person" title="quemsomos"></i></span>
+                        <span class="txt-link">Sobre</span>
                     </a>
                 </li>
-    
                 <li class="item-menu">
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-globe2" title="MiniMundo"></i></span>
-                        <span class="txt-link">Calendario</span>
+                    <a href="ajuda.html">
+                        <span class="icon"><i class="bi bi-info-circle-fill"></i></span>
+                        <span class="txt-link">Ajuda</span>
                     </a>
                 </li>
-    
                 <li class="item-menu">
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-gear" title="Conceitual"></i></span>
-                        <span class="txt-link">Configuração</span>
+                    <a href="ajuda.html">
+                        <span class="icon"><i class="bi bi-clipboard-check-fill"></i></span>
+                        <span class="txt-link">Planos</span>
                     </a>
-                </li>
-
                 </li>
             </ul>
         </nav><!--menu-lateral-->
-    
-        <script src="/Dev-Hunt/js/userempresa.js"></script>
-
     </header><!--fim-menu-principal-->
 
     <main>
         <div class="btn-fixo" id="btn-fixo">
             <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
-        
             <div class="acessibilidade" id="acessibilidade">
                 <h6 class="acess">Acessibilidade</h6>
-                
                 <div class="modo-escuro">
                     <div class="trilho" id="trilho">
                         <div class="indicador"></div><!--indicador-->
                     </div><!--trilho-->
                 </div><!--modo-escuro-->
-        
                 <div class="maior-menor" id="maior-menor">
                     <button type="button" id="btnAumentar">A+</button>
                     <button type="button" id="btnDiminuir">A-</button>
@@ -90,54 +72,48 @@
 
         <div class="main-content">
             <div class="dashboard">
-              <div class="panel large">
-                <div class="title">Performance</div>
-                <div class="content">
-                  <canvas id="chart1"></canvas>
+                <div class="panel large">
+                    <div class="title">Performance</div>
+                    <div class="content">
+                        <canvas id="chart1"></canvas>
+                    </div>
                 </div>
-              </div>
-      
-              <div class="panel medium">
-                  <div class="title">Tube</div>
-                  <div class="content tube-center">
-                    <div id="tubeChart"></div>
-                  </div>
+                <div class="panel medium">
+                    <div class="title">Tube</div>
+                    <div class="content tube-center">
+                        <div id="tubeChart"></div>
+                    </div>
                 </div>
-
                 <div class="panel medium">
                     <div class="title">Interação</div>
                     <div class="content">
-                      <canvas id="chart2"></canvas>
+                        <canvas id="chart2"></canvas>
                     </div>
-                  </div>
-                   
-              <div class="panel medium">
-                <div class="title">Saldo</div>
-                <div class="content">
-                  <div class="stat">Funcionamento: 72%</div>
-                  <div class="stat">Memory: 16GB</div>
                 </div>
-              </div>
-      
-              <div class="panel medium">
-                <div class="title">Interação</div>
-                <div class="content">
-                  <canvas id="chart2"></canvas>
+                <div class="panel medium">
+                    <div class="title">Saldo</div>
+                    <div class="content">
+                        <div class="stat">Funcionamento: 72%</div>
+                        <div class="stat">Memory: 16GB</div>
+                    </div>
                 </div>
-              </div>
-      
-              <div class="panel small">
-                <div class="title">Conexão</div>
-                <div class="content">
-                  <canvas id="chart3"></canvas>
+                <div class="panel medium">
+                    <div class="title">Interação</div>
+                    <div class="content">
+                        <canvas id="chart2"></canvas>
+                    </div>
                 </div>
-              </div>
+                <div class="panel small">
+                    <div class="title">Conexão</div>
+                    <div class="content">
+                        <canvas id="chart3"></canvas>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      
     </main>
 
-  <script src="/Dev-Hunt/js/pagina-admin.js"></script>
+    <script src="/Dev-Hunt/js/pagina-admin.js"></script>
 </body>
+
 </html>

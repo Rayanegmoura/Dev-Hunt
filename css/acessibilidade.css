@@ -342,8 +342,18 @@ footer .flex {
     
     body.dark .txt-3,
     body.dark footer,
-    body.dark .escolha button {
+    body.dark .escolha button,
+    body.dark .Barra button,
+    body.dark .link a,
+    body.dark .topico:hover {
         background-color: #2e71c6;
+    }
+
+    body.dark .link a:hover,
+    body.dark .topico,
+    body.dark .btn-plano {
+        background-color: #38c1a0;
+        border: #38c1a0;
     }
     
     body.dark header ul li a,
@@ -354,29 +364,38 @@ footer .flex {
     body.dark .fixo i,
     body.dark .escolha button,
     body.dark .btn-plano,
-    body.dark .menu-mobile .btn-login i {
+    body.dark .menu-mobile .btn-login i,
+    body.dark .link a,
+    body.dark  .topico {
         color: #fff !important;
     }
     
     body.dark h1,
     body.dark i,
     body.dark i,
-    body.dark ul li a:hover {
-        color: #2e71c6 !important; 
+    body.dark ul li a:hover,
+    body.dark .ajuda1 h2,
+    body.dark .ajuda1 a,
+    body.dark .plano h2 {
+        color: #2e71c6; 
     }
     
     body.dark h3,
     body.dark h4,
     body.dark p,
     body.dark ul li, 
-    body.dark a {
+    body.dark a,
+    body.dark .serv-box h2,
+    body.dark .p-ajuda h2,
+    body.dark .Bemvindo i,
+    body.dark .Barra input{
         color: #000;
     }
     
     body.dark span,
     body.dark .planos h3,
     body.dark .txt-topo-site i,
-    body.dark .p-planos i {
+    body.dark .p-planos i{
         color: #38c1a0 !important;
     }
     

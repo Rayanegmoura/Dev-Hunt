@@ -59,6 +59,7 @@ main {
 }
 h1 {
     margin-bottom: 40px; 
+    color: #38c1a0;
 }
 .planos-container {
     display: flex;

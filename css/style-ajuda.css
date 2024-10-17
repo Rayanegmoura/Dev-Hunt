@@ -13,7 +13,9 @@ body {
   .Bemvindo {
     text-align: center;
     margin-bottom: 40px;
-    margin: 100px;
+    margin: 130px;
+    color: #38c1a0;
+    font-size: 30px;
   }
   
   .Barra {
@@ -31,21 +33,22 @@ body {
     border: 1px solid #4a5a67; 
     font-size: 16px;
     background-color: #80808021; 
-    color: #e0e0e0;
+    color: #fff;
   }
   
   .Barra button {
     padding: 15px;
     background-color: #38c1a0; 
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
   }
+
   .Bemvindo i{
     color : #070000;
-    font-size: 18px;
+    font-size: 20px;
   }
   .Links {
     background-color: #80808021; 

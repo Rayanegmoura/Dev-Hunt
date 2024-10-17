@@ -5,51 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/empresaoufreela.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="/js/login.js" defer></script>
     <script src="/js/acessibilidade.js" defer></script>
 </head>
 <body>
     <main>
-    <div class="container">
-        <div class="logo-container">
-            <a href="index.html">
-            <img src="img/logo.png" alt="Dev Hunt Logo" class="logo">
-            </a>
-        </div>
+        <div class="container">
+
+            <div class="logo-ef">
+                <a href="/index.html">
+                    <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
+                </a><!--link-logo-->
+            </div><!--logo-->
+
             <div class="escolha">
-                <a href="login.php">
-                <button class="empresa">Empresa</button></a>
-                <a href="login.php"><button class="freela">Freelancer</button></a>
+                <button class="empresa">Empresa</button>
+                <button class="freela">Freelancer</button>
             </div>
-    </div>
-    <div class="btn-fixo" id="btn-fixo">
-        <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
-    
-        <div class="acessibilidade" id="acessibilidade">
-            <h6 class="acess">Acessibilidade</h6>
-            
-            <div class="modo-escuro">
-                <div class="trilho" id="trilho">
-                    <div class="indicador"></div><!--indicador-->
-                </div><!--trilho-->
-            </div><!--modo-escuro-->
-    
-            <div class="maior-menor" id="maior-menor">
-                <button type="button" id="btnAumentar">A+</button>
-                <button type="button" id="btnDiminuir">A-</button>
-            </div> <!--maior-menor-->
-        </div><!--acessibilidade-->
-    </div><!--btn-fixo-->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+
         </div>
-    </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+
+        <div class="btn-fixo" id="btn-fixo">
+            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+        
+            <div class="acessibilidade" id="acessibilidade">
+                <h6 class="acess">Acessibilidade</h6>
+                
+                <div class="modo-escuro">
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div><!--indicador-->
+                    </div><!--trilho-->
+                </div><!--modo-escuro-->
+        
+                <div class="maior-menor" id="maior-menor">
+                    <button type="button" id="btnAumentar">A+</button>
+                    <button type="button" id="btnDiminuir">A-</button>
+                </div> <!--maior-menor-->
+            </div><!--acessibilidade-->
+        </div><!--btn-fixo-->
+        
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+    </main>
 </body>
 </html>

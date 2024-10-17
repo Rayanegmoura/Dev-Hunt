@@ -331,6 +331,8 @@ footer .flex {
         left: 30px;
         background-color: #fff;
     }
+
+    /* ALTERÇÃO DA COR*/
     
     body.dark {
         background-color: #d5d4d4;
@@ -346,7 +348,9 @@ footer .flex {
     body.dark .escolha button,
     body.dark .Barra button,
     body.dark .link a,
-    body.dark .topico:hover {
+    body.dark .topico:hover,
+    body.dark .menu-mobile nav ul li a:hover,
+    body.dark .menu-mobile .btn-login {
         background-color: #2e71c6;
     }
 
@@ -367,7 +371,9 @@ footer .flex {
     body.dark .btn-plano,
     body.dark .menu-mobile .btn-login i,
     body.dark .link a,
-    body.dark  .topico {
+    body.dark  .topico,
+    body.dark .btn-expandir > i,
+    body.dark .card button{
         color: #fff !important;
     }
     
@@ -389,7 +395,9 @@ footer .flex {
     body.dark .serv-box h2,
     body.dark .p-ajuda h2,
     body.dark .Bemvindo i,
-    body.dark .Barra input{
+    body.dark .Barra input,
+    body.dark .card i,
+    body.dark .card h1{
         color: #000;
     }
     
@@ -427,31 +435,20 @@ footer .flex {
         box-shadow: 0 0 10px #2e71c6;
         border: 2px solid #2e71c6;
     }
-     
-    body.dark .txt-box:hover {
-        box-shadow: 0 0 30px #2e71c6;
+
+    body.dark ul li.ativo,
+    ul li.item-menu:hover {
+    background-color: #2e71c6;
+    box-shadow: 0 0 15px #2e71c6;
     }
-    
-    body.dark .menu-mobile nav ul li a:hover {
-        background-color: #2e71c6;
+
+    body.dark nav.menu-lateral,
+    body.dark .card {
+        box-shadow: 3px 0 15px #2e71c6;
     }
-    
-    
-    body.dark .menu-desktop a:hover, .login-topo a:hover {
-        box-shadow: -1px 2px 2px #2e71c6;
-        color: #2e71c6;
-    }
-    
-    body.dark .dropdown:hover .dropdown-menu {
-        box-shadow: 1px 2px 2px #2e71c6;
-    }
-    
-    body.dark .menu-mobile .btn-login {
-        background-color: #2e71c6;
-    }
-    
-    body.dark .menu-mobile .btn-login:hover {
-        box-shadow: 0 0 15px #2e71c6;
+
+    body.dark .btn-card button {
+        border: none;
     }
 
 

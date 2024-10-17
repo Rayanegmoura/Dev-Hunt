@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/userfreela.css">
 
+    <link rel="stylesheet" type="text/css" href="/css/acessibilidade.css">
+    <script src="/js/acessibilidade.js" defer></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src=""></script>
 
@@ -18,15 +21,15 @@
 
 <body>
 
-    <header class="menu-principal">
+    <header class="menu">
 
         <nav class="menu-lateral">
 
-            <div class="logo-inicio">
-                <a href="index.html">
-                    <img src="img/logo.png">
-                </a>
-            </div>
+            <div class="logo-uf">
+                <a href="/index.html">
+                    <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
+                </a><!--link-logo-->
+            </div><!--logo-->
 
             <div class="btn-expandir">
                 <i class="bi bi-list" id="btn-exp"></i>
@@ -36,7 +39,14 @@
                 <li class="item-menu">
                     <a href="index.html">
                         <span class="icon"><i class="bi bi-house" title="Início"></i></span>
-                        <span class="txt-link">Início</span>
+                        <span class="txt-link" href="index.html">Início</span>
+                    </a>
+                </li>
+
+                <li class="item-menu ativo">
+                    <a href="userempresa.html">
+                        <span class="icon"><i class="bi bi-bar-chart-steps"></i></span>
+                        <span class="txt-link" href="index.html">Feed</span>
                     </a>
                 </li>
                 
@@ -46,17 +56,18 @@
                         <span class="txt-link">Sobre</span>
                     </a>
                 </li>
+
+                <li class="item-menu">
+                    <a href="planos.html">
+                        <span class="icon"><i class="bi bi-clipboard-check-fill"></i></span>
+                        <span class="txt-link">Planos</span>
+                    </a>
+                </li>
     
                 <li class="item-menu">
                     <a href="ajuda.html">
                         <span class="icon"><i class="bi bi-info-circle-fill"></i></span>
                         <span class="txt-link">Ajuda</span>
-                    </a>
-                </li>
-                <li class="item-menu">
-                    <a href="ajuda.html">
-                        <span class="icon"><i class="bi bi-clipboard-check-fill"></i></span>
-                        <span class="txt-link">Planos</span>
                     </a>
                 </li>
             </ul>
@@ -67,7 +78,27 @@
     </header><!--fim-menu-principal-->
 
     <main>
+
+        <div class="btn-fixo" id="btn-fixo">
+            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
         
+            <div class="acessibilidade" id="acessibilidade">
+                <h6 class="acess">Acessibilidade</h6>
+                
+                <div class="modo-escuro">
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div><!--indicador-->
+                    </div><!--trilho-->
+                </div><!--modo-escuro-->
+        
+                <div class="maior-menor" id="maior-menor">
+                    <button type="button" id="btnAumentar">A+</button>
+                    <button type="button" id="btnDiminuir">A-</button>
+                </div> <!--maior-menor-->
+            </div><!--acessibilidade-->
+        </div><!--btn-fixo-->
+        
+    <div id="content">
         <section class="cards">
 
             <div class="card">
@@ -301,7 +332,7 @@
                 </div><!--btn-cards-->
             </div><!--cards-->
 
-            
+        </div>
         </section>
 
         <div vw class="enabled">

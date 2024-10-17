@@ -14,24 +14,13 @@ body {
     transition: .5s
 }
 
-/* PADRÕES DA PÁGINA */
-
-button {
-    background-color: #38c1a0;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
 
 /* MENU LATERAL */
 
 nav.menu-lateral {
     width: 60px;
     height: 100%;
-    background-color: #00000029;
+    background-color: #000000eb;
     padding: 10px 5px;
     box-shadow: 3px 0 15px #38c1a0;
     position: fixed;
@@ -48,7 +37,7 @@ nav.menu-lateral.expandir{
     width: 300px;
 }
 
-.menu-lateral .logo-inicio img {
+.menu-lateral .logo-uf img {
     width: 105px;
     height: auto;
     margin-bottom: 10px;
@@ -121,7 +110,7 @@ section.cards {
 .card {
     background-color: #c2c2c2;
     width: 760px;
-    height: 210px;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 5px 12px #38c1a0;
     margin: 30px;
@@ -147,6 +136,16 @@ section.cards {
 
 .card .btn-mensagem button {
     background-color: #2e71c6;
+}
+
+.btn-card button {
+    background-color: #38c1a0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .card h1 {

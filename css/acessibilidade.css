@@ -2,7 +2,7 @@
 
 /* ESTILO CABEÇALHO */
 
-header {
+header.menu-principal {
     position: fixed;
     top: 0;
     left: 0;
@@ -341,7 +341,8 @@ footer .flex {
     }
     
     body.dark .txt-3,
-    body.dark footer {
+    body.dark footer,
+    body.dark .escolha button {
         background-color: #2e71c6;
     }
     
@@ -351,6 +352,7 @@ footer .flex {
     body.dark footer *,
     body.dark footer i,
     body.dark .fixo i,
+    body.dark .escolha button,
     body.dark .btn-plano,
     body.dark .menu-mobile .btn-login i {
         color: #fff !important;
@@ -378,7 +380,8 @@ footer .flex {
         color: #38c1a0 !important;
     }
     
-    body.dark button {
+    body.dark button,
+    body.dark .container  {
         border: 2px solid #2e71c6;
         color: #2e71c6; 
     }

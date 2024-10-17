@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <form id="loginForm">
+        <form action="test.php" method="POST" id="loginForm">
             <label for="usuario">Usuário</label>
             <input type="text" id="usuario" name="usuario" maxlength="6" required>
 

@@ -199,3 +199,216 @@ canvas {
         grid-template-columns: 1fr;
     }
 }
+/* ACESSIBILIDADE */
+
+    /* BOTÃO DA ACESSIBILIDADE */
+
+    .fixo {
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+        padding: 10px 15px;
+        background-color: transparent;
+        border: none !important;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 44px;
+        z-index: 1000;
+    }
+    
+    .fixo:hover {
+        box-shadow: 0 0 0 !important;
+    }
+    
+    .fixo i {
+        
+        color: #fff;
+    }
+    
+    .acessibilidade {
+        text-align: center;
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+    
+    .acessibilidade.ativo {
+        display: block;
+    }
+    
+    .acess {
+        text-transform: uppercase;
+        color: #000;
+    }
+    
+    .modo-escuro {
+        top: 6px;
+        margin: 12px 0;
+    }
+    
+        /* AUMENTAR E DIMINUIR FONTE */
+    
+    .maior-menor button {
+        padding: 3px 3px;
+        margin-left: 4px;
+    }
+    
+        /* CLARO E ESCURO */
+    
+    .trilho {
+        width: 60px;
+        height: 30px;
+        background-color: #818181;
+        border-radius: 150px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .trilho .indicador {
+        width: 30px;
+        height: 30px;
+        background-color: #000000;
+        border-radius: 50%;
+        transform: scale(.9);
+        position: absolute;
+        left: 0;
+        transition: .5s;
+    }
+    
+    .trilho.dark {
+        background-color: #a9a9a9;
+    }
+    
+    .trilho.dark .indicador {
+        left: 30px;
+        background-color: #fff;
+    }
+    
+    body.dark {
+        background-color: #d5d4d4;
+    }
+
+    body.dark .topo-do-site {
+        background-color: #000000;
+        opacity: 0.9;
+    }
+    
+    body.dark .txt-3,
+    body.dark footer {
+        background-color: #2e71c6;
+    }
+    
+    body.dark header ul li a,
+    body.dark .topo-do-site ul li,
+    body.dark .txt-3 *,
+    body.dark footer *,
+    body.dark footer i,
+    body.dark .fixo i,
+    body.dark .btn-plano,
+    body.dark .menu-mobile .btn-login i {
+        color: #fff !important;
+    }
+    
+    body.dark h1,
+    body.dark i,
+    body.dark i,
+    body.dark ul li a:hover {
+        color: #2e71c6 !important; 
+    }
+    
+    body.dark h3,
+    body.dark h4,
+    body.dark p,
+    body.dark ul li, 
+    body.dark a {
+        color: #000;
+    }
+    
+    body.dark span,
+    body.dark .planos h3,
+    body.dark .txt-topo-site i,
+    body.dark .p-planos i {
+        color: #38c1a0 !important;
+    }
+    
+    body.dark button {
+        border: 2px solid #2e71c6;
+        color: #2e71c6; 
+    }
+    
+    body.dark button:hover {
+        box-shadow: 0 0 15px #2e71c6, inset 0 0 15px #2e71c6;
+        text-shadow: 0 0 15px #2e71c6; 
+    }
+    
+    body.dark .btn-txt-2 button {
+        border: 2px solid #38c1a0;
+        color: #38c1a0;
+    }
+    
+    body.dark .btn-txt-2 button:hover {
+        box-shadow: 0 0 15px #38c1a0, inset 0 0 15px #38c1a0;
+        text-shadow: 0 0 15px #38c1a0;
+    }
+    
+    body.dark .p-planos,
+    body.dark .txt-box,
+    body.dark .depoimentos-box img {
+        box-shadow: 0 0 10px #2e71c6;
+        border: 2px solid #2e71c6;
+    }
+     
+    body.dark .txt-box:hover {
+        box-shadow: 0 0 30px #2e71c6;
+    }
+    
+    body.dark .menu-mobile nav ul li a:hover {
+        background-color: #2e71c6;
+    }
+    
+    
+    body.dark .menu-desktop a:hover, .login-topo a:hover {
+        box-shadow: -1px 2px 2px #2e71c6;
+        color: #2e71c6;
+    }
+    
+    body.dark .dropdown:hover .dropdown-menu {
+        box-shadow: 1px 2px 2px #2e71c6;
+    }
+    
+    body.dark .menu-mobile .btn-login {
+        background-color: #2e71c6;
+    }
+    
+    body.dark .menu-mobile .btn-login:hover {
+        box-shadow: 0 0 15px #2e71c6;
+    }
+
+
+    /* RESPONSIVIDADE */
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    /* MENU */
+    .menu-desktop, .btn-topo {
+        display: none;
+    }    
+
+    .btn-abrir-menu {
+        display: block;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+}

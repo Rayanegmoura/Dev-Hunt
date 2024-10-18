@@ -16,7 +16,8 @@ revelar.reveal('.efeito-txt-topo',
 revelar.reveal('.efeito-titulo',
 {
     duration: 2000,
-    distance: '90px'
+    distance: '90px',
+    delay: 1000
 })
 
 // BOX
@@ -55,14 +56,14 @@ revelar.reveal('.efeito-serv-1',
 {
     duration: 2000,
     distance: '90px',
-    delay: 2500
+    delay: 1000
 })
 
 revelar.reveal('.efeito-serv-2',
 {
     duration: 2000,
     distance: '90px',
-    delay: 2800
+    delay: 1200
 })
 
 // QUEM SOMOS
@@ -71,7 +72,7 @@ revelar.reveal('.efeito-quem-somos',
 {
     duration: 2000,
     distance: '130px',
-    delay: 700,
+    delay: 500,
     origin: 'left'
 })
 
@@ -82,7 +83,7 @@ revelar.reveal('.efeito-depoimentos-1',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1500,
+    delay: 1000,
     origin: 'left'
 })
 
@@ -90,7 +91,7 @@ revelar.reveal('.efeito-depoimentos-2',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1600,
+    delay: 1100,
     origin: 'left'
 })
 
@@ -98,7 +99,7 @@ revelar.reveal('.efeito-depoimentos-3',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1700,
+    delay: 1200,
     origin: 'left'
 })
 
@@ -106,7 +107,7 @@ revelar.reveal('.efeito-depoimentos-4',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1800,
+    delay: 1300,
     origin: 'left'
 })
 
@@ -114,7 +115,7 @@ revelar.reveal('.efeito-depoimentos-5',
 {
     duration: 2000,
     distance: '130px',
-    delay: 1900,
+    delay: 1400,
     origin: 'left'
 })
 
@@ -124,7 +125,7 @@ revelar.reveal('.efeito-planos',
 {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 1100
 })
 
 // AJUDA
@@ -133,5 +134,5 @@ revelar.reveal('.efeito-ajuda',
 {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 1100
 })

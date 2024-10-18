@@ -461,16 +461,12 @@ footer .flex {
     }
 
     /* MENU */
-    .menu-desktop, .btn-topo {
+    .menu-desktop, .btn-topo, .btn-projeto {
         display: none;
     }    
 
     .btn-abrir-menu {
         display: block;
-    }
-
-    h1 {
-        font-size: 45px;
     }
 
 }

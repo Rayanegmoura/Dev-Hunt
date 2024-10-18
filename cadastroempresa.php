@@ -64,35 +64,22 @@ if(isset($_POST['submit'])) {
                 <label for="usuario">Usuário</label>
             </div>
             <div class="label-float">
-                <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="nome">Nome Completo</label>
+                <input type="text" id="social" name="social" placeholder=" " autocomplete="off" maxlength="14" required />
+                <label for="social">Razão Social</label>
             </div>
-            
-
             <div class="label-float">
-                <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="mae">Nome da Mãe</label>
+                <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
+                <label for="nome">Nome Fantasia</label>
             </div>
-
             <div class="label-float">
                 <input type="text" id="cpf" name="cpf" placeholder=" " autocomplete="off" maxlength="14" required />
-                <label for="cpf">CPF</label>
+                <label for="cpf">CNPJ</label>
             </div>
-
-            <div class="label-float">
-            <label for="dat_nasc"></label>
-            <input class="data" type="date" id="nasc" name="dat_nasc" required>
-            </div>
-
             <div class="label-float">
                 <input type="email" id="email" name="email" placeholder=" " required />
                 <label for="email">E-mail</label>
             </div>
 
-            <div class="label-float">
-                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
-                <label for="celular">Celular</label>
-            </div>
             <div class="label-float">
                 <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
                 <label for="telefone">Telefone</label>
@@ -118,16 +105,6 @@ if(isset($_POST['submit'])) {
                 <label for="confirmSenha">Confirmar Senha</label>
             </div>
 
-            <div class="Genero">
-            <label>Sexo:</label>
-            <input type="radio" id="masculino" name="sexo" value="M" required>
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="feminino" name="sexo" value="F" required>
-            <label for="feminino">Feminino</label>
-            <input type="radio" id="outros" name="sexo" value="O" required>
-            <label for="outros">Outro</label>
-            </div>
-
             <div class="btntest">
             <button type="submit" name="submit" id="submit">Cadastrar</button>
 
@@ -137,8 +114,7 @@ if(isset($_POST['submit'])) {
         </form>
     </div>
     <script>
-        $('#cpf').mask('000.000.000-00');
-        $('#celular').mask('(00) 00000-0000');
+        $('#cnpj').mask('00.000.000/0000-00');
         $('#telefone').mask('(00) 0000-0000');
         $('#cep').mask('00000-000');
     </script>

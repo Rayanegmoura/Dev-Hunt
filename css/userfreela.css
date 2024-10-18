@@ -213,9 +213,16 @@ section.cards {
     }
 
     .menu-lateral .logo-ue img {
-        width: 95px;
+        width: 89px;
         margin-top: 10px;
         margin-left: 2px;
+    }
+
+    /* PÁGINA */
+
+    section.cards {
+        padding: 20px 4%;
+        margin-left: 40px;
     }
 
     .card {

@@ -461,7 +461,7 @@ footer .flex {
     }
 
     /* MENU */
-    .menu-desktop, .btn-topo {
+    .menu-desktop, .btn-topo, .btn-projeto {
         display: none;
     }    
 

@@ -1,11 +1,11 @@
 <?php
 
 //print_r($_REQUEST);
-if(isset($_POST['sibmit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
+if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha']))
 {
     include_once('config.php');
-    $usuario = $POST['usuario'];
-    $senha = $POST['senha'];
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
 
     print_r('usuario: ' . $usuario);
     print_r('senha: ' . $senha);
@@ -13,6 +13,6 @@ if(isset($_POST['sibmit']) && !empty($_POST['usuario']) && !empty($_POST['senha'
 }
  else
  {
-    header('location: login.php');
+    header('location: userfreela.html');
  }
 ?>

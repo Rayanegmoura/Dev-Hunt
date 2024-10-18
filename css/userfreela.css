@@ -221,7 +221,8 @@ section.cards {
     /* PÁGINA */
 
     section.cards {
-        padding: 20px 8%;
+        padding: 20px 4%;
+        margin-left: 40px;
     }
 
     .card {

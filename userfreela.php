@@ -1,3 +1,14 @@
+<?php
+    session_start(); 
+    //print_r($_SESSION);
+    if((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == true)) 
+    {
+        header('location: login.php');                                 
+    }
+
+    $logado = $_SESSION['usuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

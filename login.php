@@ -1,3 +1,9 @@
+<?php
+    session_start();
+   // print_r($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,18 +24,18 @@
             </a>
         </div>
 
-        <form action="test.php" method="POST" id="loginForm">
+        <form action="testLogin.php" method="POST" id="">
             <label for="usuario">Usuário</label>
-            <input type="text" id="usuario" name="usuario" maxlength="6" required>
+            <input type="text" id="usuario" name="usuario" maxlength="10" required>
 
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" minlength="8" required>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" minlength="8" required>
             <div class="forgot-password">
                 <a href="esquecisenha.html">Esqueci minha senha</a>
             </div>
 
             <div class="button-container">
-                <button type="submit">Enviar</button>
+                <button type="submit" name="submit">Enviar</button>
                 <button type="reset" id="clearBtn">Limpar</button>
             </div>
 
@@ -37,7 +43,7 @@
         </form>
 
         <div class="register-section">
-            <p>Não tem uma conta? <a href="useroufreela.html" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
+            <p>Não tem uma conta? <a href="cadastro.php" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
         </div>
     </div>
     <div class="btn-fixo" id="btn-fixo">

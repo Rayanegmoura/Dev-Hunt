@@ -38,6 +38,8 @@ if(isset($_POST['submit'])) {
 
      $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
      VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+
+    header("location: login.php");
 }
 ?>
 

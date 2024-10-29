@@ -16,7 +16,7 @@ body {
 nav.menu-lateral {
     width: 60px;
     height: 100%;
-    background-color: #191a2129;
+    background-color:   #191a2129;
     padding: 10px 5px;
     box-shadow: 3px 0 15px #1e1f66;
     position: fixed;
@@ -135,6 +135,17 @@ nav.menu-lateral.expandir .txt-link {
 nav.menu-lateral:hover ~ .main-content {
     margin-left: 200px; /* Ajuste do conteúdo ao expandir o menu */
 }
+
+/* Card*/
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
 
 /* DASHBOARD */
 .dashboard {

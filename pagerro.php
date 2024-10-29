@@ -1,3 +1,7 @@
+<?php
+http_response_code(404); // Define o código de resposta como 404
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -144,12 +148,12 @@
     <main class="main">
         <section class="section">
             <div class="left">
-                <p>Erro 404</p>
+                <p></p>
                 <h4>Desculpe, página não encontrada.</h4>
                 <a href="#" class="btn">Recarregar</a>
             </div>
             <div class="right">
-                <img src="/img/astronauta.png" alt="Imagem de erro 404">
+                <img src="/Dev-Hunt/img/astronauta.png" alt="Imagem de erro 404">
                 <div class="shadow"></div>
             </div>
                     

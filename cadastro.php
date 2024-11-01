@@ -48,8 +48,8 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastro.css">
-    <title>Formulário</title>
+    <link rel="stylesheet" href="style-cadastro.css">
+    <title>Cadastro</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
 <body>
     <div class="container">
         <a href="index.html">
-        <img class="logo" src="img/logo.png">
+        <img class="logo" src="img-logo.png">
         </a>
         <form action="cadastro.php" method="POST">
 

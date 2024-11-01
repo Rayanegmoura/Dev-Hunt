@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Hunt</title>
-    <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/acessibilidade.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-acessibilidade.css">
 
-    <script src="/js/pginicial.js" defer></script>
-    <script src="/js/acessibilidade.js" defer></script>
+    <script src="script-pginicial.js" defer></script>
+    <script src="script-acessibilidade.js" defer></script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -28,7 +28,7 @@
 
         <div class="logo">
             <a href="/index.html">
-                <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
+                <img id="imagemAcessibilidade" src="img-logo.png" alt="Dev Hunt" />
             </a><!--link-logo-->
         </div><!--logo-->
 
@@ -141,7 +141,7 @@
                     <div class="flex">
                         <div class="video-topo">
                         <video autoplay muted loop>
-                            <source src="/img/video.mp4" type="video/mp4">
+                            <source src="img-video.mp4" type="video/mp4">
                         </video>
                         </div>
                         </div><!---video-topo--->
@@ -215,19 +215,23 @@
                 <div class="interface">
                     <div class="flex">
                         <div class="serv-box efeito-serv-1">
-                            <button>
-                                <i class="bi bi-briefcase-fill"></i>
-                                <p>Quero elaborar um projeto</p>
-                                <h2>Empresas</h2>
-                            </button>
+                            <a href="login.php">
+                                <button>
+                                    <i class="bi bi-briefcase-fill"></i>
+                                    <p>Quero elaborar um projeto</p>
+                                    <h2>Empresas</h2>
+                                </button>
+                            </a>
                         </div><!--serv-box-->
     
                         <div class="serv-box efeito-serv-2">
-                            <button>
-                                <i class="bi bi-code-square"></i>
-                                <p>Quero fazer um projeto</p>
-                                <h2>Freelancers</h2>
+                            <a href="login.php">
+                                <button>
+                                    <i class="bi bi-code-square"></i>
+                                    <p>Quero fazer um projeto</p>
+                                    <h2>Freelancers</h2>
                                 </buttom>
+                            </a>
                         </div><!--serv-box-->
                     </div><!--flex-->
                 </div><!--interface-->
@@ -255,7 +259,7 @@
                     <div class="flex">
     
                         <div class="depoimentos-box efeito-depoimentos-1">
-                            <img src="/img/1.jpg">
+                            <img src="img-1.jpg">
                             <h4>Carlos</h4>
                             <p>“Trabalhar com a <span>Dev Hunt</span> foi uma experiência incrível. Eles entenderam
                                 exatamente o que eu precisava e entregaram um trabalho de alta qualidade dentro do prazo.
@@ -263,7 +267,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-2">
-                            <img src="/img/2.jpg">
+                            <img src="img-2.jpg">
                             <h4>Rebeca</h4>
                             <p>“Desde que comecei a colaborar com a <span>Dev Hunt</span>, minha carreira como freelancer
                                 decolou. Eles me conectaram com clientes incríveis e projetos desafiadores que me ajudaram a
@@ -271,7 +275,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-3">
-                            <img src="/img/4.jpg">
+                            <img src="img-4.jpg">
                             <h4>Pedro</h4>
                             <p> “A flexibilidade e o suporte oferecidos pela <span>Dev Hunt</span> são incomparáveis. Eles
                                 sempre estão disponíveis para ajudar e garantir que eu tenha tudo o que preciso para
@@ -279,7 +283,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-4">
-                            <img src="/img/3.jpg">
+                            <img src="img-3.jpg">
                             <h4>Bruna</h4>
                             <p>“Graças ao trabalho com a <span>Dev Hunt</span>, consegui alcançar uma independência
                                 financeira que nunca imaginei ser possível. Agora, posso focar em projetos que realmente me
@@ -287,7 +291,7 @@
                         </div><!--depoimentos-box-->
     
                         <div class="depoimentos-box efeito-depoimentos-5">
-                            <img src="/img/5.jpg">
+                            <img src="img-5.jpg">
                             <h4>Henrique</h4>
                             <p>“A qualidade e o profissionalismo da <span>Dev Hunt</span> são excepcionais. Cada projeto é
                                 tratado com o máximo cuidado e atenção aos detalhes, resultando em entregas que superam as
@@ -352,7 +356,7 @@
                             <h2>Procuro Freelancer</h2>
                             <p>Escolha o tipo de talento que precisa de acordo com a categoria e escopo do seu projeto.</p>
                             <ul>
-                                <li><a href="userempresa.html">Encontre um freelance</a></li>
+                                <li><a href="login.php">Encontre um freelance</a></li>
                                 <li><a href="planos.html">Planos e preços</a></li>
                             </ul>
                         </div><!--p-ajuda-->
@@ -363,7 +367,7 @@
                             <p>Escolha o tipo de trabalho que está procurando de acordo com a sua profissão e
                                 disponibilidade.</p>
                             <ul>
-                                <li><a href="userfreela.html">Encontre um projeto</a></li>
+                                <li><a href="login.php">Encontre um projeto</a></li>
                                 <li><a href="planos.html">Planos e preços</a></li>
                             </ul>
                         </div><!--p-ajuda-->

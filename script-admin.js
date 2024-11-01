@@ -45,9 +45,9 @@ trilho.addEventListener('click', ()=>{
     body.classList.toggle('dark')
 
     if (body.classList.contains('dark')) {
-        imagem.src = "/img/logo-2.png";
+        imagem.src = "logo-2.png";
     } else {
-        imagem.src = "/img/logo.png";
+        imagem.src = "img-logo.png";
     }
 });
 
@@ -77,21 +77,3 @@ $btnDiminuir.on('click', function() {
     $elemento.eq(i).css('font-size', fonts[i]);
   }
 });
-
-// MENU MOBILE
-
-let btnMenu = document.getElementById('btn-menu')
-let menu = document.getElementById('menu-mobile')
-let overlay = document.getElementById('overlay-menu')
-
-btnMenu.addEventListener('click', ()=>{
-    menu.classList.add('abrir-menu')
-})
-
-menu.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
-
-overlay.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})

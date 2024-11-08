@@ -30,7 +30,10 @@ h1 {
     gap: 40px;
     flex-wrap: wrap;
 }
-
+.plano1 strong {
+    font-size: 35px;
+    font-weight: 400;
+}
 .planos {
     display: flex;
     justify-content: center;
@@ -56,16 +59,16 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-.plano-icon {
-    font-size: 50px;
+.plano-icon i {
+    font-size: 30px;
     color: #38c1a0;
-    margin-bottom: 20px;
+
 }
 
 .plano h2 {
     color: #38c1a0;
     font-size: 24px;
-    margin-bottom: 15px;
+
 }
 
 .plano ul {

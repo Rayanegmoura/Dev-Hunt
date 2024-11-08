@@ -350,7 +350,8 @@ footer .flex {
     body.dark .link a,
     body.dark .topico:hover,
     body.dark .menu-mobile nav ul li a:hover,
-    body.dark .menu-mobile .btn-login {
+    body.dark .menu-mobile .btn-login,
+    body.dark .btn-plano:hover {
         background-color: #2e71c6;
     }
 
@@ -373,7 +374,8 @@ footer .flex {
     body.dark .link a,
     body.dark  .topico,
     body.dark .btn-expandir > i,
-    body.dark .card button{
+    body.dark .card button,
+    body.dark .plano-icon i {
         color: #fff !important;
     }
     
@@ -409,7 +411,8 @@ footer .flex {
     }
     
     body.dark button,
-    body.dark .container  {
+    body.dark .container,
+    body.dark .plano:hover {
         border: 2px solid #2e71c6;
         color: #2e71c6; 
     }

@@ -89,15 +89,30 @@ if(isset($_POST['submit'])) {
                 <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
                 <label for="telefone">Telefone</label>
             </div>
+            <div class="label-float">
+                <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
+                <label for="cep">CEP</label>
+            </div>
 
             <div class="label-float">
                 <input type="text" id="ende" name="endereco" placeholder=" " required />
                 <label for="ende">Endereço</label>
             </div>
-
             <div class="label-float">
-                <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">CEP</label>
+                <input type="text" id="numero" name="numero" placeholder=" " required />
+                <label for="ende">Número</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="bairro" name="bairro" placeholder=" " required />
+                <label for="ende">Bairro</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="cidade" name="cidade" placeholder=" " required />
+                <label for="ende">Cidade</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="uf" name="estado" placeholder=" " required />
+                <label for="ende">Estado</label>
             </div>
 
             <div class="label-float senha-container">

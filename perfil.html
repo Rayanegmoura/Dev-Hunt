@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHunt - Perfil</title>
+    <link rel="stylesheet" type="text/css" href="style-perfil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<main class="perfil-container">
+    <!-- Botão de Voltar -->
+    <a href="index.html">
+        <button class="btn-voltar"><i class="bi bi-chevron-left"></i></button>
+      </a>
+      
+<!-- perfil -->
+    <div class="perfil-header">
+        <div class="perfil-capa"></div>
+        <div class="perfil-foto">
+            <img src="imgs/A-Random-Persons-Profile-Picture-74509625-1.png" alt="Foto de Perfil">
+        </div>
+        <h2 class="perfil-nome">Nome do Usuário</h2>
+        <p class="perfil-usuario">@usuario</p>
+        <button class="btn-editar-perfil">Editar Perfil</button>
+    </div>
+<!-- Abas -->
+    <nav class="perfil-nav">
+        <ul>
+            <li><a href="#" class="active" onclick="mostrarConteudo('feed')">Feed</a></li>
+            <li><a href="#" onclick="mostrarConteudo('curriculo')">Currículo</a></li>
+            <li><a href="#" onclick="mostrarConteudo('candidaturas')">Candidaturas</a></li>
+        </ul>
+    </nav>
+<!-- Feed -->
+    <section id="feed" class="perfil-content mostrado">
+        <div class="usu1">
+            <h3>Matheus</h3>
+            <p>Dev hunt é a melhor empresa do mundo</p>
+        </div>
+    
+        
+    </section>
+<!-- Curriculo -->
+    <section id="curriculo" class="perfil-content">
+        <h3>Cadastro de Currículo</h3>
+        <form class="form-curriculo">
+            <!-- Nome -->
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+            </div>
+    
+            <!-- Resumo Profissional -->
+            <div class="form-group">
+                <label for="resumo">Resumo Profissional</label>
+                <textarea id="resumo" rows="4" placeholder="Escreva um resumo sobre sua experiência"></textarea>
+            </div>
+    
+            <!-- Habilidades -->
+            <div class="form-group">
+                <label for="habilidades">Habilidades</label>
+                <input type="text" id="habilidades" placeholder="Ex: JavaScript, Python, Design Gráfico">
+            </div>
+    
+            <!-- Experiência -->
+            <div class="form-group">
+                <label for="experiencia">Experiência</label>
+                <textarea id="experiencia" rows="4" placeholder="Descreva suas experiências anteriores"></textarea>
+            </div>
+    
+            <!-- Botão de Enviar -->
+            <button type="submit" class="btn-cadastro">Salvar Currículo</button>
+        </form>
+    </section>
+<!-- Candidaturas -->
+    <section id="candidaturas" class="perfil-content">
+        <h3>Minhas Candidaturas</h3>
+        <div class="candidaturas-lista">
+            <!-- Candidatura 1 -->
+            <div class="candidatura">
+                <h4>Desenvolvedor Front-End</h4>
+                <p><strong>Empresa:</strong> TechCorp</p>
+                <p><strong>Status:</strong> <span class="status aprovado">Aprovado</span></p>
+                <button class="btn-detalhes">Ver Detalhes</button>
+            </div>
+    
+            <!-- Candidatura 2 -->
+            <div class="candidatura">
+                <h4>Designer Gráfico</h4>
+                <p><strong>Empresa:</strong> CreativeDesign</p>
+                <p><strong>Status:</strong> <span class="status pendente">Pendente</span></p>
+                <button class="btn-detalhes">Ver Detalhes</button>
+            </div>
+    
+            <!-- Candidatura 3 -->
+            <div class="candidatura">
+                <h4>Analista de Dados</h4>
+                <p><strong>Empresa:</strong> DataSolutions</p>
+                <p><strong>Status:</strong> <span class="status rejeitado">Rejeitado</span></p>
+                <button class="btn-detalhes">Ver Detalhes</button>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<script>
+    function mostrarConteudo(aba) {
+        document.querySelectorAll(".perfil-content").forEach(section => section.classList.remove("mostrado"));
+        document.getElementById(aba).classList.add("mostrado");
+        document.querySelectorAll(".perfil-nav a").forEach(link => link.classList.remove("active"));
+        document.querySelector(`[onclick="mostrarConteudo('${aba}')"]`).classList.add("active");
+    }
+</script>
+
+</body>
+</html>

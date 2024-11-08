@@ -222,6 +222,10 @@ section.encontre .flex {
     margin: 10px 0 10px 0;
 }
 
+.serv-box a {
+    text-decoration: none;
+}
+
 /* ESTILO QUEM SOMOS */
 
 section.txt-3 {

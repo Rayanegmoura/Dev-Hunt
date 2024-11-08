@@ -51,6 +51,11 @@ if(isset($_POST['submit'])) {
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     
+    <!-- Adicionando JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="container">
@@ -84,15 +89,30 @@ if(isset($_POST['submit'])) {
                 <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
                 <label for="telefone">Telefone</label>
             </div>
+            <div class="label-float">
+                <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
+                <label for="cep">CEP</label>
+            </div>
 
             <div class="label-float">
                 <input type="text" id="ende" name="endereco" placeholder=" " required />
                 <label for="ende">Endereço</label>
             </div>
-
             <div class="label-float">
-                <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">CEP</label>
+                <input type="text" id="numero" name="numero" placeholder=" " required />
+                <label for="ende">Número</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="bairro" name="bairro" placeholder=" " required />
+                <label for="ende">Bairro</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="cidade" name="cidade" placeholder=" " required />
+                <label for="ende">Cidade</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="uf" name="estado" placeholder=" " required />
+                <label for="ende">Estado</label>
             </div>
 
             <div class="label-float senha-container">
@@ -117,6 +137,74 @@ if(isset($_POST['submit'])) {
         $('#cnpj').mask('00.000.000/0000-00');
         $('#telefone').mask('(00) 0000-0000');
         $('#cep').mask('00000-000');
+        
+    </script>
+    <script>
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#ende").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#uf").val("");
+                $("#ibge").val("");
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#ende").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#ende").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

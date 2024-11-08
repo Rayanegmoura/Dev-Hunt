@@ -451,6 +451,11 @@ footer .flex {
         border: none;
     }
 
+    body.dark ul li.item-menu:hover {
+        background-color: #2e71c6;
+        box-shadow: 0 0 15px #38c1a0;
+    }
+
 
     /* RESPONSIVIDADE */
 

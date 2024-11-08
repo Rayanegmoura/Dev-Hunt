@@ -4,154 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos</title>
-    <link rel="stylesheet" href="style-planosempresas.css">
+    <link rel="stylesheet" href="style-planos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <script src="script-acessibilidade.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style-acessibilidade.css">
-    <link rel="stylesheet" type="text/css" href="style-userempresa.css">
+    <script src="/js/acessibilidade.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/acessibilidade.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src=""></script>
 </head>
 <body>
-    <header class="menu">
+    <header class="menu-principal">
 
-        <nav class="menu-lateral">
+        <div class="logo">
+            <a href="/index.html">
+                <img id="imagemAcessibilidade" src="/img/logo.png" alt="Dev Hunt" />
+            </a><!--link-logo-->
+        </div><!--logo-->
 
-            <div class="logo-ue">
-                <a href="/index.html">
-                    <img id="imagemAcessibilidade" src="img-logo.png" alt="Dev Hunt" />
-                </a><!--link-logo-->
-            </div><!--logo-->
-
-            <div class="btn-expandir">
-                <i class="bi bi-list" id="btn-exp"></i>
-            </div><!--btn-expandir-->
-    
+        <nav class="menu-desktop">
             <ul>
-                <li class="item-menu">
-                    <a href="index.html">
-                        <span class="icon"><i class="bi bi-house" title="Início"></i></span>
-                        <span class="txt-link" href="index.html">Início</span>
-                    </a>
+                <li>
+                    <a href="index.html">Início</a>
                 </li>
 
-                <li class="item-menu">
-                    <a href="userempresa.html">
-                        <span class="icon"><i class="bi bi-bar-chart-steps"></i></span>
-                        <span class="txt-link" href="index.html">Propostas</span>
-                    </a>
-                </li>
-                
-                <li class="item-menu">
-                    <a href="quemsomos.html">
-                        <span class="icon"><i class="bi bi-file-person" title="quemsomos"></i></span>
-                        <span class="txt-link">Perfil</span>
-                    </a>
+                <li>
+                    <a href="quemsomos.html">Quem Somos</a>
                 </li>
 
-                <li class="item-menu ativo">
-                    <a href="planos-empresa.html">
-                        <span class="icon"><i class="bi bi-clipboard-check-fill"></i></span>
-                        <span class="txt-link">Planos</span>
-                    </a>
+                <li class="dropdown">
+                    <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <a href="planos.html">Planos</a>
+                        <a href="login.php">Freelancer</a>
+                        <a href="login.php">Empresas</a>
+                    </div>
                 </li>
-    
-                <li class="item-menu">
-                    <a href="ajuda.html">
-                        <span class="icon"><i class="bi bi-chat-left-dots"></i></span>
-                        <span class="txt-link">Ajuda</span>
-                    </a>
+
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
                 </li>
-            </ul>
-        </nav><!--menu-lateral-->
-    
-        <script src="script-userempresa.js"></script>
+            </ul><!---ul-->
+        </nav><!--links-->
+
+        <div class="btn-topo btn">
+            <a class="login-btn" href="login.php">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+            <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
+            <a href="login.php"><button>Publicar Projeto</button></a>
+        </div><!--botao-topo-->
+
+        <!--menu-mobile-->
+        
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+        </div><!--btn-abrir-menu-->
+
+        <div class="menu-mobile" id="menu-mobile">
+
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div><!--btn-fechar-->
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a class="btn-login" href="#"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="quemsomos.html">Quem Somos</a>
+                    </li>
+
+                    <li>
+                        <a href="ajuda.html">Ajuda</a>
+                    </li>
+
+                    <li>
+                        <a href="login.php">Publicar Projeto</a>
+                    </li>
+                </ul><!---ul-->
+            </nav><!--links-->
+
+        </div><!--menu-mobile-->
+
+        <div class="overlay-menu" id="overlay-menu">
+            <!--estilo do menu mobile-->
+        </div><!--overlay-menu-->
 
     </header><!--fim-menu-principal-->
     <main>
         
-            <div class="btn-fixo" id="btn-fixo">
-                <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
-            
-                <div class="acessibilidade" id="acessibilidade">
-                    <h6 class="acess">Acessibilidade</h6>
-                    
-                    <div class="modo-escuro">
-                        <div class="trilho" id="trilho">
-                            <div class="indicador"></div><!--indicador-->
-                        </div><!--trilho-->
-                    </div><!--modo-escuro-->
-            
-                    <div class="maior-menor" id="maior-menor">
-                        <button type="button" id="btnAumentar">A+</button>
-                        <button type="button" id="btnDiminuir">A-</button>
-                    </div> <!--maior-menor-->
-                </div><!--acessibilidade-->
-            </div><!--btn-fixo-->
-            <div id="content">
-                <h1>Nossos Planos</h1>
-            <div class="planos-container">
-                <div class="planos">
-                    <div class="plano">
-                        <div class="plano-icon">
-                            <i class="bi bi-calendar-date"></i>
-                        </div>
-                        <div class ="plano1">
-                        <h2>Plano Mensal</h2>
-                        <p><strong>R$ 24,99</strong></p>
-                        <ul>
-                            <li><i class="bi bi-check2-square"></i>Acesso Prioritário a Projetos</li>
-                            <li><i class="bi bi-check2-square"></i>Credibilidade Aumentada</li>
-                            <li><i class="bi bi-check2-square"></i>Mais Convites Diretos</li>
-                            <li><i class="bi bi-check2-square"></i>Perfil Verificado</li>
-                            <li><i class="bi bi-check2-square"></i>Apoio e Suporte Personalizado</li>
-                        </ul>
-                        <button class="btn-plano">Assinar</button>
-                        </div>
+        <div class="btn-fixo" id="btn-fixo">
+            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+        
+            <div class="acessibilidade" id="acessibilidade">
+                <h6 class="acess">Acessibilidade</h6>
+                
+                <div class="modo-escuro">
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div><!--indicador-->
+                    </div><!--trilho-->
+                </div><!--modo-escuro-->
+        
+                <div class="maior-menor" id="maior-menor">
+                    <button type="button" id="btnAumentar">A+</button>
+                    <button type="button" id="btnDiminuir">A-</button>
+                </div> <!--maior-menor-->
+            </div><!--acessibilidade-->
+        </div><!--btn-fixo-->
+        <div id="content">
+            <h1>Nossos Planos</h1>
+        <div class="planos-container">
+            <div class="planos">
+                <div class="plano">
+                    <div class="plano-icon">
+                        <i class="bi bi-person-workspace"></i>
                     </div>
-                       
-                    <div class="plano">
-                        <div class="plano-icon">
-                            <i class="bi bi-calendar-date"></i>
-                        </div>
-                        <div class ="plano1">
-                        <h2>Plano Semestral</h2>
-                        <p><strong>R$ 129,99 </strong></p>
-                        <ul>
-                            <li><i class="bi bi-check2-square"></i>Todos os Benefícios do Plano Mensal</li>
-                            <li><i class="bi bi-check2-square"></i>Curriculo Personalizado</li>
-                            <li><i class="bi bi-check2-square"></i>Suporte Prioritário</li>
-                            <li><i class="bi bi-check2-square"></i>Ferramentas Exclusivas</li>
-                            <li><i class="bi bi-check2-square"></i>Taxas Reduzidas</li>
-                        </ul>
-                        <button class="btn-plano">Assinar</button>
-                        </div>
-                    </div>
-                    <div class="plano">
-                        <div class="plano-icon">
-                            <i class="bi bi-calendar-date"></i>
-                        </div>
-                        <div class ="plano1">
-                        <h2>Plano Anual</h2>
-                        <p><strong>R$ 249,99 </strong></p>
-                        <ul>
-                            <li><i class="bi bi-check2-square"></i>Todos os Benefícios do Plano Mensal</li>
-                            <li><i class="bi bi-check2-square"></i>Consultas com Especialistas</li>
-                            <li><i class="bi bi-check2-square"></i>Taxas Reduzidas</li>
-                            <li><i class="bi bi-check2-square"></i>Perfil Super Verificado</li>
-                            <li><i class="bi bi-check2-square"></i>Destaque na Home do Site</li>
-                        </ul>
-                        <button class="btn-plano">Assinar</button>
-                    </div>
-                    </div>
+                    <h2>Plano Freelancer</h2>
+                    <p><strong>R$ 24,99/mês</strong></p>
+                    <ul>
+                        <li><i class="bi bi-star"></i>Acesso Prioritário a Projetos</li>
+                        <li><i class="bi bi-shield-check"></i>Credibilidade Aumentada</li>
+                        <li><i class="bi bi-envelope-heart"></i>Mais Convites Diretos</li>
+                        <li><i class="bi bi-tools"></i>Ferramentas Exclusivas</li>
+                        <li><i class="bi bi-person-bounding-box"></i>Apoio e Suporte Personalizado</li>
+                    </ul>
+                    <button class="btn-plano">Assinar</button>
                 </div>
-
+                   
+                <div class="plano">
+                    <div class="plano-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h2>Plano Empresa</h2>
+                    <p><strong>R$ 49,99/mês</strong></p>
+                    <ul>
+                        <li><i class="bi bi-person-check"></i>Acesso a Talentos Qualificados</li>
+                        <li><i class="bi bi-clock-history"></i>Economia de Tempo</li>
+                        <li><i class="bi bi-file-earmark-check"></i>Maior Garantia de Entrega</li>
+                        <li><i class="bi bi-filter"></i>Filtragem Avançada</li>
+                        <li><i class="bi bi-headset"></i>Suporte Prioritário</li>
+                        <li><i class="bi bi-graph-up-arrow"></i>Relatórios e Insights</li>
+                    </ul>
+                    <button class="btn-plano">Assinar</button>
+                </div>
             </div>
-            </div>
-            
-            
-        </main>
+        </div>
+        </div>
+        
+    </main>
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -164,6 +171,24 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
 
+    <footer>
+        <div class="interface">
+            <div class="footer-1">
+                <div class="flex">
+                    <div class="btn-redes">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div><!--btn-redes-->
+                </div><!--flex-->
+            </div><!--footer-1-->
+
+            <div class="footer-2">
+                <p><i class="bi bi-envelope"></i><a href="mailto:contato@devhunt.com.br"> contato@devhunt.com.br</a></p>
+                <p class="desc">© 2024 www.devhunt.com.br | Todos os direitos reservados.</p>
+            </div><!--footer-2-->
+        </div><!--interface-->
+    </footer><!--rodapé-->
 </body>
 </html>
 

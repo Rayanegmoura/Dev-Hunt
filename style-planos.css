@@ -4,16 +4,15 @@ body {
     padding: 0;
     background: #000; 
     color: #e0e0e0;
-    margin-left: 20px;
 }
 
 main {
+    padding: 50px 20px;
     text-align: center;
+    margin: 60px;
 }
-
 h1 {
-    font-size: 60px;
-    padding: 30px;
+    margin-bottom: 40px; 
     color: #38c1a0;
 }
 .planos-container {
@@ -22,19 +21,6 @@ h1 {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
-}
-
-.plano1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.plano1 strong {
-    font-size: 45px;
-    font-weight: 400;
 }
 
 .planos {
@@ -49,7 +35,7 @@ h1 {
     padding: 30px;
     border-radius: 12px;
     text-align: center;
-    width: 350px;
+    width: 320px;
     color: #e0e0e0;
     border: 3px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
@@ -62,15 +48,16 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-.plano-icon i {
-    font-size: 25px;
-    color: #fff;
+.plano-icon {
+    font-size: 50px;
+    color: #38c1a0;
+    margin-bottom: 20px;
 }
 
 .plano h2 {
-    margin-top: 10px;
     color: #38c1a0;
-    font-size: 30px;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
 .plano ul {
@@ -84,7 +71,7 @@ h1 {
     font-size: 16px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .plano ul li i {
@@ -104,7 +91,7 @@ h1 {
 }
 
 .btn-plano:hover {
-    background-color: #38c1a0;
+    background-color: #2e71c6;
     transform: scale(1.05); 
 }
 
@@ -113,4 +100,3 @@ h1 {
         flex-direction: column;
     }
 }
-

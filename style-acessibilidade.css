@@ -374,8 +374,7 @@ footer .flex {
     body.dark .link a,
     body.dark  .topico,
     body.dark .btn-expandir > i,
-    body.dark .card button,
-    body.dark .plano-icon i {
+    body.dark .card button {
         color: #fff !important;
     }
     
@@ -385,7 +384,8 @@ footer .flex {
     body.dark ul li a:hover,
     body.dark .ajuda1 h2,
     body.dark .ajuda1 a,
-    body.dark .plano h2 {
+    body.dark .plano h2,
+    body.dark .plano ul li i {
         color: #2e71c6; 
     }
     
@@ -399,7 +399,8 @@ footer .flex {
     body.dark .Bemvindo i,
     body.dark .Barra input,
     body.dark .card i,
-    body.dark .card h1{
+    body.dark .card h1,
+    body.dark .plano-icon i {
         color: #000;
     }
     

@@ -351,7 +351,9 @@ footer .flex {
     body.dark .topico:hover,
     body.dark .menu-mobile nav ul li a:hover,
     body.dark .menu-mobile .btn-login,
-    body.dark .btn-plano:hover {
+    body.dark .btn-plano:hover,
+    body.dark .topo-suporte .lista-tp a:hover,
+    body.dark .btn-suporte .btn-st button {
         background-color: #2e71c6;
     }
 
@@ -374,7 +376,8 @@ footer .flex {
     body.dark .link a,
     body.dark  .topico,
     body.dark .btn-expandir > i,
-    body.dark .card button {
+    body.dark .card button,
+    body.dark .btn-suporte h3 {
         color: #fff !important;
     }
     
@@ -385,7 +388,8 @@ footer .flex {
     body.dark .ajuda1 h2,
     body.dark .ajuda1 a,
     body.dark .plano h2,
-    body.dark .plano ul li i {
+    body.dark .plano ul li i,
+    body.dark .box-suporte strong {
         color: #2e71c6; 
     }
     
@@ -400,7 +404,8 @@ footer .flex {
     body.dark .Barra input,
     body.dark .card i,
     body.dark .card h1,
-    body.dark .plano-icon i {
+    body.dark .plano-icon i,
+    body.dark .box-suporte h2 {
         color: #000;
     }
     
@@ -458,6 +463,11 @@ footer .flex {
     body.dark ul li.item-menu:hover {
         background-color: #2e71c6;
         box-shadow: 0 0 15px #38c1a0;
+    }
+
+    body.dark .box-suporte .box-1,
+    body.dark .box-suporte .box-2 {
+        box-shadow: 0 0 5px #2e71c6;
     }
 
 

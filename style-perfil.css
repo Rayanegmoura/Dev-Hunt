@@ -20,6 +20,7 @@ body {
   margin-bottom: 20px;
   position: relative;
 }
+
 .btn-voltar {
   position: absolute;
   top: 20px;
@@ -27,11 +28,11 @@ body {
   background: #2e71c6;
   color: #e0e0e0;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .btn-voltar:hover {
@@ -125,6 +126,7 @@ body {
 .mostrado {
   display: block;
 }
+
 .form-curriculo {
   display: flex;
   flex-direction: column;
@@ -173,6 +175,7 @@ body {
   background-color: #38c1a0;
   transform: scale(1.05);
 }
+
 .candidaturas-lista {
   display: flex;
   flex-direction: column;
@@ -233,4 +236,26 @@ body {
 .btn-detalhes:hover {
   background-color: #38c1a0;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .perfil-container {
+    padding: 10px;
+  }
+  .btn-voltar {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+    top: 60px;
+  }
+  .perfil-nome,
+  .perfil-usuario {
+    top: 80px;
+  }
+  .perfil-nav ul {
+    flex-direction: column;
+  }
 }

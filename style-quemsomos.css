@@ -1,0 +1,104 @@
+/* ESTILO DA PÁGINA */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    transition: .5s
+}
+
+section.quem-somos {
+    padding: 120px 4%;
+}
+
+.quem-somos .video-topo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 900px;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.txt-quems {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.txt-quems p {
+    margin: 2px 0 4px 0;
+    font-size: 19px;
+}
+
+.legenda, .legenda2, .legenda3 {
+    padding: 20px;
+    width: 78%;
+    height: 200px;
+}
+
+.legenda, .legenda2, .legenda3 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: auto
+}
+  
+
+.legenda:after,
+.legenda2:after,
+.legenda3:after {
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.legenda:hover,
+.legenda2:hover,
+.legenda3:hover {
+    transform: scale(1.10, 1.10);
+}
+
+.legenda::after,
+.legenda2::after,
+.legenda3:after {
+    opacity: 1;
+}
+
+.legenda3:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .legenda, .legenda2, .legenda3 {
+        height: auto;
+    }
+
+}

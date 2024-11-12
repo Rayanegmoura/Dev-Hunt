@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentificação de dois fatores</title>
+    <link rel="stylesheet" href="style-2FA.css">
+    <script src="script-alt.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style-acessibilidade.css">
+    <script src="script-acessibilidade.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src=""></script>
+</head>
+<body>
+
+    <header class="menu-principal">
+
+        <div class="logo">
+            <a href="/index.html">
+                <img id="imagemAcessibilidade" src="img-logo.png" alt="Dev Hunt" />
+            </a><!--link-logo-->
+        </div><!--logo-->
+
+        <nav class="menu-desktop">
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="quemsomos.html">Quem Somos</a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
+
+                    <div class="dropdown-menu">
+                        <a href="planos.html">Planos</a>
+                        <a href="login.html">Freelancer</a>
+                        <a href="login.html">Empresas</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
+                </li>
+            </ul><!---ul-->
+        </nav><!--links-->
+
+        <div class="btn-topo btn">
+            <a class="login-btn" href="login.html">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+            <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
+            <a href="login.html"><button>Publicar Projeto</button></a>
+        </div><!--botao-topo-->
+
+        <!--menu-mobile-->
+        
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+        </div><!--btn-abrir-menu-->
+
+        <div class="menu-mobile" id="menu-mobile">
+
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div><!--btn-fechar-->
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a class="btn-login" href="#"><i class="bi bi-person-square"></i>Olá, seja bem-vindo</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="quemsomos.html">Quem Somos</a>
+                    </li>
+
+                    <li>
+                        <a href="ajuda.html">Ajuda</a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">Publicar Projeto</a>
+                    </li>
+                </ul><!---ul-->
+            </nav><!--links-->
+
+        </div><!--menu-mobile-->
+
+        <div class="overlay-menu" id="overlay-menu">
+            <!--estilo do menu mobile-->
+        </div><!--overlay-menu-->
+
+    </header><!--fim-menu-principal-->
+
+    <div class="btn-fixo" id="btn-fixo">
+        <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+    
+        <div class="acessibilidade" id="acessibilidade">
+            <h6 class="acess">Acessibilidade</h6>
+            
+            <div class="modo-escuro">
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div><!--indicador-->
+                </div><!--trilho-->
+            </div><!--modo-escuro-->
+    
+            <div class="maior-menor" id="maior-menor">
+                <button type="button" id="btnAumentar">A+</button>
+                <button type="button" id="btnDiminuir">A-</button>
+            </div> <!--maior-menor-->
+        </div><!--acessibilidade-->
+    </div><!--btn-fixo-->
+
+    <div class="alterar-senha-container">
+        <div class="logo-container">
+            <img src="img-logo.png" alt="Dev Hunt Logo" class="logo">
+        </div>
+
+        <h2>Alterar Senha</h2>
+        <form id="alterar-senha">
+            <div class="password-container">
+                <form id="pergunta-form">
+                    <label for="nome-mae">Qual o nome da sua mãe?</label>
+                    <input type="text" id="nome-mae" name="nome-mae" required placeholder="Digite o nome da sua mãe">
+        
+        
+            <div class="button-container">
+                <button type="submit" onclick="location.href='troca_senha.html';">Alterar Senha</button>
+            </div>
+
+            <p id="errorMessage"></p>
+        </form>
+        
+        <div class="login-section">
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+</body>
+</html>

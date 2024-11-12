@@ -1,1 +1,143 @@
-<!--administrador do site-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Administradora</title>
+    <link rel="stylesheet" href="/style-Admin.css">
+
+    <script src="/script-acessibilidade.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header class="menu-principal">
+        <nav class="menu-lateral">
+            <div class="logo-inicio">
+                <a href="index.html">
+                    <img src="img-logo.png">
+                </a>
+            </div>
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>
+            </div><!--btn-expandir-->
+            <ul>
+                <li class="item-menu">
+                    <a href="index.html">
+                        <span class="icon"><i class="bi bi-columns-gap" title="Início"></i></span>
+                        <span class="txt-link">Início</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="quemsomos.html">
+                        <span class="icon"><i class="bi bi-calendar3" title="quemsomos"></i></span>
+                        <span class="txt-link">Calendario</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="ajuda.html">
+                        <span class="icon"><i class="bi bi-info-circle-fill"></i></span>
+                        <span class="txt-link">Ajuda</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="ajuda.html">
+                        <span class="icon"><i class="bi bi-clipboard-check-fill"></i></span>
+                        <span class="txt-link">Planos</span>
+                    </a>
+                </li>
+            </ul>
+        </nav><!--menu-lateral-->
+    </header><!--fim-menu-principal-->
+
+    <main>
+        <div class="btn-fixo" id="btn-fixo">
+            <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>
+            <div class="acessibilidade" id="acessibilidade">
+                <h6 class="acess">Acessibilidade</h6>
+                <div class="modo-escuro">
+                    <div class="trilho" id="trilho">
+                        <div class="indicador"></div><!--indicador-->
+                    </div><!--trilho-->
+                </div><!--modo-escuro-->
+                <div class="maior-menor" id="maior-menor">
+                    <button type="button" id="btnAumentar">A+</button>
+                    <button type="button" id="btnDiminuir">A-</button>
+                </div> <!--maior-menor-->
+            </div><!--acessibilidade-->
+        </div><!--btn-fixo-->
+
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">1,754</div>
+                    <div class="card-name">daile viws</div>
+                </div>
+                <div class="iconsBx">
+                    <span class="icon"><i class="bi bi-info-circle-fill"></i></span>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">depois</div>
+                    <div class="card-name">depois</div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">depois</div>
+                    <div class="card-name">depois</div>
+                </div>
+            </div>
+        </div>
+        <!--d-->
+        <div class="main-content">
+            <div class="dashboard">
+                <div class="panel large">
+                    <div class="title">Performance</div>
+                    <div class="content">
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+                <div class="panel medium">
+                    <div class="title">Tube</div>
+                    <div class="content tube-center">
+                        <div id="tubeChart"></div>
+                    </div>
+                </div>
+                <div class="panel medium">
+                    <div class="title">Interação</div>
+                    <div class="content">
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+                <div class="panel medium">
+                    <div class="title">Saldo</div>
+                    <div class="content">
+                        <div class="stat"></div>
+                        <canvas id="myChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                <div class="panel medium">
+                    <div class="title">Interação</div>
+                    <div class="content">
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+                <div class="panel small">
+                    <div class="title">Conexão</div>
+                    <div class="content">
+                        <canvas id="chart3"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/pagina-admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: #000;
+    color: #e0e0e0; 
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .Bemvindo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin: 130px;
+    color: #38c1a0;
+    font-size: 30px;
+  }
+  
+  .Barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 72px;
+  }
+  
+  .Barra input {
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #4a5a67; 
+    font-size: 16px;
+    background-color: #80808021; 
+    color: #fff;
+  }
+  
+  .Barra button {
+    padding: 15px;
+    background-color: #38c1a0; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .Bemvindo i{
+    color : #070000;
+    font-size: 20px;
+  }
+  .Links {
+    background-color: #80808021; 
+    padding: 20px;
+    margin-bottom: 45px;
+    border-radius: 8px;
+  }
+  
+  .Links h2 {
+    margin-bottom: 20px;
+    color: #ffffff; 
+  }
+  
+  .link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+  }
+  
+  .link a {
+    background-color: #38c1a0; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px); 
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+  
+  .link a:hover {
+    background-color: #2e71c6; 
+  }
+  
+  .Recomendados {
+    background-color: #80808021;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  .Recomendados h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+
+  }
+  .topicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    
+  }
+  .topico {
+    background-color: #2e71c6;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 30px);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+    text-decoration: none; 
+  }
+  .topico:hover {
+      background-color: #38c1a0; 
+  }
+  
+  .ajuda1 {
+    background-color: #80808021;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+  }
+  
+  .ajuda1 h2 {
+    margin-bottom: 20px;
+    color: #38c1a0;
+  }
+  
+  .ajuda2 {
+    margin-bottom: 20px;
+  }
+  
+  .ajuda2 a {
+    color: #38c1a0;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .Barra input {
+        width: 100%;
+    }
+  
+    .link a {
+        flex: 1 1 100%;
+    }
+  
+    .topico {
+        flex: 1 1 100%;
+    }
+  }

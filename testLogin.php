@@ -31,7 +31,7 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
 
         $_SESSION['usuario']  = $usuario;
         $_SESSION['senha']  = $senha;
-        header('Location: userfreela.php');
+        header('Location: admin.html.html');
     }
 } 
 else 

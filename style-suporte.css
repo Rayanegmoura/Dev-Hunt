@@ -28,89 +28,6 @@ h1 {
     display: flex;
 }
 
-/* MENU LATERAL */
-
-nav.menu-lateral {
-    width: 60px;
-    height: 100%;
-    background-color: #000000eb;
-    padding: 10px 5px;
-    box-shadow: 3px 0 15px #38c1a0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: .5s;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 99999;
-}
-
-nav.menu-lateral.expandir{
-    width: 300px;
-}
-
-.menu-lateral .logo-ue img {
-    width: 105px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.btn-expandir {
-    width: 100%;
-    padding-left: 10px;
-}
-
-.btn-expandir > i {
-    font-size: 34px;
-    cursor: pointer;
-}
-
-ul{
-    height: 100%;
-    list-style-type: none;
-}
-
-ul li.item-menu {
-    transition: .2s;
-}
-
-ul li.ativo {
-    background-color: #38c1a0;
-    box-shadow: 0 0 15px #38c1a0;
-}
-
-ul li.item-menu:hover {
-    background-color: #38c1a0;
-    box-shadow: 0 0 15px #2e71c6;
-}
-
-ul li.item-menu a {
-    text-decoration: none;
-    font-size: 18px;
-    padding: 20px 4%;
-    display: flex;
-    line-height: 40px;
-}
-
-ul li.item-menu a .txt-link {
-    color: #fff !important;
-    margin-left: 70px;
-    transition: 1s;
-    opacity: 0;
-}
-
-nav.menu-lateral.expandir .txt-link {
-    margin-left: 40px;
-    opacity: 1;
-}
-
-ul li.item-menu .icon > i {
-    font-size: 30px;
-    margin-left: 30%;
-    color: #fff;
-}
-
 /* TOPO */
 
 section.topo-suporte {
@@ -254,6 +171,58 @@ section.box-suporte .flex{
 .box-suporte .box-2 a:hover {
     color: #2e71c6;
 }
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1020px) {
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    body {
+        margin-left: 50px;
+    }
+
+    /* TOPO */
+
+    .topo-suporte .lista-tp ul li {
+        display: flex;
+        margin: 5px;
+    }
+
+    .topo-suporte .lista-tp a {
+        margin: 0;
+        padding: 5px;
+    }
+
+    .topo-suporte .lista-tp a:hover {
+        background-color: transparent;
+        color: #38c1a0
+    }
+
+    /* BARRA DE PESQUISA */
+
+    .br-pesquisa .barra input {
+        padding: 15px;
+    }
+
+    /* BOX SUPORTE */
+
+    section.box-suporte {
+        padding: 20px 9%;
+    }
+
+    .box-suporte .box-1, .box-2 {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    
+    }
 
 
 

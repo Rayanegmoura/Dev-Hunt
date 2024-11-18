@@ -41,7 +41,7 @@ if(isset($_POST['submit'])) {
 
     header("location: login.php");
 }
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -61,91 +61,118 @@ if(isset($_POST['submit'])) {
         </a>
         <form action="cadastro.php" method="POST">
 
-        <div class="label-float">
-                <input type="text" id="usuario" name="usuario" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="usuario">Usuário</label>
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="nome" name="nome" placeholder=" " required />
+                    <label for="nome">Nome Completo</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" id="cpf" name="cpf" placeholder=" " autocomplete="off" maxlength="14" required />
+                    <label for="cpf">CPF</label>
+                </div>
             </div>
-            <div class="label-float">
-                <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="nome">Nome Completo</label>
+
+            <div class="form-row">
+                <div class="data genero">
+                    <label>Data de Nascimento</label>
+                    <input class="data" type="date" id="nasc" name="dat_nasc" required>
+                </div>
+                
+                <div class="genero">
+                    <label>Sexo:</label>
+                    <input type="radio" id="masculino" name="sexo" value="M" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="feminino" name="sexo" value="F" required>
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="outros" name="sexo" value="O" required>
+                    <label for="outros">Outro</label>
+                </div>
+                
             </div>
             
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <label for="celular">Celular</label>
+                </div>
 
-            <div class="label-float">
-                <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />
-                <label for="mae">Nome da Mãe</label>
-            </div>
-
-            <div class="label-float">
-                <input type="text" id="cpf" name="cpf" placeholder=" " autocomplete="off" maxlength="14" required />
-                <label for="cpf">CPF</label>
-            </div>
-
-            <div class="label-float">
-            <label for="dat_nasc"></label>
-            <input class="data" type="date" id="nasc" name="dat_nasc" required>
+                <div class="label-float">
+                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <label for="telefone">Telefone</label>
+                </div>
             </div>
 
-            <div class="label-float">
-                <input type="email" id="email" name="email" placeholder=" " required />
-                <label for="email">E-mail</label>
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />
+                    <label for="mae">Nome da Mãe</label>
+                </div>   
+                
+                <div class="label-float">
+                    <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <label for="cep">CEP</label>
+                </div>
+
             </div>
 
-            <div class="label-float">
-                <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
-                <label for="celular">Celular</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
-                <label for="telefone">Telefone</label>
+            <div class="form-row">    
+                <div class="label-float">
+                    <input type="text" id="ende" name="endereco" placeholder=" " required />
+                    <label for="ende">Endereço</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" id="numero" name="numero" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <label for="numero">Número</label>
+                </div>
             </div>
 
-            <div class="label-float">
-                <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">CEP</label>
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="complemento" name="complemento" placeholder=" " autocomplete="off" maxlength="90" required />
+                    <label for="complemento">Complemento</label>
+                </div>
+                
+                <div class="label-float">
+                    <input type="text" id="bairro" name="bairro" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <label for="cep">Bairro</label>
+                </div>
             </div>
 
-            <div class="label-float">
-                <input type="text" id="ende" name="endereco" placeholder=" " required />
-                <label for="ende">Endereço</label>
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="cidade" name="cidade" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <label for="cep">Cidade</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="uf" name="Estado" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <label for="cep">Estado</label>
+                </div>
             </div>
 
-            <div class="label-float">
-                <input type="text" id="numero" name="numero" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">Número</label>
-            </div>
+            <div class="form-row">
+                <div class="label-float">
+                    <input type="text" id="usuario" name="usuario" placeholder=" " required />
+                    <label for="usuario">Usuário</label>
+                </div>
 
-            <div class="label-float">
-                <input type="text" id="bairro" name="bairro" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">Bairro</label>
+                <div class="label-float">
+                    <input type="email" id="email" name="email" placeholder=" " required />
+                    <label for="email">E-mail</label>
+                </div>
             </div>
-            <div class="label-float">
-                <input type="text" id="cidade" name="cidade" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">Cidade</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="uf" name="Estado" placeholder=" " autocomplete="off" maxlength="9" required />
-                <label for="cep">Estado</label>
-            </div>
-
-            <div class="label-float senha-container">
-                <input type="password" id="senha" name="senha" placeholder=" " required />
-                <label for="senha">Senha</label>
-            </div>
-
-            <div class="label-float senha-container">
-                <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
-                <label for="confirmSenha">Confirmar Senha</label>
-            </div>
-
-            <div class="Genero">
-            <label>Sexo:</label>
-            <input type="radio" id="masculino" name="sexo" value="M" required>
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="feminino" name="sexo" value="F" required>
-            <label for="feminino">Feminino</label>
-            <input type="radio" id="outros" name="sexo" value="O" required>
-            <label for="outros">Outro</label>
+            
+            <div class="form-row">
+                <div class="label-float senha-container">
+                    <input type="password" id="senha" name="senha" placeholder=" " required />
+                    <label for="senha">Senha</label>
+                </div>
+    
+                <div class="label-float senha-container">
+                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
+                    <label for="confirmSenha">Confirmar Senha</label>
+                </div>
             </div>
 
             <div class="btntest">
@@ -156,6 +183,7 @@ if(isset($_POST['submit'])) {
 
         </form>
     </div>
+
     <script>
         $('#cpf').mask('000.000.000-00');
         $('#celular').mask('(00) 00000-0000');

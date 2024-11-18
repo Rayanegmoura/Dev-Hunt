@@ -241,6 +241,135 @@ footer .flex {
     display: none;
 }
 
+/* ESTILO MENU LOGADO */
+
+/* MENU LATERAL */
+
+nav.menu-lateral {
+    width: 60px;
+    height: 100%;
+    background-color: #000000eb;
+    padding: 10px 5px;
+    box-shadow: 3px 0 15px #38c1a0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.menu-lateral .logo-ue img {
+    width: 105px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    font-size: 34px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: .2s;
+}
+
+ul li.ativo {
+    background-color: #38c1a0;
+    box-shadow: 0 0 15px #38c1a0;
+}
+
+ul li.item-menu:hover {
+    background-color: #38c1a0;
+    box-shadow: 0 0 15px #2e71c6;
+}
+
+ul li.item-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    color: #fff !important;
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu .icon > i {
+    font-size: 30px;
+    margin-left: 30%;
+    color: #fff;
+}
+  
+  .perfil-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .perfil-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #80808021;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+  
+  .perfil-nav ul li a {
+    padding: 10px;
+    color: #38c1a0;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .perfil-nav ul li a.active,
+  .perfil-nav ul li a:hover {
+    color: #2e71c6;
+    border-bottom: 3px solid #2e71c6;
+  }
+  
+  .perfil-content {
+    padding: 20px;
+    background: #80808020;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: left;
+    display: none;
+  }
+  
+  .mostrado {
+    display: block;
+  }
+
 /* ACESSIBILIDADE */
 
     /* BOTÃO DA ACESSIBILIDADE */
@@ -353,7 +482,8 @@ footer .flex {
     body.dark .menu-mobile .btn-login,
     body.dark .btn-plano:hover,
     body.dark .topo-suporte .lista-tp a:hover,
-    body.dark .btn-suporte .btn-st button {
+    body.dark .btn-suporte .btn-st button,
+    body.dark .perfil-container button {
         background-color: #2e71c6;
     }
 
@@ -377,7 +507,8 @@ footer .flex {
     body.dark  .topico,
     body.dark .btn-expandir > i,
     body.dark .card button,
-    body.dark .btn-suporte h3 {
+    body.dark .btn-suporte h3,
+    body.dark .perfil-container button {
         color: #fff !important;
     }
     
@@ -389,7 +520,8 @@ footer .flex {
     body.dark .ajuda1 a,
     body.dark .plano h2,
     body.dark .plano ul li i,
-    body.dark .box-suporte strong {
+    body.dark .box-suporte strong,
+    body.dark .perfil-container h2 {
         color: #2e71c6; 
     }
     
@@ -466,7 +598,8 @@ footer .flex {
     }
 
     body.dark .box-suporte .box-1,
-    body.dark .box-suporte .box-2 {
+    body.dark .box-suporte .box-2,
+    body.dark .perfil-container .projeto {
         box-shadow: 0 0 5px #2e71c6;
     }
 

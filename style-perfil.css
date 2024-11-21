@@ -7,7 +7,7 @@ body {
 }
 
 .perfil-container {
-  max-width: 600px;
+  max-width: 800px; 
   margin: auto;
   text-align: center;
   padding: 20px;
@@ -20,7 +20,6 @@ body {
   margin-bottom: 20px;
   position: relative;
 }
-
 .btn-voltar {
   position: absolute;
   top: 20px;
@@ -238,6 +237,125 @@ body {
   transform: scale(1.05);
 }
 
+/* Seção do Feed */
+#feed {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.postagem {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.postagem:hover {
+  transform: translateY(-5px);
+}
+
+.postagem-header, .postagem-interacoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.postagem-autor {
+  font-size: 1.2rem;
+  color: #050505;
+  font-weight: bold;
+}
+
+.postagem-data, .comentario-data {
+  font-size: 0.8rem;
+  color: #7a7a7a;
+}
+
+.postagem-conteudo, .comentario-texto {
+  font-size: 1rem;
+  color: #333;
+}
+
+.btn-curtir, .btn-comentar {
+  padding: 8px 15px;
+  background: #e4e6eb;
+  color: #1877f2;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-curtir:hover, .btn-comentar:hover {
+  background: #d0d3d8;
+  transform: scale(1.05);
+}
+
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentario {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f7f7f8;
+  border-radius: 10px;
+}
+
+.comentario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav .Barra {
+  display: flex;
+  align-items: center;
+  background: #2e2e2e;
+  border-radius: 25px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+nav .Barra input[type="search"] {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 15px; 
+  padding: 10px 15px;
+}
+
+nav .Barra:hover {
+  background: #3c3c3c;
+}
+
+nav .Barra i {
+  color: #38c1a0;
+  font-size: 20px;
+}
+
+nav .Barra input[type="search"]::placeholder {
+  color: #7e7e7e;
+}
+
+
 @media (max-width: 768px) {
   .perfil-container {
     padding: 10px;
@@ -255,6 +373,11 @@ body {
   .perfil-usuario {
     top: 80px;
   }
+  .perfil-nav ul {
+    flex-direction: column;
+  }
+}
+
   .perfil-nav ul {
     flex-direction: column;
   }

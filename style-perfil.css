@@ -378,7 +378,3 @@ nav .Barra input[type="search"]::placeholder {
   }
 }
 
-  .perfil-nav ul {
-    flex-direction: column;
-  }
-}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevHunt - Perfil</title>
-    <link rel="stylesheet" type="text/css" href="style-perfil.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <button class="btn-voltar"><i class="bi bi-chevron-left"></i></button>
       </a>
       
-<!-- perfil -->
+
     <div class="perfil-header">
         <div class="perfil-capa"></div>
         <div class="perfil-foto">
@@ -25,7 +25,7 @@
         <p class="perfil-usuario">@usuario</p>
         <button class="btn-editar-perfil">Editar Perfil</button>
     </div>
-<!-- Abas -->
+
     <nav class="perfil-nav">
         <ul>
             <li><a href="#" class="active" onclick="mostrarConteudo('feed')">Feed</a></li>
@@ -34,14 +34,57 @@
         </ul>
     </nav>
 <!-- Feed -->
-    <section id="feed" class="perfil-content mostrado">
-        <div class="usu1">
-            <h3>Matheus</h3>
-            <p>Dev hunt é a melhor empresa do mundo</p>
+<section id="feed" class="perfil-content mostrado">
+    <nav>
+    <div class="Barra">
+        <i class="bi bi-search"></i>
+        <input type="search" placeholder="Faça uma postagem">
+    </div>
+    </nav>
+
+    <div class="postagens">
+        <!-- Postagem 1 -->
+        <div class="postagem">
+            <div class="postagem-header">
+                <h4 class="postagem-autor">Matheus</h4>
+                <span class="postagem-data">12/11/2024</span>
+            </div>
+            <p class="postagem-conteudo">Dev Hunt é a melhor empresa do mundo!</p>
+            <div class="postagem-interacoes">
+                <button class="btn-curtir">Curtir</button>
+                <button class="btn-comentar">Comentar</button>
+            </div>
         </div>
-    
-        
-    </section>
+
+        <!-- Postagem 2 -->
+        <div class="postagem">
+            <div class="postagem-header">
+                <h4 class="postagem-autor">Juliana</h4>
+                <span class="postagem-data">10/11/2024</span>
+            </div>
+            <p class="postagem-conteudo">Estou animada para o próximo projeto da Dev Hunt!</p>
+            <div class="postagem-interacoes">
+                <button class="btn-curtir">Curtir</button>
+                <button class="btn-comentar">Comentar</button>
+            </div>
+        </div>
+
+        <!-- Postagem 3 -->
+        <div class="postagem">
+            <div class="postagem-header">
+                <h4 class="postagem-autor">Lucas</h4>
+                <span class="postagem-data">08/11/2024</span>
+            </div>
+            <p class="postagem-conteudo">Quais ferramentas vocês recomendam para trabalhar com JavaScript?</p>
+            <div class="postagem-interacoes">
+                <button class="btn-curtir">Curtir</button>
+                <button class="btn-comentar">Comentar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
 <!-- Curriculo -->
     <section id="curriculo" class="perfil-content">
         <h3>Cadastro de Currículo</h3>

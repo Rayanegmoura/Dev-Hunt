@@ -1,4 +1,5 @@
 <?php
+
     // Configuração dos dados de conexão com o banco de dados
     $hostname = "localhost";
     $username = "root";

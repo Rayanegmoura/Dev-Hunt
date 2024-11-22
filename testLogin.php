@@ -4,7 +4,6 @@
 
 if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])) 
 {
-    
     include_once('config.php');
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
@@ -14,10 +13,9 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
 
     // Cria a consulta SQL
    $sql = "SELECT * FROM freelance WHERE usuario = '$usuario' AND senha = '$senha'";
-
+   
     // Executa a consulta
    $result = $conexao->query($sql);
-
 
     // Verifica se a consulta retornou algum resultado
     if (mysqli_num_rows($result) < 1) {
@@ -31,7 +29,7 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
 
         $_SESSION['usuario']  = $usuario;
         $_SESSION['senha']  = $senha;
-        header('Location: admin.html.html');
+        header('Location: userfreela.html');
     }
 } 
 else 

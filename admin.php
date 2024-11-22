@@ -27,7 +27,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/rostos/face15.jpg" alt="">
+                  <img class="img-xs rounded-circle " src="assets/images/rostos/face17.jpg" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="nome-perfil">
@@ -44,7 +44,7 @@
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                    <p class="preview-subject ellipsis mb-1 text-small">Configuraçao da conta</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
@@ -55,7 +55,7 @@
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                    <p class="preview-subject ellipsis mb-1 text-small"> Esqueceu senha</p>
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
@@ -66,17 +66,17 @@
                     </div>
                   </div>
                   <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                    <p class="preview-subject ellipsis mb-1 text-small">Minha lista</p>
                   </div>
                 </a>
               </div>
             </div>
           </li>
           <li class="nav-item nav-category">
-            <span class="nav-link">Navegador</span>
+            <span class="nav-link">Geral</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="\Dev-Hunt\admin.php">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
@@ -84,7 +84,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="\Dev-Hunt\tabela.php">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
@@ -92,7 +92,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="\Dev-Hunt\graficos.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
@@ -221,7 +221,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="Ft-perfil">
-                    <img class="img-xs rounded-circle" src="assets/images/rostos/face15.jpg" alt="">
+                    <img class="img-xs rounded-circle" src="assets/images/rostos/face17.jpg" alt="">
                     <p class="mb-0 d-none d-sm-block navbar-nome-perfil">Ryan Roger</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
@@ -514,7 +514,7 @@
                             <th> Valores de Projeto </th>
                             <th> Projeto </th>
                             <th> Forma de Pagamento </th>
-                            <th> Data da Ativçao </th>
+                            <th> Data da Ativação </th>
                             <th> Status de Pagamento </th>
                           </tr>
                         </thead>

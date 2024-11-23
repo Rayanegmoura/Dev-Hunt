@@ -1,6 +1,6 @@
 <?php
 
- session_start();
+session_start();
 
 if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])) 
 {
@@ -8,34 +8,24 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    //print_r('usuario: ' . $usuario); 
-    //print_r('senha'. $senha);
+    // Consulta SQL para verificar usuário e senha
+    $sql = "SELECT * FROM freelance WHERE usuario = '$usuario' AND senha = '$senha'";
+    $result = $conexao->query($sql);
 
-    // Cria a consulta SQL
-   $sql = "SELECT * FROM freelance WHERE usuario = '$usuario' AND senha = '$senha'";
-   
-    // Executa a consulta
-   $result = $conexao->query($sql);
-
-    // Verifica se a consulta retornou algum resultado
     if (mysqli_num_rows($result) < 1) {
-           
-           unset($_SESSION['usuario']);
-           unset($_SESSION['senha']);
-           header('Location: login.php');
-
-           // Login bem-sucedido, redireciona para a página do usuário
+        unset($_SESSION['usuario']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
     } else {
-
-        $_SESSION['usuario']  = $usuario;
-        $_SESSION['senha']  = $senha;
-        header('Location: userfreela.html');
+        // Login bem-sucedido, redireciona para a página 2FA
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['senha'] = $senha;
+        header('Location: 2fa.php');
     }
 } 
 else 
 {
-        // Se não acessar, redireciona para a página de login
-        header('Location: login.php');
-  //  }
+    // Se não acessar, redireciona para a página de login
+    header('Location: login.php');
 }
 ?>

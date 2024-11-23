@@ -26,6 +26,9 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticação 2FA</title>
     <link rel="stylesheet" href="style-Login.css">
+    <!-- Adicione jQuery e jQuery Mask Plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
     <main>
@@ -38,6 +41,9 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
                 <?php if ($chavePergunta === 'dat_nasc'): ?>
                     <!-- Campo de data para a pergunta de data de nascimento -->
                     <input type="date" id="resposta" name="resposta" required>
+                <?php elseif ($chavePergunta === 'cep'): ?>
+                    <!-- Campo de texto para o CEP com um ID específico -->
+                    <input type="text" id="cep" name="resposta" required>
                 <?php else: ?>
                     <!-- Campo de texto padrão para outras perguntas -->
                     <input type="text" id="resposta" name="resposta" required>
@@ -52,5 +58,15 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
             </form>
         </div>
     </main>
+
+    <!-- Script para adicionar a máscara de CEP -->
+    <script>
+        $(document).ready(function(){
+            // Adiciona a máscara apenas se a pergunta for sobre o CEP
+            if ("<?php echo $chavePergunta; ?>" === "cep") {
+                $('#cep').mask('00000-000');
+            }
+        });
+    </script>
 </body>
 </html>

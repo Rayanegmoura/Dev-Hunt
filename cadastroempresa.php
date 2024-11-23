@@ -24,18 +24,22 @@ if(isset($_POST['submit'])) {
     
     include_once('config.php');
 
-    $usuario = $_POST['usuario'];
-    $nome = $_POST['nome'];
-    $mae = $_POST['mae'];
-    $cpf = $_POST['cpf'];
-    $dat_nasc = $_POST['dat_nasc'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $endereco = $_POST['endereco'];
+    $social = $_POST['social'];
+    $fantasia = $_POST['fantasia'];
+    $cnpj = $_POST['cnpj'];
+    $tipo = $_POST['tipo'];
+    $tel = $_POST['tel'];
+    $cel = $_POST['cel'];
     $cep = $_POST['cep'];
+    $ende = $_POST['ende'];
+    $numero = $_POST['numero'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $sexo = $_POST['sexo'];
-
+    
      $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
      VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
 }
@@ -83,20 +87,20 @@ if(isset($_POST['submit'])) {
 
                 <div class="genero">
                     <label>Tipo de Empresa:</label>
-                    <input type="radio" id="mei" name="mei" value="mei" required>
+                    <input type="radio" id="mei" name="tipo" value="mei" required>
                     <label for="masculino">MEI</label>
-                    <input type="radio" id="ltda" name="ltda" value="ltda" required>
+                    <input type="radio" id="ltda" name="tipo" value="ltda" required>
                     <label for="feminino">LTDA</label>
-                    <input type="radio" id="outros" name="sa" value="sa" required>
+                    <input type="radio" id="outros" name="tipo" value="sa" required>
                     <label for="outros">S/A</label>
-                    <input type="radio" id="outros" name="outros" value="O" required>
+                    <input type="radio" id="outros" name="tipo" value="O" required>
                     <label for="outros">Outros</label>
                 </div>
             </div>      
         
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <input type="text" id="telefone" name="tel" placeholder=" " autocomplete="off" maxlength="17" required />
                     <label for="telefone">Telefone</label>
                 </div>
 

@@ -34,7 +34,7 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
     <main>
         <div class="2fa-container">
             <h2>Autenticação de Duplo Fator</h2>
-            <form action="verify2fa.php" method="POST">
+            <form action="verify2fafreela.php" method="POST">
                 <!-- Mostra a pergunta sorteada -->
                 <label for="resposta"><?php echo $perguntaEscolhida; ?></label>
                 

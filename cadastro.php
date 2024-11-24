@@ -165,12 +165,12 @@ if(isset($_POST['submit'])) {
             
             <div class="form-row">
                 <div class="label-float senha-container">
-                    <input type="password" id="senha" name="senha" placeholder=" " required />
+                    <input type="password" id="senha" name="senha" placeholder=" " minlength="8" required />
                     <label for="senha">Senha</label>
                 </div>
     
                 <div class="label-float senha-container">
-                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
+                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " minlength="8" required />
                     <label for="confirmSenha">Confirmar Senha</label>
                 </div>
             </div>

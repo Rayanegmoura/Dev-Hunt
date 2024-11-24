@@ -39,7 +39,7 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
                 <label for="resposta"><?php echo $perguntaEscolhida; ?></label>
                 
                 <?php if ($chavePergunta === 'cnpj'): ?>
-                    <!-- Campo de data para a pergunta de data de nascimento -->
+                    <!-- Campo de data para a pergunta do cnpj -->
                     <input type="text" id="cnpj" name="resposta" required>
                 <?php elseif ($chavePergunta === 'cep'): ?>
                     <!-- Campo de texto para o CEP com um ID específico -->

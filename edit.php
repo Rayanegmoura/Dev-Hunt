@@ -1,25 +1,35 @@
 <?php
-if(isset($_POST['submit'])) {
-
-    
+ if(!empty($_GET['id']))
+{    
     include_once('config.php');
 
-    $usuario = $_POST['usuario'];
-    $nome = $_POST['nome'];
-    $mae = $_POST['mae'];
-    $cpf = $_POST['cpf'];
-    $dat_nasc = $_POST['dat_nasc'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $endereco = $_POST['endereco'];
-    $cep = $_POST['cep'];
-    $senha = $_POST['senha'];
-    $sexo = $_POST['sexo'];
+    $id = $_GET['id'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+    $sqlSelect = "SELECT * FROM freelance WHERE id=$id";
 
-    header("location: login.php");
+    $result = $conexao->query($sqlSelect);
+
+    if($result->num_rows > 0)
+    {
+      while($user_data = mysqli_fetch_assoc($result))
+      { 
+        $usuario = $user_data['usuario'];
+        $nome = $user_data['nome'];
+        $mae = $user_data['mae'];
+        $cpf = $user_data['cpf'];
+        $dat_nasc = $user_data['dat_nasc'];
+        $email = $user_data['email'];
+        $celular = $user_data['celular'];
+        $endereco = $user_data['endereco'];
+        $cep = $user_data['cep'];
+        $senha = $user_data['senha'];
+        $sexo = $user_data['sexo'];
+      }   
+    } 
+    else
+    {
+        header("location: tabela.php");
+    }       
 }
 ?> 
 
@@ -29,7 +39,7 @@ if(isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-cadastro.css">
-    <title>Cadastro</title>
+    <title>edit</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     
@@ -39,16 +49,16 @@ if(isset($_POST['submit'])) {
         <a href="index.html">
         <img class="logo" src="img-logo.png">
         </a>
-        <form action="cadastro.php" method="POST">
+        <form action="saveEdit.php" method="POST">
 
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="nome" name="nome" placeholder=" " required />
+                    <input type="text" id="nome" name="nome" placeholder=" " value="<?php echo isset($nome) ? $nome : ''; ?>" required />
                     <label for="nome">Nome Completo</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" id="cpf" name="cpf" placeholder=" " autocomplete="off" maxlength="14" required />
+                    <input type="text" id="cpf" name="cpf" placeholder=" " autocomplete="off" maxlength="16" value="<?php echo $cpf ?>" required />
                     <label for="cpf">CPF</label>
                 </div>
             </div>
@@ -56,16 +66,16 @@ if(isset($_POST['submit'])) {
             <div class="form-row">
                 <div class="data genero">
                     <label>Data de Nascimento</label>
-                    <input class="data" type="date" id="nasc" name="dat_nasc" required>
+                    <input class="data" type="date" id="nasc" name="dat_nasc" value="<?php echo $dat_nasc ?>" required>
                 </div>
                 
                 <div class="genero">
                     <label>Sexo:</label>
-                    <input type="radio" id="masculino" name="sexo" value="M" required>
+                    <input type="radio" id="masculino" name="sexo" value="M" <?php echo ($sexo== 'M') ? 'checked' : ''?> required>
                     <label for="masculino">Masculino</label>
-                    <input type="radio" id="feminino" name="sexo" value="F" required>
+                    <input type="radio" id="feminino" name="sexo" value="F" <?php echo ($sexo== 'F') ? 'checked' : ''?> required>
                     <label for="feminino">Feminino</label>
-                    <input type="radio" id="outros" name="sexo" value="O" required>
+                    <input type="radio" id="outros" name="sexo" value="O" <?php echo ($sexo== 'O') ? 'checked' : ''?> required>
                     <label for="outros">Outro</label>
                 </div>
                 
@@ -73,24 +83,24 @@ if(isset($_POST['submit'])) {
             
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <input type="text" id="celular" name="celular" placeholder=" " autocomplete="off" maxlength="17" value="<?php echo $celular ?>" required />
                     <label for="celular">Celular</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17"  required />
                     <label for="telefone">Telefone</label>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" required />
+                    <input type="text" id="mae" name="mae" placeholder=" " autocomplete="off" maxlength="60" value="<?php echo $mae ?>" required />
                     <label for="mae">Nome da Mãe</label>
                 </div>   
                 
                 <div class="label-float">
-                    <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="cep" name="cep" placeholder=" " autocomplete="off" maxlength="9" value="<?php echo $cep ?>" required />
                     <label for="cep">CEP</label>
                 </div>
 
@@ -98,7 +108,7 @@ if(isset($_POST['submit'])) {
 
             <div class="form-row">    
                 <div class="label-float">
-                    <input type="text" id="ende" name="endereco" placeholder=" " required />
+                    <input type="text" id="ende" name="endereco" placeholder=" "  required />
                     <label for="ende">Endereço</label>
                 </div>
 
@@ -133,30 +143,32 @@ if(isset($_POST['submit'])) {
 
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="usuario" name="usuario" placeholder=" " required />
+                    <input type="text" id="usuario" name="usuario" placeholder=" " value="<?php echo $usuario ?>" required />
                     <label for="usuario">Usuário</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="email" id="email" name="email" placeholder=" " required />
+                    <input type="email" id="email" name="email" placeholder=" " value="<?php echo $email ?>" required />
                     <label for="email">E-mail</label>
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="label-float senha-container">
-                    <input type="password" id="senha" name="senha" placeholder=" " required />
+                    <input type="text" id="senha" name="senha" placeholder=" " value="<?php echo $senha ?>" required />
                     <label for="senha">Senha</label>
                 </div>
     
                 <div class="label-float senha-container">
-                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
+                    <input type="test" id="confirmSenha" name="confirmSenha" placeholder=" "  required />
                     <label for="confirmSenha">Confirmar Senha</label>
                 </div>
             </div>
 
+            <input type="hidden" name="id" value="<?php echo $id ?>">
+
             <div class="btntest">
-            <button type="submit" name="submit" id="submit">Cadastrar</button>
+            <button type="submit" name="update" id="update">Salvar</button>
 
             <button type="reset" name="reset" id="reset">Limpar</button>
             </div>

@@ -1,0 +1,15 @@
+create database Dev_hunt ;
+use Dev_hunt;
+create table freelance (
+id_freelancer int primary key auto_increment not null ,
+usuario varchar(50) not null ,
+nome  varchar(50) not null ,
+mae  varchar(50) not null ,
+cpf varchar(11) not null ,
+dat_nasc date,
+email varchar(110) not null ,
+celular varchar(11) not null ,
+endereco varchar(50) not null ,
+cep varchar(11) not null ,
+senha varchar(50) not null ,
+sexo char(1));

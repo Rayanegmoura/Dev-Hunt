@@ -1,41 +1,50 @@
 <?php
+session_start();
 
- session_start();
-
+// Verifica se o formulário foi submetido e se os campos de usuário e senha não estão vazios
 if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])) 
 {
     include_once('config.php');
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
 
-    //print_r('usuario: ' . $usuario); 
-    //print_r('senha'. $senha);
+    // Consulta SQL para verificar se o usuário é um freelancer
+    $sqlFreelancer = "SELECT * FROM freelance WHERE usuario = '$usuario' AND senha = '$senha'";
+    $resultFreelancer = $conexao->query($sqlFreelancer);
 
-    // Cria a consulta SQL
-   $sql = "SELECT * FROM freelance WHERE usuario = '$usuario' AND senha = '$senha'";
-   
-    // Executa a consulta
-   $result = $conexao->query($sql);
+    // Consulta SQL para verificar se o usuário é uma empresa
+    $sqlEmpresa = "SELECT * FROM empresa WHERE usuario = '$usuario' AND senha = '$senha'";
+    $resultEmpresa = $conexao->query($sqlEmpresa);
 
-    // Verifica se a consulta retornou algum resultado
-    if (mysqli_num_rows($result) < 1) {
-           
-           unset($_SESSION['usuario']);
-           unset($_SESSION['senha']);
-           header('Location: login.php');
-
-           // Login bem-sucedido, redireciona para a página do usuário
+    // Verifica se o login é válido para freelancer
+    if (mysqli_num_rows($resultFreelancer) > 0) {
+        // Login bem-sucedido como freelancer
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['senha'] = $senha;
+        // Redireciona para a página 2FA para freelancers
+        header('Location: 2fafreela.php');
+        exit();
+    }
+    // Verifica se o login é válido para empresa
+    elseif (mysqli_num_rows($resultEmpresa) > 0) {
+        // Login bem-sucedido como empresa
+        $_SESSION['usuario'] = $usuario;
+        $_SESSION['senha'] = $senha;
+        // Redireciona para a página 2FA para empresas
+        header('Location: 2faempresa.php');
+        exit();
     } else {
-
-        $_SESSION['usuario']  = $usuario;
-        $_SESSION['senha']  = $senha;
-        header('Location: userfreela.html');
+        // Falha no login, redireciona para a página de login
+        unset($_SESSION['usuario']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+        exit();
     }
 } 
 else 
 {
-        // Se não acessar, redireciona para a página de login
-        header('Location: login.php');
-  //  }
+    // Se não acessar, redireciona para a página de login
+    header('Location: login.php');
+    exit();
 }
 ?>

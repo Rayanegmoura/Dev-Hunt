@@ -1,45 +1,35 @@
 <?php
 if(isset($_POST['submit'])) {
-    // Imprimir os dados recebidos no formulário
-    /*print_r($_POST["nome"]);
-    print_r('<br>');
-    print_r($_POST["mae"]);
-    print_r('<br>');
-    print_r($_POST["cpf"]);
-    print_r('<br>');
-    print_r($_POST["nasc"]);
-    print_r('<br>');
-    print_r($_POST["email"]);
-    print_r('<br>');
-    print_r($_POST["celular"]);
-    print_r('<br>');
-    print_r($_POST["ende"]);
-    print_r('<br>');
-    print_r($_POST["cep"]);
-    print_r('<br>');
-    print_r($_POST["senha"]);
-    print_r('<br>');
-    print_r($_POST["sexo"]);
-    print_r('<br>');*/
-    
+    // Inclua o arquivo de configuração para conectar ao banco de dados
     include_once('config.php');
 
-    $usuario = $_POST['usuario'];
-    $nome = $_POST['nome'];
-    $mae = $_POST['mae'];
-    $cpf = $_POST['cpf'];
-    $dat_nasc = $_POST['dat_nasc'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $endereco = $_POST['endereco'];
+    // Captura os dados do formulário corretamente
+    $social = $_POST['social'];
+    $fantasia = $_POST['fantasia'];
+    $cnpj = $_POST['cnpj'];
+    $tipo = $_POST['tipo'];
+    $tel = $_POST['tel'];
+    $cel = $_POST['cel'];
     $cep = $_POST['cep'];
+    $ende = $_POST['ende'];  
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $sexo = $_POST['sexo'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+    // Verifique a consulta SQL
+    $result = mysqli_query($conexao, "INSERT INTO empresa(social, fantasia, cnpj, tipo, tel, cel, cep, ende, usuario, email, senha) 
+    VALUES ('$social', '$fantasia', '$cnpj', '$tipo', '$tel', '$cel', '$cep', '$ende', '$usuario', '$email', '$senha')");
+
+    // Verifique se houve algum erro na inserção
+    if ($result) {
+        echo "Cadastro realizado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar: " . mysqli_error($conexao);
+    }
+    header("location: login.php");
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,19 +40,13 @@ if(isset($_POST['submit'])) {
     <title>Cadastro</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
-    
-    <!-- Adicionando JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
-
 </head>
 <body>
     <div class="container">
         <a href="index.html">
         <img class="logo" src="img-logo.png">
         </a>
-        <form action="cadastro.php" method="POST">
+        <form action="cadastroempresa.php" method="POST">
 
             <div class="form-row">
                 <div class="label-float">
@@ -70,8 +54,8 @@ if(isset($_POST['submit'])) {
                     <label for="social">Razão Social</label>
                 </div>
                 <div class="label-float">
-                    <input type="text" id="nome" name="nome" placeholder=" " autocomplete="off" maxlength="60" required />
-                    <label for="nome">Nome Fantasia</label>
+                    <input type="text" id="fantasia" name="fantasia" placeholder=" " autocomplete="off" maxlength="60" required />
+                    <label for="fantasia">Nome Fantasia</label>
                 </div>
             </div>
 
@@ -83,20 +67,20 @@ if(isset($_POST['submit'])) {
 
                 <div class="genero">
                     <label>Tipo de Empresa:</label>
-                    <input type="radio" id="mei" name="mei" value="mei" required>
+                    <input type="radio" id="mei" name="tipo" value="mei" required>
                     <label for="masculino">MEI</label>
-                    <input type="radio" id="ltda" name="ltda" value="ltda" required>
+                    <input type="radio" id="ltda" name="tipo" value="ltda" required>
                     <label for="feminino">LTDA</label>
-                    <input type="radio" id="outros" name="sa" value="sa" required>
+                    <input type="radio" id="outros" name="tipo" value="sa" required>
                     <label for="outros">S/A</label>
-                    <input type="radio" id="outros" name="outros" value="O" required>
+                    <input type="radio" id="outros" name="tipo" value="O" required>
                     <label for="outros">Outros</label>
                 </div>
             </div>      
         
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" required />
+                    <input type="text" id="tel" name="tel" placeholder=" " autocomplete="off" maxlength="17" required />
                     <label for="telefone">Telefone</label>
                 </div>
 
@@ -114,7 +98,7 @@ if(isset($_POST['submit'])) {
                 </div>
     
                 <div class="label-float">
-                    <input type="text" id="ende" name="endereco" placeholder=" " required />
+                    <input type="text" id="ende" name="ende" placeholder=" " required />
                     <label for="ende">Endereço</label>
                 </div>
             </div>
@@ -156,12 +140,12 @@ if(isset($_POST['submit'])) {
 
             <div class="form-row">
                 <div class="label-float senha-container">
-                    <input type="password" id="senha" name="senha" placeholder=" " required />
+                    <input type="password" id="senha" name="senha" placeholder=" " minlength="8" required />
                     <label for="senha">Senha</label>
                 </div>
     
                 <div class="label-float senha-container">
-                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " required />
+                    <input type="password" id="confirmSenha" name="confirmSenha" placeholder=" " minlength="8" required />
                     <label for="confirmSenha">Confirmar Senha</label>
                 </div>
             </div>
@@ -176,7 +160,8 @@ if(isset($_POST['submit'])) {
     </div>
     <script>
         $('#cnpj').mask('00.000.000/0000-00');
-        $('#telefone').mask('(00) 0000-0000');
+        $('#tel').mask('(00) 0000-0000');
+        $('#cel').mask('(00) 00000-0000');
         $('#cep').mask('00000-000');
         
     </script>

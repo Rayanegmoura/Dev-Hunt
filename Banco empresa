@@ -1,0 +1,14 @@
+create table empresa(
+id_empresa int primary key auto_increment not null,
+social varchar(50) not null,
+fantasia varchar(50) not null,
+cnpj varchar(14) not null,
+tipo char(1),
+cep varchar(11) not null,
+tel varchar(11) not null,
+cel varchar(11) not null,
+ende varchar(110) not null,
+usuario varchar(50) not null,
+email varchar(110) not null,
+senha varchar(50) not null
+);

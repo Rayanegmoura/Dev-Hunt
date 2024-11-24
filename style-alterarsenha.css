@@ -14,11 +14,15 @@ body {
 }
 
 .alterar-senha-container {
-    background-color: #ffffff;
+    background-color: #383838a3;
     padding: 40px;
     border-radius: 5px;
     border: 2px solid #38c1a0;
     box-shadow: 0 0 15px #38c1a0;
+    color: white;
+}
+h2, a{
+    color: white;
 }
 
 .logo-container {

@@ -25,7 +25,7 @@
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" minlength="8" required>
             <div class="forgot-password">
-                <a href="esquecisenha.html">Esqueci minha senha</a>
+                <a href="alterarsenha.html">Esqueci minha senha</a>
             </div>
 
             <div class="button-container">
@@ -37,7 +37,7 @@
         </form>
 
         <div class="register-section">
-            <p>Não tem uma conta? <a href="cadastro.php" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
+            <p>Não tem uma conta? <a href="useroufreela.html" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
         </div>
     </div>
     <div class="btn-fixo" id="btn-fixo">

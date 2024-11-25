@@ -18,16 +18,9 @@
             </a>
         </div>
 
-        <form action="testLogin.php" method="POST" id="">
-            <label for="usuario">Usuário</label>
+        <form action="testusuario.php" method="POST" id="">
+            <label for="usuario">Qual seu Usuário?</label>
             <input type="text" id="usuario" name="usuario" maxlength="10" required>
-
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" minlength="8" required>
-            <div class="forgot-password">
-                <a href="alterarsenha.php">Esqueci minha senha</a>
-            </div>
-
             <div class="button-container">
                 <button type="submit" name="submit">Enviar</button>
                 <button type="reset" id="clearBtn">Limpar</button>
@@ -36,9 +29,6 @@
             <p id="errorMessage"></p>
         </form>
 
-        <div class="register-section">
-            <p>Não tem uma conta? <a href="useroufreela.html" onclick="redirectToRegister()">Cadastre-se aqui</a></p> <!-- Redirecionamento via JS -->
-        </div>
     </div>
     <div class="btn-fixo" id="btn-fixo">
         <button class="fixo" id="toggleAcessibilidade"><i class="bi bi-universal-access-circle"></i></button>

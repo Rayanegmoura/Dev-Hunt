@@ -35,7 +35,7 @@ body {
 
 .label-float {
     position: relative;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .label-float input {
@@ -80,6 +80,10 @@ body {
     justify-content: space-evenly;
     gap: 60px;
     margin-bottom: 20px; 
+}
+
+.nivel {
+    justify-content: center;
 }
 
 .form-row .label-float {
@@ -138,3 +142,4 @@ i.fa-eye {
     border: none;
     font-size: 20px;
 }
+

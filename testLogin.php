@@ -1,4 +1,4 @@
-<?php
+    <?php
 session_start();
 
 // Verifica se o formulário foi submetido e se os campos de usuário e senha não estão vazios

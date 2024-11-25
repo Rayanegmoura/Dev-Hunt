@@ -59,6 +59,7 @@ if (isset($_POST['submit'])) {
         header('Location: userfreela.html');
     } else {
         // Falha na autenticação 2FA, redireciona de volta para 2FA
+        header('Location: pagerro.html');
         echo '<script>alert("Falha na autenticação 2FA. Tente novamente.");</script>';
         echo '<script>window.location.href="2fa.php";</script>';
     }

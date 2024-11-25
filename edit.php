@@ -23,6 +23,11 @@
         $endereco = $user_data['endereco'];
         $cep = $user_data['cep'];
         $senha = $user_data['senha'];
+        $cidade = $user_data['cidade'];
+        $estado = $user_data['estado'];
+        $complemento = $user_data['complemento'];
+        $sexo = $user_data['sexo'];
+        $sexo = $user_data['sexo'];
         $sexo = $user_data['sexo'];
       }   
     } 

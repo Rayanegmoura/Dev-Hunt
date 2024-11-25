@@ -49,6 +49,16 @@ if(isset($_POST['submit'])) {
         <form action="cadastroempresa.php" method="POST">
 
             <div class="form-row">
+                <div class="nivel genero">
+                    <label>Tipo de Empresa:</label>
+                    <input type="radio" id="mei" name="nivel" value="mei" required>
+                    <label for="masculino">Freelancer</label>
+                    <input type="radio" id="ltda" name="nivel" value="ltda" checked required>
+                    <label for="feminino">Empresa</label>
+                </div>
+            </div>
+
+            <div class="form-row">
                 <div class="label-float">
                     <input type="text" id="social" name="social" placeholder=" " autocomplete="off" maxlength="14" required />
                     <label for="social">Razão Social</label>
@@ -65,7 +75,7 @@ if(isset($_POST['submit'])) {
                     <label for="cnpj">CNPJ</label>
                 </div>
 
-                <div class="genero">
+                <div class="tipo genero">
                     <label>Tipo de Empresa:</label>
                     <input type="radio" id="mei" name="tipo" value="mei" required>
                     <label for="masculino">MEI</label>

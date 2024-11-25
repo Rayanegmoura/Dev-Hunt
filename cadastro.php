@@ -13,11 +13,17 @@ if(isset($_POST['submit'])) {
     $celular = $_POST['celular'];
     $endereco = $_POST['endereco'];
     $cep = $_POST['cep'];
+    $nivel = $_POST['nivel'];
     $senha = $_POST['senha'];
     $sexo = $_POST['sexo'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
+    $numero = $_POST['numero'];
+    $complemento = $_POST['complemento'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo')");
+     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo, bairro, numero, cidade, estado, complemento) 
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo','$bairro', '$numero', '$cidade', '$estado', '$complemento')");
 
     header("location: login.php");
 }
@@ -40,6 +46,16 @@ if(isset($_POST['submit'])) {
         <img class="logo" src="img-logo.png">
         </a>
         <form action="cadastro.php" method="POST">
+
+            <div class="form-row">
+                <div class="nivel genero">
+                    <label>Tipo de Empresa:</label>
+                    <input type="radio" id="mei" name="nivel" value="mei" checked required>
+                    <label for="masculino">Freelancer</label>
+                    <input type="radio" id="ltda" name="nivel" value="ltda" required>
+                    <label for="feminino">Empresa</label>
+                </div>
+            </div>
 
             <div class="form-row">
                 <div class="label-float">
@@ -126,7 +142,7 @@ if(isset($_POST['submit'])) {
                     <label for="cep">Cidade</label>
                 </div>
                 <div class="label-float">
-                    <input type="text" id="uf" name="Estado" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="uf" name="estado" placeholder=" " autocomplete="off" maxlength="9" required />
                     <label for="cep">Estado</label>
                 </div>
             </div>

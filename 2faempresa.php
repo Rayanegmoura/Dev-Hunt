@@ -25,7 +25,7 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticação 2FA</title>
-    <link rel="stylesheet" href="style-Login.css">
+    <link rel="stylesheet" href="styleLogin2fa.css">
     <!-- Adicione jQuery e jQuery Mask Plugin -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
@@ -33,7 +33,7 @@ $perguntaEscolhida = $perguntas[$chavePergunta];
 <body>
     <main>
         <div class="2fa-container">
-            <h2>Autenticação de Duplo Fator</h2>
+            <h2>Autenticação de 2FA</h2>
             <form action="verify2faempresa.php" method="POST">
                 <!-- Mostra a pergunta sorteada -->
                 <label for="resposta"><?php echo $perguntaEscolhida; ?></label>

@@ -13,7 +13,7 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
     $resultFreelancer = $conexao->query($sqlFreelancer);
 
     // Consulta SQL para verificar se o usuário é uma empresa
-    $sqlEmpresa = "SELECT * FROM empresa WHERE usuario = '$usuario' AND senha = '$senha'";
+    $sqlEmpresa = "SELECT * FROM Adm WHERE usuario = '$usuario' AND senha = '$senha'";
     $resultEmpresa = $conexao->query($sqlEmpresa);
 
     // Verifica se o login é válido para freelancer
@@ -31,7 +31,7 @@ if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha
         $_SESSION['usuario'] = $usuario;
         $_SESSION['senha'] = $senha;
         // Redireciona para a página 2FA para empresas
-        header('Location: 2faempresa.php');
+        header('Location: admin.php');
         exit();
     } else {
         // Falha no login, redireciona para a página de login

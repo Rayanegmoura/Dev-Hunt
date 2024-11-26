@@ -11,6 +11,7 @@ if(isset($_POST['submit'])) {
     $dat_nasc = $_POST['dat_nasc'];
     $email = $_POST['email'];
     $celular = $_POST['celular'];
+    $telefone = $_POST['telefone'];
     $endereco = $_POST['endereco'];
     $cep = $_POST['cep'];
     $nivel = $_POST['nivel'];
@@ -22,8 +23,8 @@ if(isset($_POST['submit'])) {
     $numero = $_POST['numero'];
     $complemento = $_POST['complemento'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular, endereco, cep, senha, sexo, bairro, numero, cidade, estado, complemento) 
-     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular', '$endereco', '$cep', '$senha', '$sexo','$bairro', '$numero', '$cidade', '$estado', '$complemento')");
+     $result = mysqli_query($conexao, "INSERT INTO freelance(nivel,usuario, nome, mae, cpf, dat_nasc, email, celular,telefone, endereco, cep, senha, sexo, bairro, numero, cidade, estado, complemento) 
+     VALUES ('$nivel','$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular','$telefone', '$endereco', '$cep', '$senha', '$sexo','$bairro', '$numero', '$cidade', '$estado', '$complemento')");
 
     header("location: login.php");
 }
@@ -48,12 +49,12 @@ if(isset($_POST['submit'])) {
         <form action="cadastro.php" method="POST">
 
             <div class="form-row">
-                <div class="nivel genero">
+                <div class="nivel">
                     <label>Tipo de Empresa:</label>
                     <input type="radio" id="mei" name="nivel" value="mei" checked required>
-                    <label for="masculino">Freelancer</label>
+                    <label for="freelancer">Freelancer</label>
                     <input type="radio" id="ltda" name="nivel" value="ltda" required>
-                    <label for="feminino">Empresa</label>
+                    <label for="empresa">Empresa</label>
                 </div>
             </div>
 

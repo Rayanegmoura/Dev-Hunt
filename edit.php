@@ -23,12 +23,13 @@
         $endereco = $user_data['endereco'];
         $cep = $user_data['cep'];
         $senha = $user_data['senha'];
+        $sexo = $user_data['sexo'];
         $cidade = $user_data['cidade'];
         $estado = $user_data['estado'];
         $complemento = $user_data['complemento'];
-        $sexo = $user_data['sexo'];
-        $sexo = $user_data['sexo'];
-        $sexo = $user_data['sexo'];
+        $telefone = $user_data['telefone'];
+        $numero = $user_data['numero'];
+        $bairro = $user_data['bairro'];
       }   
     } 
     else
@@ -93,7 +94,7 @@
                 </div>
 
                 <div class="label-float">
-                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17"  required />
+                    <input type="text" id="telefone" name="telefone" placeholder=" " autocomplete="off" maxlength="17" value="<?php echo isset($telefone) ? $telefone : ''; ?>"  required />
                     <label for="telefone">Telefone</label>
                 </div>
             </div>
@@ -113,35 +114,35 @@
 
             <div class="form-row">    
                 <div class="label-float">
-                    <input type="text" id="ende" name="endereco" placeholder=" "  required />
+                    <input type="text" id="ende" name="endereco" placeholder=" " value="<?php echo isset($endereco) ? $endereco : ''; ?>" required />
                     <label for="ende">Endereço</label>
                 </div>
 
                 <div class="label-float">
-                    <input type="text" id="numero" name="numero" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="numero" name="numero" placeholder=" " autocomplete="off" maxlength="9" value="<?php echo isset($numero) ? $numero : ''; ?>" required />
                     <label for="numero">Número</label>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="complemento" name="complemento" placeholder=" " autocomplete="off" maxlength="90" required />
+                    <input type="text" id="complemento" name="complemento" placeholder=" " autocomplete="off" maxlength="90" value="<?php echo isset($complemento) ? $complemento : ''; ?>" required />
                     <label for="complemento">Complemento</label>
                 </div>
                 
                 <div class="label-float">
-                    <input type="text" id="bairro" name="bairro" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="bairro" name="bairro" placeholder=" " autocomplete="off" maxlength="9" value="<?php echo isset($bairro) ? $bairro : ''; ?>" required />
                     <label for="cep">Bairro</label>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="label-float">
-                    <input type="text" id="cidade" name="cidade" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="cidade" name="cidade" placeholder=" " autocomplete="off" maxlength="9" value="<?php echo isset($cidade) ? $cidade : ''; ?>" required />
                     <label for="cep">Cidade</label>
                 </div>
                 <div class="label-float">
-                    <input type="text" id="uf" name="Estado" placeholder=" " autocomplete="off" maxlength="9" required />
+                    <input type="text" id="uf" name="estado" placeholder=" " autocomplete="off" maxlength="9" value="<?php echo isset($estado) ? $estado : ''; ?>" required />
                     <label for="cep">Estado</label>
                 </div>
             </div>

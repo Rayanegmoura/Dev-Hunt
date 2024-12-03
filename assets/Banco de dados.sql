@@ -44,7 +44,7 @@ email varchar(110) not null,
 senha varchar(50) not null
 );
 
-create table admin (
+create table Adm (
 id_admin int auto_increment not null primary key,
 nome varchar (50),
 mae varchar (50),
@@ -53,9 +53,9 @@ usuario varchar(20),
 senha varchar(50)
 );
 
-insert into admin (usuario, senha) values 
+insert into Adm (usuario, senha) values 
 ('Lucas', '12345678'); 
 
-select * from admin;
+select * from Adm;
 select * from freelance;
 select * from empresa;

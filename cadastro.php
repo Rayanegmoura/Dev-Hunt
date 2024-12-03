@@ -14,7 +14,6 @@ if(isset($_POST['submit'])) {
     $telefone = $_POST['telefone'];
     $endereco = $_POST['endereco'];
     $cep = $_POST['cep'];
-    $nivel = $_POST['nivel'];
     $senha = $_POST['senha'];
     $sexo = $_POST['sexo'];
     $bairro = $_POST['bairro'];
@@ -23,8 +22,8 @@ if(isset($_POST['submit'])) {
     $numero = $_POST['numero'];
     $complemento = $_POST['complemento'];
 
-     $result = mysqli_query($conexao, "INSERT INTO freelance(nivel,usuario, nome, mae, cpf, dat_nasc, email, celular,telefone, endereco, cep, senha, sexo, bairro, numero, cidade, estado, complemento) 
-     VALUES ('$nivel','$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular','$telefone', '$endereco', '$cep', '$senha', '$sexo','$bairro', '$numero', '$cidade', '$estado', '$complemento')");
+     $result = mysqli_query($conexao, "INSERT INTO freelance(usuario, nome, mae, cpf, dat_nasc, email, celular,telefone, endereco, cep, senha, sexo, bairro, numero, cidade, estado, complemento) 
+     VALUES ('$usuario', '$nome', '$mae', '$cpf', '$dat_nasc', '$email', '$celular','$telefone', '$endereco', '$cep', '$senha', '$sexo','$bairro', '$numero', '$cidade', '$estado', '$complemento')");
 
     header("location: login.php");
 }

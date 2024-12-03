@@ -11,14 +11,18 @@ if(isset($_POST['submit'])) {
     $tel = $_POST['tel'];
     $cel = $_POST['cel'];
     $cep = $_POST['cep'];
-    $ende = $_POST['ende'];  
+    $ende = $_POST['ende'];
+    $numero = $_POST['numero'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];  
     $usuario = $_POST['usuario'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
     // Verifique a consulta SQL
-    $result = mysqli_query($conexao, "INSERT INTO empresa(social, fantasia, cnpj, tipo, tel, cel, cep, ende, usuario, email, senha) 
-    VALUES ('$social', '$fantasia', '$cnpj', '$tipo', '$tel', '$cel', '$cep', '$ende', '$usuario', '$email', '$senha')");
+    $result = mysqli_query($conexao, "INSERT INTO empresa(social, fantasia, cnpj, tipo, tel, cel, cep, ende, numero, bairro, cidade, estado, usuario, email, senha) 
+    VALUES ('$social', '$fantasia', '$cnpj', '$tipo', '$tel', '$cel', '$cep', '$ende', '$numero', '$bairro', '$cidade', '$estado', '$usuario', '$email', '$senha')");
 
     // Verifique se houve algum erro na inserção
     if ($result) {

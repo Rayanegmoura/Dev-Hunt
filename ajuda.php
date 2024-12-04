@@ -16,7 +16,7 @@
     <header class="menu-principal">
 
         <div class="logo">
-            <a href="/index.html">
+            <a href="/index.php">
                 <img id="imagemAcessibilidade" src="img-logo.png" alt="Dev Hunt" />
             </a><!--link-logo-->
         </div><!--logo-->
@@ -24,31 +24,33 @@
         <nav class="menu-desktop">
             <ul>
                 <li>
-                    <a href="index.html">Início</a>
+                    <a href="index.php">Início</a>
                 </li>
 
                 <li>
-                    <a href="quemsomos.html">Quem Somos</a>
+                    <a href="quemsomos.php">Quem Somos</a>
                 </li>
 
                 <li class="dropdown">
                     <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
 
                     <div class="dropdown-menu">
-                        <a href="planos.html">Planos</a>
+                        <a href="planos.php">Planos</a>
                         <a href="login.html">Freelancer</a>
                         <a href="login.html">Empresas</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="ajuda.html">Ajuda</a>
+                    <a href="ajuda.php">Ajuda</a>
                 </li>
             </ul><!---ul-->
         </nav><!--links-->
 
         <div class="btn-topo btn">
-            <a class="login-btn" href="login.html">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+        <?php
+    include 'header.php';
+    ?>
             <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
             <a href="login.html"><button>Publicar Projeto</button></a>
         </div><!--botao-topo-->
@@ -73,15 +75,15 @@
                     </li>
 
                     <li>
-                        <a href="index.html">Início</a>
+                        <a href="index.php">Início</a>
                     </li>
 
                     <li>
-                        <a href="quemsomos.html">Quem Somos</a>
+                        <a href="quemsomos.php">Quem Somos</a>
                     </li>
 
                     <li>
-                        <a href="ajuda.html">Ajuda</a>
+                        <a href="ajuda.php">Ajuda</a>
                     </li>
 
                     <li>

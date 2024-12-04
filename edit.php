@@ -52,7 +52,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html">
+        <a href="index.php">
         <img class="logo" src="img-logo.png">
         </a>
         <form action="saveEdit.php" method="POST">

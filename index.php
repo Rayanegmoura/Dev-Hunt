@@ -27,7 +27,7 @@
     <header class="menu-principal">
 
         <div class="logo">
-            <a href="/index.html">
+            <a href="/index.php">
                 <img id="imagemAcessibilidade" src="img-logo.png" alt="Dev Hunt" />
             </a><!--link-logo-->
         </div><!--logo-->
@@ -35,31 +35,33 @@
         <nav class="menu-desktop">
             <ul>
                 <li>
-                    <a href="index.html">Início</a>
+                    <a href="index.php">Início</a>
                 </li>
 
                 <li>
-                    <a href="quemsomos.html">Quem Somos</a>
+                    <a href="quemsomos.php">Quem Somos</a>
                 </li>
 
                 <li class="dropdown">
                     <a href="#">Serviços<i class="bi bi-caret-down"></i></a>
 
                     <div class="dropdown-menu">
-                        <a href="planos.html">Planos</a>
+                        <a href="planos.php">Planos</a>
                         <a href="login.php">Freelancer</a>
                         <a href="login.php">Empresas</a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="ajuda.html">Ajuda</a>
+                    <a href="ajuda.php">Ajuda</a>
                 </li>
             </ul><!---ul-->
         </nav><!--links-->
 
         <div class="btn-topo btn">
-            <a class="login-btn" href="login.php">Olá <span id="username">Visitante</span>, seja bem-vindo</a>
+        <?php
+    include 'header.php';
+    ?>
             <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
             <a href="login.php"><button>Publicar Projeto</button></a>
         </div><!--botao-topo-->
@@ -85,15 +87,15 @@
                     </li>
 
                     <li>
-                        <a href="index.html">Início</a>
+                        <a href="index.php">Início</a>
                     </li>
 
                     <li>
-                        <a href="quemsomos.html">Quem Somos</a>
+                        <a href="quemsomos.php">Quem Somos</a>
                     </li>
 
                     <li>
-                        <a href="planos.html">Planos</a>
+                        <a href="planos.php">Planos</a>
                     </li>
 
                     <li>
@@ -101,7 +103,7 @@
                     </li>
 
                     <li>
-                        <a href="ajuda.html">Ajuda</a>
+                        <a href="ajuda.php">Ajuda</a>
                     </li>
                 </ul><!---ul-->
             </nav><!--links-->
@@ -323,7 +325,7 @@
                                 <li><i class="bi bi-check2-circle"></i>Relatórios e Insights</li>
                             </ul>
                             <div class="btn-planos">
-                                <a href="planos.html"><button>Contratar</button></a>
+                                <a href="planos.php"><button>Contratar</button></a>
                             </div><!--btn-planos-->
                         </div><!--p-empresa-->
     
@@ -339,7 +341,7 @@
                                 <li><i class="bi bi-check2-circle"></i>Apoio e Suporte Personalizado</li>
                             </ul>
                             <div class="btn-planos">
-                                <a href="planos.html"><button>Contratar</button></a>
+                                <a href="planos.php"><button>Contratar</button></a>
                             </div><!--btn-planos-->
                         </div><!--p-freelancer-->
                     </div><!--flex-->
@@ -357,7 +359,7 @@
                             <p>Escolha o tipo de talento que precisa de acordo com a categoria e escopo do seu projeto.</p>
                             <ul>
                                 <li><a href="login.php">Encontre um freelance</a></li>
-                                <li><a href="planos.html">Planos e preços</a></li>
+                                <li><a href="planos.php">Planos e preços</a></li>
                             </ul>
                         </div><!--p-ajuda-->
     
@@ -368,7 +370,7 @@
                                 disponibilidade.</p>
                             <ul>
                                 <li><a href="login.php">Encontre um projeto</a></li>
-                                <li><a href="planos.html">Planos e preços</a></li>
+                                <li><a href="planos.php">Planos e preços</a></li>
                             </ul>
                         </div><!--p-ajuda-->
     
@@ -377,8 +379,8 @@
                             <h2>Quero Ajuda</h2>
                             <p>Tire suas dúvidas e receba assistência em até 24hrs. Através do email, WhatsApp ou Central de atendimento.</p>
                             <ul>
-                                <li><a href="ajuda.html">Central de Ajuda</a></li>
-                                <li><a href="ajuda.html">Perguntas Frequentes</a></li>
+                                <li><a href="ajuda.php">Central de Ajuda</a></li>
+                                <li><a href="ajuda.php">Perguntas Frequentes</a></li>
                             </ul>
                         </div><!--p-ajuda-->
     

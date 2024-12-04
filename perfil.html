@@ -23,7 +23,7 @@
         </div>
         <h2 class="perfil-nome">Nome do Usuário</h2>
         <p class="perfil-usuario">@usuario</p>
-        <button class="btn-editar-perfil">Editar Perfil</button>
+        <button class="btn-editar-perfil" onclick="window.location.href='editar-perfil.html'">Editar Perfil</button>
     </div>
 
     <nav class="perfil-nav">
@@ -155,7 +155,23 @@
         document.getElementById(aba).classList.add("mostrado");
         document.querySelectorAll(".perfil-nav a").forEach(link => link.classList.remove("active"));
         document.querySelector(`[onclick="mostrarConteudo('${aba}')"]`).classList.add("active");
+    } 
+    window.onload = function() {
+    // Verifica se existe o nome e a foto salvos no localStorage
+    const nomeUsuario = localStorage.getItem('nomeUsuario');
+    const fotoPerfil = localStorage.getItem('fotoPerfil');
+
+    // Atualiza o nome do usuário na página
+    if (nomeUsuario) {
+      document.querySelector('.perfil-nome').textContent = nomeUsuario;
+      document.querySelector('.perfil-usuario').textContent = '@' + nomeUsuario.toLowerCase();
     }
+
+    // Atualiza a foto de perfil
+    if (fotoPerfil) {
+      document.querySelector('.perfil-foto img').src = fotoPerfil;
+    }
+  };
 </script>
 
 </body>

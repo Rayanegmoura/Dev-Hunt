@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="editar-perfil.css">
+</head>
+<body>
+  <main class="container-editar-perfil">
+    <h1>Editar Perfil</h1>
+    
+    <form class="formulario-editar">
+      <!-- Seção de foto de perfil -->
+      <div class="secao-foto-perfil">
+        <label for="foto-perfil">
+          <img id="foto-preview" src="perfil-padrao.png" alt="Foto de Perfil">
+        </label>
+        <input type="file" id="foto-perfil" accept="image/*" hidden onchange="previsualizarFotoPerfil(event)">
+        <p>Clique na imagem para alterar</p>
+      </div>
+
+      <!-- Seção para alterar nome -->
+      <div class="secao-nome">
+        <label for="nome-usuario">Nome:</label>
+        <input type="text" id="nome-usuario" placeholder="Digite seu novo nome" required>
+      </div>
+
+      <button type="button" class="botao-salvar" onclick="salvarAlteracoes()">Salvar Alterações</button>
+    </form>
+
+    <!-- Botão para retornar ao feed -->
+    <a href="perfil.html" class="botao-voltar-feed">Voltar para o Feed</a>
+  </main>
+
+  <script>
+    function salvarAlteracoes() {
+      // Pega os dados do formulário
+      const nomeUsuario = document.getElementById('nome-usuario').value;
+      const fotoPerfil = document.getElementById('foto-perfil').files[0];
+      
+      // Armazenando no localStorage
+      if (nomeUsuario) {
+        localStorage.setItem('nomeUsuario', nomeUsuario);
+      }
+  
+      if (fotoPerfil) {
+        const reader = new FileReader();
+        reader.onload = function() {
+          localStorage.setItem('fotoPerfil', reader.result);
+        };
+        reader.readAsDataURL(fotoPerfil);
+      }
+  
+      // Pode incluir aqui um alerta ou mensagem de sucesso
+      alert('Alterações salvas com sucesso!');
+    }
+  </script>
+  
+</body>
+</html>

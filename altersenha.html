@@ -8,7 +8,7 @@
 </head>
 <body>
   <main class="container-altersenha">
-    <h1>Editar Perfil</h1>
+    <h1>Editar Senha</h1>
     
     <form class="formulario-altersenha">
       <!-- Alterar senha -->
@@ -26,7 +26,7 @@
       <button type="submit" class="botao-salvar">Salvar Alterações</button>
     </form>
 
-    <a href="feed.html" class="botao-voltar-feed">Voltar para o Feed</a>
+    <a href="perfil.html" class="botao-voltar-feed">Voltar para o Feed</a>
   </main>
 
   <script>
@@ -40,7 +40,7 @@
 
       if (novaSenha === confirmarSenha) {
         alert('Alterações salvas com sucesso!');
-        window.location.href = "feed.html"; // Redireciona para o feed
+        window.location.href = "perfil.html"; // Redireciona para o feed
       } else {
         alert('As senhas não coincidem. Tente novamente.');
       }

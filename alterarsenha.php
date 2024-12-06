@@ -18,7 +18,7 @@
             </a>
         </div>
 
-        <form action="testusuario.php" method="POST" id="">
+        <form action="altersenha.html" method="POST" id="">
             <label for="usuario">Qual seu Usuário?</label>
             <input type="text" id="usuario" name="usuario" maxlength="10" required>
             <div class="button-container">

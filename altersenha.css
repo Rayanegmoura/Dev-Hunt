@@ -1,0 +1,82 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #e0e0e0;
+}
+
+main.container-altersenha {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h1 {
+  color: #38c1a0;
+  margin-bottom: 20px;
+}
+
+.formulario-altersenha {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.secao-senha label {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.secao-senha input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.secao-senha input::placeholder {
+  color: #999;
+}
+
+.botao-salvar {
+  padding: 12px 20px;
+  background-color: #38c1a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-salvar:hover {
+  background-color: #2d987c;
+  transform: scale(1.05);
+}
+
+.botao-voltar-feed {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #38c1a0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-voltar-feed:hover {
+  background-color: #2d987c;
+  transform: scale(1.05);
+}

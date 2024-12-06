@@ -7,7 +7,6 @@
   
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     
-    <link rel="stylesheet" type="text/css" href="style-acessibilidade.css">
     <script src="script-acessibilidade.js" defer></script>
     
     <link rel="stylesheet" href="assets/css/style.css">
@@ -240,13 +239,13 @@
                     </div>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item" href="/Dev-Hunt/login.php">
+                  <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
                         <i class="mdi mdi-logout text-danger"></i>
                       </div>
                     </div>
-                    <div href="/Dev-Hunt/login.php" class="preview-item-content">
+                    <div class="preview-item-content">
                       <p class="preview-subject mb-1">Sair</p>
                     </div>
                   </a>

@@ -63,7 +63,7 @@
     include 'header.php';
     ?>
             <a class="btn-logout" href="#" id="logout-btn" style="display: none;">Logout</a>
-            <a href="login.php"><button>Publicar Projeto</button></a>
+            <a href="useroufreela.html"><button>Cadastre-se</button></a>
         </div><!--botao-topo-->
 
         <!--menu-mobile-->
@@ -99,7 +99,7 @@
                     </li>
 
                     <li>
-                        <a href="login.php">Publicar Projeto</a>
+                        <a href="login.php">Cadastre-se</a>
                     </li>
 
                     <li>
